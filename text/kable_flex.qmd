@@ -11,3 +11,8 @@ title: Kable vs Flex
 
 ```{r child=file.path(here::here(), "tables", "Table_Counts_flex.Rmd")}
 ```
+
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

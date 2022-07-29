@@ -25,3 +25,8 @@ Quisque in nibh sit amet nunc mollis porttitor quis et mauris. Sed non condiment
 ```{r child=here::here("figures", "Figure1.Rmd")}
 ```
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+

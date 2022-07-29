@@ -42,7 +42,12 @@ If your output is `officedown::rdocx_document` or `bookdown::`, then you will ha
 
 * Example, this is a reference to Table \@ref(tab:tab1). This is a reference to Table \@ref(tab:tab2).
 
-You can create links but you won't see the table number [the table](#tab:tab1). This works whether you created the table caption with `flextable` or `knitr`.
+In Quarto, links are `@tab1`.
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
 
 
 
