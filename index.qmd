@@ -17,11 +17,11 @@ Eli Holmes, Evan Howell, Ady Rios, Molly Stevens, Josh London, Megsie Siple, et 
 
 ![](images/doc-logo.png){fig-align="left" width="132"}
 
-::: {style="line-height: .3"}
-U.S. Department of Commerce
-National Oceanic and Atmospheric Administration
-National Marine Fisheries Service		
+::: {style="line-height: 1"}
+U.S. Department of Commerce \
+National Marine Fisheries Service	\	
 
-NOAA Technical Memorandum NMFS-F/SPO-227
+NOAA Technical Memorandum NMFS-F \
+SPO-227
 December 2021
 :::
