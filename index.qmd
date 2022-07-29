@@ -1,8 +1,30 @@
+---
+title: Preface
+---
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+
+## Acknowledgements  {.unlisted .unnumbered}
+
+Phasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus.
+
+```{r include=FALSE}
+# include = FALSE means don't show code or any output (like warnings)
+# It is good to set up any knitr options that you want at the top of all your Rmds
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+```
+
 
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
 
+## Abstract {-}
+
+Phasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus.
 
 

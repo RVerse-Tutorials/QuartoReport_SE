@@ -1,10 +1,19 @@
+---
+title: Tips
+---
+
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
 
-# Chapter 1: Tips
+## Overview 
 
-## Overview
+```{r}
+#| label: "fig-chinook"
+#| fig-cap: "chapter 1 plot"
+plot(pressure)
+```
+
 
 
 ## General set-up

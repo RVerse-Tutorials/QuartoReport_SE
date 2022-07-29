@@ -1,4 +1,17 @@
-# Chapter 2: Simple tables and figures
+---
+title: "Simple tables and figures"
+---
+
+@fig-chinook
+
+
+```{r}
+#| label: "fig-chinook"
+#| fig-cap: "chapter 2 plot"
+plot(cars)
+
+```
+
 
 Lorem  ipsum dolor sit amet [@knuth84] consectetur adipiscing elit. Nam commodo sit amet nibh non molestie. Maecenas hendrerit nisl velit, a condimentum enim lobortis sit amet. Ut vitae nunc sed mauris condimentum fermentum. Mauris pellentesque nec neque id elementum. Suspendisse a quam aliquam, facilisis urna venenatis, malesuada diam. Pellentesque in fringilla orci. @knuth84 cras sed purus urna. Ut pharetra enim ut ligula egestas mattis.
 
