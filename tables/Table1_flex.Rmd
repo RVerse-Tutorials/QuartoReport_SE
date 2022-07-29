@@ -1,0 +1,28 @@
+---
+title: "Table 1"
+author: "EE Holmes"
+output:
+  html_document:
+    df_print: paged
+  word_document:
+    reference_docx: file.path(here::here(), "template.dotx")
+---
+
+```{r warning=FALSE, echo=FALSE}
+library(knitr)
+library(xtable)
+library(flextable)
+library(dplyr)
+```
+
+```{r}
+if( require("xtable") ){
+  data(tli)
+  fm3 <- glm(disadvg ~ ethnicty*grade, data = tli, family = binomial)
+  ft <- xtable_to_flextable(xtable(anova(fm3)), hline.after = c(1))
+  ft %>%
+    font(fontname="Times New Roman", part="all") %>%
+    fontsize(size=12)
+}
+```
+

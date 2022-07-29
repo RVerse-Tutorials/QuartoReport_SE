@@ -1,0 +1,25 @@
+<!-- Title Page -->
+
+<!-- A hack to get a title page in bookdown. This # {-} must be here -->
+# {-} 
+
+<p class="techauthor">
+Eli Holmes<br>
+NOAA Fisheries, Northwest Fisheries Science Center
+</p>
+
+```{r echo=FALSE, out.width="20%"}
+knitr::include_graphics(here::here("images", "doc-logo.png"))
+```
+
+<div style="line-height: 0.5;">
+U.S. Department of Commerce
+
+National Oceanic and Atmospheric Administration
+
+National Marine Fisheries Service
+</div>
+
+
+NOAA Technical Memorandum NMFS-F/SPO-ABC
+June 2022

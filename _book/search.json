@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "Abstract\nPhasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus."
+  },
+  {
+    "objectID": "text/Chapter_1.html#general-set-up",
+    "href": "text/Chapter_1.html#general-set-up",
+    "title": "2  Chapter 1: Tips",
+    "section": "2.2 General set-up",
+    "text": "2.2 General set-up\n\nBe as modular and simple as you can. You can spend many hours figuring out how to do things in R Markdown (that are simple in Word).\nDon’t make everyone in your team be the R Markdown wizard. You only need one person to build the framework.\nUse simple child Rmds so that other team members work only on simple Rmd flat files.\nDon’t put all your tables or figures in one huge file: Table xyz.Rmd, Table abc.Rmd. Have your dedicated R Markdown wizard figure out the automatic numbering.\nCopy reports built by others who doing something similar to you. TALK within your center or across centers and share work."
+  },
+  {
+    "objectID": "text/Chapter_1.html#tips",
+    "href": "text/Chapter_1.html#tips",
+    "title": "2  Chapter 1: Tips",
+    "section": "2.3 Tips",
+    "text": "2.3 Tips\n\n2.3.1 Cross-references\nThis can be really troublesome unless you use an output that already has cross-references as part of the design:\n\n{bookdown} outputs for html and PDF\n{officedown} for Word\n\nThese output formats give you access to cross-referencing via the \\@ref(xxx:yyy) format and if you use bookdown::pdf_book, this will also work with PDF.\n\n\n2.3.2 Chunk labels\n\nbest not to use chunk labels in the your Rmd children. It’s too easy to get duplicate labels accidentally.\n\n\n\n2.3.3 File paths\n\nif you need to reference a file in a folder, let R create the path so that it is compatible across systems:\n\nfile.path('images', 'figure1.Rmd')\n\nI always use the here package so that my code doesn’t break if I happen to issue a change workspace directory command.\n\nfile.path(here::here(), 'images', 'figure1.Rmd')\n\n\n2.3.4 Tables in for loops\nMaking tables within for loops is tricky and it is different if you are outputting to Word versus html and also depends on what package that you use. See my Rmd files for examples of how to set it up, but also be prepared for things breaking in the future as package writers change things. This feature is really fluid. Web searches on stackoverflow are key for solving these problems."
+  },
+  {
+    "objectID": "text/Chapter_1.html#working-with-word",
+    "href": "text/Chapter_1.html#working-with-word",
+    "title": "2  Chapter 1: Tips",
+    "section": "2.4 Working with Word",
+    "text": "2.4 Working with Word\nFor many of us, Word is part of our team’s workflow. Here are some tips if that is the case for you:\n\nCheck out the officeverse: officedown and flextable R packages.\nDon’t build the whole report in Word. Work on individual text sections and then have RStudio (via pandoc/knitr) assemble the report (text, figures, tables) from the individual parts.\nHow to deal with the team needing to review the assembled document (text, figures, tables):\n\nTry to modularize. So maybe make individual chapters and have review happen at that level. Then you incorporate the changes into the plain text manually.\nUse templates to make your Word doc look the way you want. The default is kind of weird. See my example and read about using Word templates with R Markdown here.\n\n\n\n2.4.1 Making tables look nice in Word\nThe example in Table_Counts.Rmd and Table_Counts_flex.Rmd shows you tricks to make nice Word tables.\n\nhow to include a page break in your Word doc between tables.\nusing format=\"pandoc\" for the table\nusing results='asis' and print() so you can use for loops.\ncentering your tables is next to impossible with kable(). Use the {flextable} package if you need that.\n\n\n\n2.4.2 New pages\nThis is how to get a new page in Word. Make sure you are in print view on the word doc, otherwise you won’t see any of the pages.\n\n\n```{=openxml}\n<w:p><w:r><w:br w:type=\"page\"/></w:r></w:p>\n```"
+  },
+  {
+    "objectID": "text/Chapter_1.html#more-examples",
+    "href": "text/Chapter_1.html#more-examples",
+    "title": "2  Chapter 1: Tips",
+    "section": "2.5 More examples",
+    "text": "2.5 More examples\nhttp://freerangestats.info/blog/2017/09/09/rmarkdown\nhttps://appsilon.com/gxp-compliance-in-pharma-made-easier-good-documentation-practices-with-r-markdown-and-officedown/"
+  },
+  {
+    "objectID": "text/Chapter_2.html",
+    "href": "text/Chapter_2.html",
+    "title": "3  Chapter 2: Simple tables and figures",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet (Knuth 1984) consectetur adipiscing elit. Nam commodo sit amet nibh non molestie. Maecenas hendrerit nisl velit, a condimentum enim lobortis sit amet. Ut vitae nunc sed mauris condimentum fermentum. Mauris pellentesque nec neque id elementum. Suspendisse a quam aliquam, facilisis urna venenatis, malesuada diam. Pellentesque in fringilla orci. Knuth (1984) cras sed purus urna. Ut pharetra enim ut ligula egestas mattis.\nPhasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus.\nQuisque in nibh sit amet nunc mollis porttitor quis et mauris. Sed non condimentum leo, ac condimentum est. Duis ac venenatis nulla, et aliquet elit. Suspendisse potenti. Duis mollis dui at semper luctus. Maecenas euismod finibus condimentum. Fusce vitae gravida massa. Mauris metus est, pretium non semper vel, dictum vel augue.\nCurabitur tempus, leo quis volutpat rhoncus, turpis elit vehicula dolor, id tincidunt augue nunc at enim. In vel enim mattis, varius orci at, tempus ante. Morbi massa elit, pharetra ac libero at, porta tempus quam. Ut fringilla, tortor ac tristique euismod, magna felis vestibulum turpis, quis congue mauris leo nec felis. Aliquam viverra et nibh ut blandit. Praesent sed luctus odio. Pellentesque finibus velit dolor. Morbi ac pulvinar ex, id dapibus eros. Cras interdum arcu viverra auctor tristique. Suspendisse venenatis volutpat ultricies."
+  },
+  {
+    "objectID": "text/Chapter_2.html#the-data",
+    "href": "text/Chapter_2.html#the-data",
+    "title": "3  Chapter 2: Simple tables and figures",
+    "section": "3.1 The data",
+    "text": "3.1 The data\nDonec bibendum pharetra arcu vitae porttitor. Morbi ac quam nunc. Ut cursus dolor a mauris aliquet vulputate. Morbi elementum ullamcorper augue, et tincidunt libero facilisis posuere. Nam congue velit non elit sollicitudin aliquet. Donec lobortis nunc ligula, id sollicitudin erat rhoncus cursus. Ut egestas orci libero, eu malesuada ex sollicitudin sed. Sed ornare nunc eget massa scelerisque, nec egestas nulla commodo. Pellentesque efficitur accumsan ullamcorper. Nulla facilisi. Maecenas tristique luctus malesuada. Phasellus id enim maximus, tempus tellus eu, dignissim sapien. Integer et mauris in lectus condimentum pellentesque non a felis.\n\n\n\nAttaching package: 'flextable'\n\n\nThe following object is masked from 'package:xtable':\n\n    align\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\nif( require(\"xtable\") ){\n  data(tli)\n  fm3 <- glm(disadvg ~ ethnicty*grade, data = tli, family = binomial)\n  ft <- xtable_to_flextable(xtable(anova(fm3)), hline.after = c(1))\n  ft %>%\n    font(fontname=\"Times New Roman\", part=\"all\") %>%\n    fontsize(size=12)\n}\n\n\n\nDfDevianceResid. DfResid. DevNULL99129.5ethnicty347.29682.2grade11.79580.5ethnicty:grade37.29273.3"
+  },
+  {
+    "objectID": "text/Chapter_2.html#some-figures",
+    "href": "text/Chapter_2.html#some-figures",
+    "title": "3  Chapter 2: Simple tables and figures",
+    "section": "3.2 Some figures",
+    "text": "3.2 Some figures\nQuisque in nibh sit amet nunc mollis porttitor quis et mauris. Sed non condimentum leo, ac condimentum est. Duis ac venenatis nulla, et aliquet elit. Suspendisse potenti. Duis mollis dui at semper luctus. Maecenas euismod finibus condimentum. Fusce vitae gravida massa. Mauris metus est, pretium non semper vel, dictum vel augue.\n\n\n\n\n\n\n\n\nFigure 1. Plot of the data\n\n\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "text/Chapter_3.html",
+    "href": "text/Chapter_3.html",
+    "title": "4  Chapter 3: Table in for loop",
+    "section": "",
+    "text": "This is an example of a Tables qmd with separate qmds for the individual tables. The table code is in the tables folder. Table1 is a simple table. Table_Counts is a table function that is then called to make tables with the same format but different input data. For this example, I am only going to use kable() for all output types. See Tables.Rmd and Table_Counts_flex.Rmd for examples of using the kableExtra, xtable and flextable packages.\nThe flextable package will do a bit nicer tables than kable."
+  },
+  {
+    "objectID": "text/Chapter_3.html#captions",
+    "href": "text/Chapter_3.html#captions",
+    "title": "4  Chapter 3: Table in for loop",
+    "section": "4.1 Captions",
+    "text": "4.1 Captions\nNow, let’s add a caption with set_caption:\n\n\n\n\n\nairquality dataset\n\n\nOzoneSolar.RWindTempMonthDay411907.46751361188.072521214912.674531831311.5625414.356552814.96656\n\n\nOr use knitr chunk options:\n\n\n\n\n\nairquality dataset\n\n\nOzoneSolar.RWindTempMonthDay411907.46751361188.072521214912.674531831311.5625414.356552814.96656"
+  },
+  {
+    "objectID": "text/Chapter_3.html#cross-references",
+    "href": "text/Chapter_3.html#cross-references",
+    "title": "4  Chapter 3: Table in for loop",
+    "section": "4.2 Cross-references",
+    "text": "4.2 Cross-references\nIf your output is officedown::rdocx_document or bookdown::, then you will have access to auto-referencing via \\@ref(xxx:yyy) format.\n\nExample, this is a reference to Table @ref(tab:tab1). This is a reference to Table @ref(tab:tab2).\n\nYou can create links but you won’t see the table number the table. This works whether you created the table caption with flextable or knitr."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  }
+]

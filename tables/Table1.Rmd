@@ -1,0 +1,19 @@
+---
+title: "Table 1"
+author: "EE Holmes"
+date: "6/12/2020"
+---
+
+```{r warning=FALSE, echo=FALSE}
+library(knitr)
+dt <- mtcars[1:10, 1:3]
+```
+
+```{r}
+# Use format="pandoc" if you are going to Word. knitr often get confused
+# if you don't and you'll drive yourself crazy wondering why the same 
+# kable() command doesn't show the same table in Word (hint, its because
+# unbeknownst to you, R changed the format argument value on you).
+kable(dt, align="lcc", caption="Table 1. This is a basic table.", digits=c(0,1,2), format="pandoc")
+```
+

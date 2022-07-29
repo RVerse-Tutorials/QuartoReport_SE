@@ -1,0 +1,81 @@
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+# Chapter 1: Tips
+
+## Overview
+
+
+## General set-up
+
+* Be as modular and simple as you can. You can spend many hours figuring out how to do things in R Markdown (that are simple in Word).
+* Don't make everyone in your team be the R Markdown wizard. You only need one person to build the framework.
+* Use simple child Rmds so that other team members work only on simple Rmd flat files.
+* Don't put all your tables or figures in one huge file: `Table xyz.Rmd`, `Table abc.Rmd`. Have your dedicated R Markdown wizard figure out the automatic numbering.
+* Copy reports built by others who doing something similar to you. TALK within your center or across centers and share work.
+
+## Tips
+
+### Cross-references
+
+This can be really troublesome unless you use an output that already has cross-references as part of the design:
+
+* {bookdown} outputs for html and PDF
+* {officedown} for Word
+
+These output formats give you access to cross-referencing via the `\@ref(xxx:yyy)` format and if you use `bookdown::pdf_book`, this will also work with PDF.
+
+
+### Chunk labels
+
+* best not to use chunk labels in the your Rmd children. It's too easy to get duplicate labels accidentally.
+
+### File paths
+
+* if you need to reference a file in a folder, let R create the path so that it is compatible across systems:
+```
+file.path('images', 'figure1.Rmd')
+```
+* I always use the **here** package so that my code doesn't break if I happen to issue a change workspace directory command.
+```
+file.path(here::here(), 'images', 'figure1.Rmd')
+```
+
+### Tables in for loops
+
+Making tables within `for` loops is tricky and it is different if you are outputting to Word versus html and also depends on what package that you use. See my Rmd files for examples of how to set it up, but also be prepared for things breaking in the future as package writers change things. This feature is really fluid. Web searches on stackoverflow are key for solving these problems.
+
+## Working with Word
+
+For many of us, Word is part of our team's workflow. Here are some tips if that is the case for you:
+
+* Check out the [officeverse](https://ardata-fr.github.io/officeverse/index.html): [officedown](https://CRAN.R-project.org/package=officedown) and [flextable](https://CRAN.R-project.org/package=flextable) R packages.
+* Don't build the whole report in Word. Work on individual text sections and then have RStudio (via pandoc/knitr) assemble the report (text, figures, tables) from the individual parts.
+* How to deal with the team needing to review the assembled document (text, figures, tables):
+  * Try to modularize. So maybe make individual chapters and have review happen at that level. Then you incorporate the changes into the plain text manually.
+  * Use templates to make your Word doc look the way you want. The default is kind of weird. See my example and read about using Word templates with R Markdown [here](https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html).
+  
+
+### Making tables look nice in Word
+
+The example in `Table_Counts.Rmd` and `Table_Counts_flex.Rmd` shows you tricks to make nice Word tables.
+
+* how to include a page break in your Word doc between tables. 
+* using `format="pandoc"` for the table
+* using `results='asis'` and `print()` so you can use `for` loops.
+* centering your tables is next to impossible with `kable()`. Use the {[flextable](https://ardata-fr.github.io/flextable-book/)} package if you need that.
+
+### New pages
+
+This is how to get a new page in Word. Make sure you are in print view on the word doc, otherwise you won't see any of the pages.
+
+```{r echo=FALSE, comment=""}
+cat('```{=openxml}\n<w:p><w:r><w:br w:type="page"/></w:r></w:p>\n```')
+```
+
+## More examples
+
+http://freerangestats.info/blog/2017/09/09/rmarkdown
+
+https://appsilon.com/gxp-compliance-in-pharma-made-easier-good-documentation-practices-with-r-markdown-and-officedown/

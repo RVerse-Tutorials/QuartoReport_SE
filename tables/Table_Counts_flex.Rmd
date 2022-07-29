@@ -1,0 +1,77 @@
+---
+title: "Table of Population Counts"
+---
+
+```{r include=FALSE}
+# Since the master had this, I don't need to repeat it. But I do so that I can
+# run this Rmd independently during debugging and development
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(knitr)
+# need this for %>% function
+library(dplyr)
+library(flextable)
+```
+
+```{r}
+fixcols <- function(x){
+  # fix _ and . in colname and make title format
+  x <- stringr::str_replace_all(x, "_", " ")
+  x <- stringr::str_replace_all(x, "[,]", " ")
+  x <- stringr::str_to_title(x)
+  x[x=="Esu"] <- "ESU"
+  x[x=="Number Of Spawners"] <- "Spawners"
+  x
+}
+```
+
+<!-- This is how to get a new page in Word. Make sure you are in print view on the word doc -->
+
+```{r}
+wordnewpage <-
+'```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```'
+```
+
+```{r}
+fil <- "Lower_Columbia_River_Chinook.csv"
+filful <- file.path(here::here(), "data", fil)
+modtime <- system(paste("git log -1 --format=%cd", filful), intern=TRUE)
+counts <- read.csv(filful, stringsAsFactors=FALSE)
+colnames(counts) <- fixcols(colnames(counts))
+```
+
+The **flextable** package will do a bit nicer tables than **kable**.
+
+```{r}
+# Create my table function; set default cols but different cols can be passed in
+tablecount <- function(data, cols="Spawners", caption="", cap_wide=FALSE){
+  dat <- data[, c("Year", cols)]
+  cap <- paste0(caption, "Yearly counts of ", paste(cols, collapse=" and "), " for ", min(dat$Year), " to ", max(dat$Year))
+  tab <- dat %>%
+    regulartable() %>%
+    autofit() %>%
+    add_footer(., Year = "* These spawner counts are from river redd surveys.") %>%
+    merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
+    add_footer(., Year = paste("** data file date:", modtime)) %>%
+    merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
+    add_header(., Year = cap, top = TRUE) %>% 
+    merge_at(., i = 1, j = 1:ncol(dat), part = "header") %>%
+    colformat_num(., j=1, big.mark = "", na_str = "NA") %>%
+    font(fontname="Times New Roman", part="all") %>%
+    fontsize(size=12)
+}
+```
+
+```{r results='asis'}
+tbl <- 2
+col <- c("Spawners", "Fracwild")
+for(i in unique(counts$`Common Population Name`)[1:tbl]){
+  dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2014)
+  cap <- paste0("Table ", tbl, ". ", i, ". ")
+  tab <- tablecount(dat, cols=col, caption=cap)
+  cat("\n", wordnewpage, "\n")
+  cat(knitr::knit_print(tab))
+  tbl <- tbl + 1
+}
+```

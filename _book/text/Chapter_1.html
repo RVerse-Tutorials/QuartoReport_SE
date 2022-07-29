@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.653">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Quarto_Report - 2&nbsp; Chapter 1: Tips</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../text/Chapter_2.html" rel="next">
+<link href="../preface.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 1: Tips</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Quarto_Report</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preface.html" class="sidebar-item-text sidebar-link">Acknowledgements</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/Chapter_1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 1: Tips</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/Chapter_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 2: Simple tables and figures</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/Chapter_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 3: Table in for loop</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"> <span class="header-section-number">2.1</span> Overview</a></li>
+  <li><a href="#general-set-up" id="toc-general-set-up" class="nav-link" data-scroll-target="#general-set-up"> <span class="header-section-number">2.2</span> General set-up</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips"> <span class="header-section-number">2.3</span> Tips</a>
+  <ul class="collapse">
+  <li><a href="#cross-references" id="toc-cross-references" class="nav-link" data-scroll-target="#cross-references"> <span class="header-section-number">2.3.1</span> Cross-references</a></li>
+  <li><a href="#chunk-labels" id="toc-chunk-labels" class="nav-link" data-scroll-target="#chunk-labels"> <span class="header-section-number">2.3.2</span> Chunk labels</a></li>
+  <li><a href="#file-paths" id="toc-file-paths" class="nav-link" data-scroll-target="#file-paths"> <span class="header-section-number">2.3.3</span> File paths</a></li>
+  <li><a href="#tables-in-for-loops" id="toc-tables-in-for-loops" class="nav-link" data-scroll-target="#tables-in-for-loops"> <span class="header-section-number">2.3.4</span> Tables in for loops</a></li>
+  </ul></li>
+  <li><a href="#working-with-word" id="toc-working-with-word" class="nav-link" data-scroll-target="#working-with-word"> <span class="header-section-number">2.4</span> Working with Word</a>
+  <ul class="collapse">
+  <li><a href="#making-tables-look-nice-in-word" id="toc-making-tables-look-nice-in-word" class="nav-link" data-scroll-target="#making-tables-look-nice-in-word"> <span class="header-section-number">2.4.1</span> Making tables look nice in Word</a></li>
+  <li><a href="#new-pages" id="toc-new-pages" class="nav-link" data-scroll-target="#new-pages"> <span class="header-section-number">2.4.2</span> New pages</a></li>
+  </ul></li>
+  <li><a href="#more-examples" id="toc-more-examples" class="nav-link" data-scroll-target="#more-examples"> <span class="header-section-number">2.5</span> More examples</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Chapter 1: Tips</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">2.1</span> Overview</h2>
+</section>
+<section id="general-set-up" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="general-set-up"><span class="header-section-number">2.2</span> General set-up</h2>
+<ul>
+<li>Be as modular and simple as you can. You can spend many hours figuring out how to do things in R Markdown (that are simple in Word).</li>
+<li>Don’t make everyone in your team be the R Markdown wizard. You only need one person to build the framework.</li>
+<li>Use simple child Rmds so that other team members work only on simple Rmd flat files.</li>
+<li>Don’t put all your tables or figures in one huge file: <code>Table xyz.Rmd</code>, <code>Table abc.Rmd</code>. Have your dedicated R Markdown wizard figure out the automatic numbering.</li>
+<li>Copy reports built by others who doing something similar to you. TALK within your center or across centers and share work.</li>
+</ul>
+</section>
+<section id="tips" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="tips"><span class="header-section-number">2.3</span> Tips</h2>
+<section id="cross-references" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="cross-references"><span class="header-section-number">2.3.1</span> Cross-references</h3>
+<p>This can be really troublesome unless you use an output that already has cross-references as part of the design:</p>
+<ul>
+<li>{bookdown} outputs for html and PDF</li>
+<li>{officedown} for Word</li>
+</ul>
+<p>These output formats give you access to cross-referencing via the <code>\@ref(xxx:yyy)</code> format and if you use <code>bookdown::pdf_book</code>, this will also work with PDF.</p>
+</section>
+<section id="chunk-labels" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="chunk-labels"><span class="header-section-number">2.3.2</span> Chunk labels</h3>
+<ul>
+<li>best not to use chunk labels in the your Rmd children. It’s too easy to get duplicate labels accidentally.</li>
+</ul>
+</section>
+<section id="file-paths" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="file-paths"><span class="header-section-number">2.3.3</span> File paths</h3>
+<ul>
+<li>if you need to reference a file in a folder, let R create the path so that it is compatible across systems:</li>
+</ul>
+<pre><code>file.path('images', 'figure1.Rmd')</code></pre>
+<ul>
+<li>I always use the <strong>here</strong> package so that my code doesn’t break if I happen to issue a change workspace directory command.</li>
+</ul>
+<pre><code>file.path(here::here(), 'images', 'figure1.Rmd')</code></pre>
+</section>
+<section id="tables-in-for-loops" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="tables-in-for-loops"><span class="header-section-number">2.3.4</span> Tables in for loops</h3>
+<p>Making tables within <code>for</code> loops is tricky and it is different if you are outputting to Word versus html and also depends on what package that you use. See my Rmd files for examples of how to set it up, but also be prepared for things breaking in the future as package writers change things. This feature is really fluid. Web searches on stackoverflow are key for solving these problems.</p>
+</section>
+</section>
+<section id="working-with-word" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="working-with-word"><span class="header-section-number">2.4</span> Working with Word</h2>
+<p>For many of us, Word is part of our team’s workflow. Here are some tips if that is the case for you:</p>
+<ul>
+<li>Check out the <a href="https://ardata-fr.github.io/officeverse/index.html">officeverse</a>: <a href="https://CRAN.R-project.org/package=officedown">officedown</a> and <a href="https://CRAN.R-project.org/package=flextable">flextable</a> R packages.</li>
+<li>Don’t build the whole report in Word. Work on individual text sections and then have RStudio (via pandoc/knitr) assemble the report (text, figures, tables) from the individual parts.</li>
+<li>How to deal with the team needing to review the assembled document (text, figures, tables):
+<ul>
+<li>Try to modularize. So maybe make individual chapters and have review happen at that level. Then you incorporate the changes into the plain text manually.</li>
+<li>Use templates to make your Word doc look the way you want. The default is kind of weird. See my example and read about using Word templates with R Markdown <a href="https://bookdown.org/yihui/rmarkdown-cookbook/word-template.html">here</a>.</li>
+</ul></li>
+</ul>
+<section id="making-tables-look-nice-in-word" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="making-tables-look-nice-in-word"><span class="header-section-number">2.4.1</span> Making tables look nice in Word</h3>
+<p>The example in <code>Table_Counts.Rmd</code> and <code>Table_Counts_flex.Rmd</code> shows you tricks to make nice Word tables.</p>
+<ul>
+<li>how to include a page break in your Word doc between tables.</li>
+<li>using <code>format="pandoc"</code> for the table</li>
+<li>using <code>results='asis'</code> and <code>print()</code> so you can use <code>for</code> loops.</li>
+<li>centering your tables is next to impossible with <code>kable()</code>. Use the {<a href="https://ardata-fr.github.io/flextable-book/">flextable</a>} package if you need that.</li>
+</ul>
+</section>
+<section id="new-pages" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="new-pages"><span class="header-section-number">2.4.2</span> New pages</h3>
+<p>This is how to get a new page in Word. Make sure you are in print view on the word doc, otherwise you won’t see any of the pages.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>```{=openxml}
+&lt;w:p&gt;&lt;w:r&gt;&lt;w:br w:type="page"/&gt;&lt;/w:r&gt;&lt;/w:p&gt;
+```</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="more-examples" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="more-examples"><span class="header-section-number">2.5</span> More examples</h2>
+<p>http://freerangestats.info/blog/2017/09/09/rmarkdown</p>
+<p>https://appsilon.com/gxp-compliance-in-pharma-made-easier-good-documentation-practices-with-r-markdown-and-officedown/</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../preface.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Acknowledgements</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../text/Chapter_2.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Chapter 2: Simple tables and figures</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

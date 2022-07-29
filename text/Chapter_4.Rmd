@@ -1,0 +1,11 @@
+<!-- Chapter 3 -->
+
+## `kabel`
+
+```{r child=file.path(here::here(), "tables", "Table_Counts.Rmd")}
+```
+
+## `flextable`
+
+```{r child=file.path(here::here(), "tables", "Table_Counts_flex.Rmd")}
+```

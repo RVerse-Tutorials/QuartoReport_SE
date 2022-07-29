@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "Quarto_Report"
+  author: "EE Holmes"
+  date: "7/28/2022"
+  cover-image: images/doc-logo.png
+  chapters:
+    - index.qmd
+    - preface.qmd
+    - text/Chapter_1.qmd
+    - text/Chapter_2.qmd
+    - text/Chapter_3.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  docx:
+    toc: true
+    reference-doc: template.docx
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
