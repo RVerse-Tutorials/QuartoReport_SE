@@ -1,4 +1,6 @@
-<!-- Chapter 3 -->
+---
+title: Kable vs Flex
+---  
 
 ## `kabel`
 

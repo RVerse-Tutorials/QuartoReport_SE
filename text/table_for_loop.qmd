@@ -1,4 +1,6 @@
-# Chapter 3: Table in for loop
+---
+title: Table in for loop
+---
 
 ```{r include=FALSE}
 library(knitr)

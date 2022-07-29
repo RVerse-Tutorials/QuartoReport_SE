@@ -1,6 +1,6 @@
 <!-- Title Page -->
 
-<!-- A hack to get a title page in bookdown. This # {-} must be here -->
+<!-- Eli's hacky way to try to get a title page in bookdown. This # {-} must be here -->
 # {-} 
 
 <p class="techauthor">

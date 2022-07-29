@@ -2,16 +2,15 @@ project:
   type: book
 
 book:
-  title: "Quarto_Report"
-  author: "EE Holmes"
-  date: "7/28/2022"
-  cover-image: images/doc-logo.png
+  title: "Quarto Report"
   chapters:
     - index.qmd
     - preface.qmd
-    - text/Chapter_1.qmd
-    - text/Chapter_2.qmd
-    - text/Chapter_3.qmd
+    - text/tips.qmd
+    - text/tables_figures.qmd
+    - text/table_for_loop.qmd
+    - text/kable_flex.qmd
+    - text/conclusion.qmd
     - references.qmd
 
 bibliography: references.bib
