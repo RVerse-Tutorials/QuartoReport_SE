@@ -6,7 +6,7 @@ If I demo a Quarto report and have to hack hard to make a title page, then the r
 
 Quarto solves a lot of that. Last piece is the title page and copyright page. If I could just a basic title page get across HTML, Word and PDF without hacking that'd be huge. If I could edit that title page and its layout with the visual editor too!! Well, one can dream.
 
-July 30 22 update
+## July 30 22 update
 
 I hacked the index.qmd yaml to make what looks like a title page using the `subtitle:`. But now PDF and Word won't build. Word says it can't find the image file even though it finds it fine when the image is in the main text.
 
