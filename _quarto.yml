@@ -2,7 +2,28 @@ project:
   type: book
 
 book:
-  title: "Quarto Report"
+  title: Quarto Report
+  subtitle: | 
+    \
+    Eli Holmes$^1$, Julie Lowndes$^2$
+    \
+    1. NOAA Fisheries, Northwest Fisheries Science Center
+    2. Openscapes
+    
+
+    \
+    \
+    \
+    \
+    ![](images/doc-logo.png){fig-align="left" width="132"}
+    
+    U.S. Department of Commerce \
+    National Marine Fisheries Service	\	
+
+    NOAA Technical Memorandum NMFS-F \
+    SPO-227
+    December 2021
+
   chapters:
     - index.qmd
     - preface.qmd
@@ -21,5 +42,13 @@ format:
     reference-doc: template.docx
   html:
     theme: cosmo
+    toc: true
   pdf:
-    documentclass: scrreprt
+    documentclass: scrbook
+    classoption: [titlepage=true]
+    toc: true
+    lof: true
+    lot: true
+    include-in-header: 
+      text: |
+        \frontmatter
