@@ -1,10 +1,10 @@
 # QmdReport.
 
-**Background**: A little background. I am not trying to do this for a specific report and I have a lot of experience creating big complex government reports with R Markdown. But right now our packages that the produce reports are all customized and a massive amount of work to create, e.g. https://github.com/EmilyMarkowitz-NOAA/NMFSReports. It looks like switching to Quarto is going to take care of the custom stuff that we had to write for NMFSReports, but I need to be able to control of the title page in html, Word and PDF. 
+A demo a Quarto report
 
-If I demo a Quarto report and have to hack hard to make a title page, then the response will be "that's a non-starter. you're saying we need a computer programmer just to be able to make a title page for our report?? um, no. let's stick with the current tools (Word)." That's what we are facing when we try to transition to R Markdown reports; it's just requires too much technical skill to do things that are simple in Word.
+## Aug 5 22 update
 
-Quarto solves a lot of that. Last piece is the title page and copyright page. If I could just a basic title page get across HTML, Word and PDF without hacking that'd be huge. If I could edit that title page and its layout with the visual editor too!! Well, one can dream.
+The title page work is living here at the moment: https://github.com/nmfs-opensci/quarto_titlepages
 
 ## Aug 2 22 update
 
