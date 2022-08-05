@@ -2,39 +2,35 @@ project:
   type: book
 
 book:
-  title: Quarto Report
-  subtitle: | 
-    \
-    Eli Holmes$^1$, Julie Lowndes$^2$
-    \
-    1. NOAA Fisheries, Northwest Fisheries Science Center
-    2. Openscapes
-    
-
-    \
-    \
-    \
-    \
-    ![](images/doc-logo.png){fig-align="left" width="132"}
-    
-    U.S. Department of Commerce \
-    National Marine Fisheries Service	\	
-
-    NOAA Technical Memorandum NMFS-F \
-    SPO-227
-    December 2021
-
+  title: The SocioEconomic Aspects of Stock Assessments Report
+  subtitle: Recommendations for Increasing Assessment Accuracy and Improving Management Advice
+  author:
+    - name: Jane Doe
+      affiliations:
+        - name: University of XXX
+          department: Department of YYY
+    - name: Eva Nováková
+      affiliations:
+        - name: University of XXX
+          department: Department of YYY
+    - name: Matti Meikäläinen
+      affiliations:
+        - name: University of XXX
+          department: Department of YYY
   chapters:
     - index.qmd
     - preface.qmd
     - text/tips.qmd
     - text/tables_figures.qmd
-    - text/table_for_loop.qmd
     - text/kable_flex.qmd
     - text/conclusion.qmd
     - references.qmd
+    - text/appendix_tables.qmd
 
 bibliography: references.bib
+
+execute:
+  echo: false
 
 format:
   docx:
@@ -43,12 +39,20 @@ format:
   html:
     theme: cosmo
     toc: true
+    code-fold: true
+    code-tools: true
   pdf:
     documentclass: scrbook
-    classoption: [titlepage=true]
+    template-partials: ["partials/before-body.tex"]
     toc: true
     lof: true
     lot: true
     include-in-header: 
       text: |
-        \frontmatter
+        \newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic dummy publisher logo
+        \usepackage[utf8]{inputenc} % Required for inputting international characters
+        \usepackage[T1]{fontenc} % Output font encoding for international characters
+        \usepackage{hyphenat}
+        \usepackage{authblk}
+   
+

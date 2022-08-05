@@ -1,5 +1,5 @@
 ---
-title: "Table of Population Counts"
+title: "Table of Population Counts with flextable"
 ---
 
 ```{r include=FALSE}

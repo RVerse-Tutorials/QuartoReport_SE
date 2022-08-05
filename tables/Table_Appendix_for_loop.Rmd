@@ -1,0 +1,114 @@
+---
+title: "Table in For Loop"
+---
+
+<!-- Since the main file (index) had this, I don't need to repeat it. 
+     But I do so that I can run this Rmd independently during debugging and development.
+     I set all the output to FALSE. -->
+     
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(knitr)
+library(dplyr) # need this for %>% function
+library(flextable)
+ishtml <- knitr::is_html_output()
+ispdf <- knitr::is_latex_output()
+isword <- !ishtml & !ispdf
+```
+
+<!-- Specify the data here at top so it is easy to find.
+     A better way to do this is to use parameterized Rmd. -->
+     
+<!-- I am adding the last commit date as the data date.
+     That helps makes sure we all know what data were used. -->
+
+```{r}
+datafil <- here::here("data", "Lower_Columbia_River_Chinook.csv")
+modtime <- system(paste("git log -1 --format=%cd", datafil), intern=TRUE)
+counts <- read.csv(datafil, stringsAsFactors=FALSE)
+```
+
+<!-- Specify the output limits here.
+     This will help me during debugging to have this up here. -->
+     
+```{r}
+ntbl <- length(unique(counts$COMMON_POPULATION_NAME))
+tbl <- ntbl # how many to print
+nYr <- 2000:2010
+```
+
+<!-- Just a function I need for data wrangling. There are better ways to do this -->
+
+```{r}
+fixcols <- function(x){
+  # fix _ and . in colname and make title format
+  x <- stringr::str_replace_all(x, "_", " ")
+  x <- stringr::str_replace_all(x, "[,]", " ")
+  x <- stringr::str_to_title(x)
+  x[x=="Esu"] <- "ESU"
+  x[x=="Number Of Spawners"] <- "Spawners"
+  x
+}
+```
+
+<!-- This is how to get a new page in Word. -->
+
+```{r}
+wordnewpage <-
+'```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```'
+```
+
+<!-- Data clean-up -->
+
+```{r}
+colnames(counts) <- fixcols(colnames(counts))
+```
+
+<!-- The table function.
+     flextable package will do nicer tables than kable.
+     The code is how one customizes flextables. -->
+
+```{r}
+tablecount <- function(data, cols="Spawners", caption="", cap_wide=FALSE){
+  dat <- data[, c("Year", cols)]
+  cap <- paste0(caption, "Yearly counts of ", paste(cols, collapse=" and "), " for ", min(dat$Year), " to ", max(dat$Year))
+  tab <- dat %>%
+    regulartable() %>%
+    autofit() %>%
+    add_footer(., Year = "* These spawner counts are from river redd surveys.") %>%
+    merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
+    add_footer(., Year = paste("** data file date:", modtime)) %>%
+    merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
+    add_header(., Year = cap, top = TRUE) %>% 
+    merge_at(., i = 1, j = 1:ncol(dat), part = "header") %>%
+    colformat_num(., j=1, big.mark = "", na_str = "NA") %>%
+    font(fontname="Times New Roman", part="all") %>%
+    fontsize(size=10) %>%
+    line_spacing(space = 1.0, part = "all")
+}
+```
+
+<!-- Outputting the table as markdown.
+     Note the cat(knitr::knit_print(tab))
+     This is done this way so that it is cross-compatible with PDF, HTML and Word.
+     Quarto might make these hacks go away.
+     This part is putting a newpage or section for each table but I want it 
+     to behave differently for different outputs.
+        if(isword) cat("\n", wordnewpage, "\n") 
+     -->
+
+```{r results='asis'}
+col <- c("Spawners", "Fracwild")
+for(i in 1:tbl){
+  popname <- unique(counts$`Common Population Name`)[i]
+  dat <- subset(counts, `Common Population Name`==popname & Year %in% nYr)
+  cap <- paste0("Table A", i, ". ", popname, ". ")
+  tab <- tablecount(dat, cols=col, caption=cap)
+  if(isword) cat("\n", wordnewpage, "\n")
+  if(ispdf) cat("\\newpage")
+  if(ishtml) cat("## ", popname, "\n\n")
+  cat(knitr::knit_print(tab))
+}
+```
