@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>A Very Long Title for A Big Report Because Long Titles are Common - 3&nbsp; Tables intro</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../text/tables_in_a_for_loop.html" rel="next">
+<link href="../text/tips.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<link href="../site_libs/tabwid-1.0.0/tabwid.css" rel="stylesheet">
+<link href="../site_libs/tabwid-1.0.0/scrool.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tables intro</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">A Very Long Title for A Big Report Because Long Titles are Common</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Citation</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preface.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/tips.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tips</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/tables.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tables intro</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/tables_in_a_for_loop.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tables in a for loop</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/kable_flex.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Kable vs Flex vs qt</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/figures.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Figures intro</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/conclusion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conclusion</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Appendices</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/appendix_tables.html" class="sidebar-item-text sidebar-link">Appendices</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#example-table" id="toc-example-table" class="nav-link active" data-scroll-target="#example-table"> <span class="header-section-number">3.1</span> Example table</a></li>
+  <li><a href="#including-table-files" id="toc-including-table-files" class="nav-link" data-scroll-target="#including-table-files"> <span class="header-section-number">3.2</span> Including table files</a></li>
+  <li><a href="#cross-references" id="toc-cross-references" class="nav-link" data-scroll-target="#cross-references"> <span class="header-section-number">3.3</span> Cross-references</a></li>
+  <li><a href="#dynamic-table-captions" id="toc-dynamic-table-captions" class="nav-link" data-scroll-target="#dynamic-table-captions"> <span class="header-section-number">3.4</span> Dynamic table captions</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tables intro</span></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+</div>
+<p>This chapter shows a few simple examples of including tables and getting cross-referencing to work across formats (HTML, Word, PDF). See <a href="kable_flex.html"><span>Chapter&nbsp;5</span></a> for more examples and comparisons of different table outputs.</p>
+<p>In this chapter, I am going to use {flextable} for Word and HTML and {kabelExtra} for PDF. See <a href="kable_flex.html"><span>Chapter&nbsp;5</span></a> for a comparison of {flextable}, {kableExtra} and {gt}. There is a current problem that Quarto is not processing the cross-references with {flextable} into PDF and Word. But this is a known problem and they are working on it. {flextable} is the only table package that I have found the tends to work as expected across platforms. The {officer} package uses it so it works well with Word and works well with LaTeX.</p>
+<p>*Note, I am using some customized functions to be able have a uniform look for my tables. These are in <code>tables/_common.R</code>.</p>
+<section id="example-table" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="example-table"><span class="header-section-number">3.1</span> Example table</h2>
+<p>This is an example a table. We can reference <a href="#tbl-example">Table&nbsp;<span>3.1</span></a> easily and it is auto-numbered.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-example" class="anchored">
+
+<div class="tabwid"><style>.cl-a7a4001c{}.cl-a79e7084{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a79e8448{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a79e8449{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a79ebe22{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe23{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe2c{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe2d{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe2e{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe36{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe40{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe41{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe42{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe4a{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe4b{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe54{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe55{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe56{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe5e{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe5f{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe68{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe69{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe6a{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a79ebe72{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-a7a4001c"><caption>Table 3.1:  This is a simple table. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe68"><p class="cl-a79e8448"><span class="cl-a79e7084">mpg</span></p></td><td class="cl-a79ebe72"><p class="cl-a79e8448"><span class="cl-a79e7084">cyl</span></p></td><td class="cl-a79ebe69"><p class="cl-a79e8448"><span class="cl-a79e7084">disp</span></p></td><td class="cl-a79ebe6a"><p class="cl-a79e8448"><span class="cl-a79e7084">hp</span></p></td><td class="cl-a79ebe68"><p class="cl-a79e8448"><span class="cl-a79e7084">drat</span></p></td><td class="cl-a79ebe69"><p class="cl-a79e8448"><span class="cl-a79e7084">wt</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe2c"><p class="cl-a79e8448"><span class="cl-a79e7084">21.0</span></p></td><td class="cl-a79ebe22"><p class="cl-a79e8448"><span class="cl-a79e7084">6</span></p></td><td class="cl-a79ebe23"><p class="cl-a79e8448"><span class="cl-a79e7084">160.0</span></p></td><td class="cl-a79ebe2d"><p class="cl-a79e8448"><span class="cl-a79e7084">110</span></p></td><td class="cl-a79ebe2c"><p class="cl-a79e8448"><span class="cl-a79e7084">3.90</span></p></td><td class="cl-a79ebe23"><p class="cl-a79e8448"><span class="cl-a79e7084">2.620</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">21.0</span></p></td><td class="cl-a79ebe42"><p class="cl-a79e8448"><span class="cl-a79e7084">6</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">160.0</span></p></td><td class="cl-a79ebe54"><p class="cl-a79e8448"><span class="cl-a79e7084">110</span></p></td><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">3.90</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">2.875</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">22.8</span></p></td><td class="cl-a79ebe42"><p class="cl-a79e8448"><span class="cl-a79e7084">4</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">108.0</span></p></td><td class="cl-a79ebe54"><p class="cl-a79e8448"><span class="cl-a79e7084">93</span></p></td><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">3.85</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">2.320</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">21.4</span></p></td><td class="cl-a79ebe42"><p class="cl-a79e8448"><span class="cl-a79e7084">6</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">258.0</span></p></td><td class="cl-a79ebe54"><p class="cl-a79e8448"><span class="cl-a79e7084">110</span></p></td><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">3.08</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">3.215</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe2c"><p class="cl-a79e8448"><span class="cl-a79e7084">18.7</span></p></td><td class="cl-a79ebe22"><p class="cl-a79e8448"><span class="cl-a79e7084">8</span></p></td><td class="cl-a79ebe23"><p class="cl-a79e8448"><span class="cl-a79e7084">360.0</span></p></td><td class="cl-a79ebe2d"><p class="cl-a79e8448"><span class="cl-a79e7084">175</span></p></td><td class="cl-a79ebe2c"><p class="cl-a79e8448"><span class="cl-a79e7084">3.15</span></p></td><td class="cl-a79ebe23"><p class="cl-a79e8448"><span class="cl-a79e7084">3.440</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe2c"><p class="cl-a79e8448"><span class="cl-a79e7084">18.1</span></p></td><td class="cl-a79ebe22"><p class="cl-a79e8448"><span class="cl-a79e7084">6</span></p></td><td class="cl-a79ebe23"><p class="cl-a79e8448"><span class="cl-a79e7084">225.0</span></p></td><td class="cl-a79ebe2d"><p class="cl-a79e8448"><span class="cl-a79e7084">105</span></p></td><td class="cl-a79ebe2c"><p class="cl-a79e8448"><span class="cl-a79e7084">2.76</span></p></td><td class="cl-a79ebe23"><p class="cl-a79e8448"><span class="cl-a79e7084">3.460</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe2c"><p class="cl-a79e8448"><span class="cl-a79e7084">14.3</span></p></td><td class="cl-a79ebe22"><p class="cl-a79e8448"><span class="cl-a79e7084">8</span></p></td><td class="cl-a79ebe23"><p class="cl-a79e8448"><span class="cl-a79e7084">360.0</span></p></td><td class="cl-a79ebe2d"><p class="cl-a79e8448"><span class="cl-a79e7084">245</span></p></td><td class="cl-a79ebe2c"><p class="cl-a79e8448"><span class="cl-a79e7084">3.21</span></p></td><td class="cl-a79ebe23"><p class="cl-a79e8448"><span class="cl-a79e7084">3.570</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">24.4</span></p></td><td class="cl-a79ebe42"><p class="cl-a79e8448"><span class="cl-a79e7084">4</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">146.7</span></p></td><td class="cl-a79ebe54"><p class="cl-a79e8448"><span class="cl-a79e7084">62</span></p></td><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">3.69</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">3.190</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">22.8</span></p></td><td class="cl-a79ebe42"><p class="cl-a79e8448"><span class="cl-a79e7084">4</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">140.8</span></p></td><td class="cl-a79ebe54"><p class="cl-a79e8448"><span class="cl-a79e7084">95</span></p></td><td class="cl-a79ebe4a"><p class="cl-a79e8448"><span class="cl-a79e7084">3.92</span></p></td><td class="cl-a79ebe4b"><p class="cl-a79e8448"><span class="cl-a79e7084">3.150</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a79ebe40"><p class="cl-a79e8448"><span class="cl-a79e7084">19.2</span></p></td><td class="cl-a79ebe2e"><p class="cl-a79e8448"><span class="cl-a79e7084">6</span></p></td><td class="cl-a79ebe41"><p class="cl-a79e8448"><span class="cl-a79e7084">167.6</span></p></td><td class="cl-a79ebe36"><p class="cl-a79e8448"><span class="cl-a79e7084">123</span></p></td><td class="cl-a79ebe40"><p class="cl-a79e8448"><span class="cl-a79e7084">3.92</span></p></td><td class="cl-a79ebe41"><p class="cl-a79e8448"><span class="cl-a79e7084">3.440</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-a79ebe5e"><p class="cl-a79e8449"><span class="cl-a79e7084">flextable</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+</section>
+<section id="including-table-files" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="including-table-files"><span class="header-section-number">3.2</span> Including table files</h2>
+<p>It is often good to have your files in separate files so that when you edit your tables, you only have to work on the table code.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r child=here::here("tables", "Table_flex.Rmd")}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- The yaml is not needed. Left here in case I need to copy this file into
+     a non-Quarto project. -->
+<div class="cell">
+
+</div>
+
+<!-- Generic flextable example from the flextable reference manual. 
+     The tbl-xyz label is important. This allows cross-referencing. -->
+<div class="cell">
+
+</div>
+<!-- This auto-numbering bit is different (and better) in Quarto -->
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-flexchild" class="anchored">
+
+<div class="tabwid"><style>.cl-a7d5d038{}.cl-a7d15a4e{font-family:'Times New Roman';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a7d15a58{font-family:'Times New Roman';font-size:12pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a7d15a59{font-family:'Times New Roman';font-size:12pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a7d164b2{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a7d164b3{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a7d187c6{width:68.8pt;background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187c7{width:32.1pt;background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187d0{width:76.8pt;background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187d1{width:68.2pt;background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187da{width:96.3pt;background-color:transparent;vertical-align: middle;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187db{width:68.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187dc{width:32.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187e4{width:76.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187e5{width:68.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187ee{width:96.3pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187ef{width:68.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187f8{width:32.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d187f9{width:76.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d18802{width:68.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d18803{width:96.3pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d18804{width:68.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d1880c{width:32.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d1880d{width:76.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d18816{width:68.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d18817{width:96.3pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d18818{width:68.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d18820{width:32.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d18821{width:76.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d1882a{width:68.2pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7d1882b{width:96.3pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-a7d5d038"><caption>Table 3.2:  This table is created in Table_flex.Rmd. flextable. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-a7d1882b"><p class="cl-a7d164b2"><span class="cl-a7d15a4e"></span></p></td><td class="cl-a7d18820"><p class="cl-a7d164b3"><span class="cl-a7d15a4e">Df</span></p></td><td class="cl-a7d18818"><p class="cl-a7d164b3"><span class="cl-a7d15a4e">Deviance</span></p></td><td class="cl-a7d1882a"><p class="cl-a7d164b3"><span class="cl-a7d15a4e">Resid. Df</span></p></td><td class="cl-a7d18821"><p class="cl-a7d164b3"><span class="cl-a7d15a4e">Resid. Dev</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-a7d187da"><p class="cl-a7d164b2"><span class="cl-a7d15a58">NULL</span></p></td><td class="cl-a7d187c7"><p class="cl-a7d164b3"><span class="cl-a7d15a59"></span></p></td><td class="cl-a7d187c6"><p class="cl-a7d164b3"><span class="cl-a7d15a59"></span></p></td><td class="cl-a7d187d1"><p class="cl-a7d164b3"><span class="cl-a7d15a59">99</span></p></td><td class="cl-a7d187d0"><p class="cl-a7d164b3"><span class="cl-a7d15a59">129.5</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7d187ee"><p class="cl-a7d164b2"><span class="cl-a7d15a58">ethnicty</span></p></td><td class="cl-a7d187dc"><p class="cl-a7d164b3"><span class="cl-a7d15a59">3</span></p></td><td class="cl-a7d187db"><p class="cl-a7d164b3"><span class="cl-a7d15a59">47.2</span></p></td><td class="cl-a7d187e5"><p class="cl-a7d164b3"><span class="cl-a7d15a59">96</span></p></td><td class="cl-a7d187e4"><p class="cl-a7d164b3"><span class="cl-a7d15a59">82.2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7d18803"><p class="cl-a7d164b2"><span class="cl-a7d15a58">grade</span></p></td><td class="cl-a7d187f8"><p class="cl-a7d164b3"><span class="cl-a7d15a59">1</span></p></td><td class="cl-a7d187ef"><p class="cl-a7d164b3"><span class="cl-a7d15a59">1.7</span></p></td><td class="cl-a7d18802"><p class="cl-a7d164b3"><span class="cl-a7d15a59">95</span></p></td><td class="cl-a7d187f9"><p class="cl-a7d164b3"><span class="cl-a7d15a59">80.5</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7d18817"><p class="cl-a7d164b2"><span class="cl-a7d15a58">ethnicty:grade</span></p></td><td class="cl-a7d1880c"><p class="cl-a7d164b3"><span class="cl-a7d15a59">3</span></p></td><td class="cl-a7d18804"><p class="cl-a7d164b3"><span class="cl-a7d15a59">7.2</span></p></td><td class="cl-a7d18816"><p class="cl-a7d164b3"><span class="cl-a7d15a59">92</span></p></td><td class="cl-a7d1880d"><p class="cl-a7d164b3"><span class="cl-a7d15a59">73.3</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</div>
+<p>We can add a captions to a flextable with <code>set_caption</code> but then we won’t have access to Quarto’s cross-format (Word, HTML, PDF) cross-referencing engine. We can also use <code>tab.cap="caption"</code> in the chunk yaml but again we don’t get the cross-referencing engine.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set_caption</span>(ft, </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"a table caption with set_caption"</span>, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">style =</span> <span class="st">"Table Caption"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="cross-references" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="cross-references"><span class="header-section-number">3.3</span> Cross-references</h2>
+<p>In Quarto, <a href="https://quarto.org/docs/authoring/cross-references.html#tables">table links</a> use the table label <code>@tbl-tablabel</code> where <code>tablabel</code> is the label you put on the table chunk. In the text it looks like this <a href="#tbl-tablabel">Table&nbsp;<span>3.3</span></a>. The chunk yaml looks like this</p>
+<pre><code>#| label: tbl-tablabel
+#| tbl-cap: "my caption"</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-tablabel" class="anchored">
+
+<div class="tabwid"><style>.cl-a7fbc3f6{}.cl-a7f66668{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a7f6728e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a7f6728f{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a7f6b276{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b277{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b278{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b280{width:45pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b281{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b282{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b283{width:41.3pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b28a{width:41.3pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b28b{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b28c{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b294{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b295{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b296{width:45pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b29e{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b29f{width:41.3pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2a0{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2a8{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2a9{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2aa{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2b2{width:45pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2b3{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2b4{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2bc{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2bd{width:45pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2be{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2bf{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2c6{width:41.3pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2c7{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2c8{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2d0{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2d1{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2d2{width:41.3pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2da{width:40.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2db{width:45pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a7f6b2dc{width:39.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-a7fbc3f6"><caption>Table 3.3:  This is a table with a number. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b2db"><p class="cl-a7f6728e"><span class="cl-a7f66668">Year</span></p></td><td class="cl-a7f6b2c8"><p class="cl-a7f6728f"><span class="cl-a7f66668">Jan</span></p></td><td class="cl-a7f6b2dc"><p class="cl-a7f6728f"><span class="cl-a7f66668">Feb</span></p></td><td class="cl-a7f6b2d1"><p class="cl-a7f6728f"><span class="cl-a7f66668">Mar</span></p></td><td class="cl-a7f6b2c8"><p class="cl-a7f6728f"><span class="cl-a7f66668">Apr</span></p></td><td class="cl-a7f6b2d2"><p class="cl-a7f6728f"><span class="cl-a7f66668">May</span></p></td><td class="cl-a7f6b2c8"><p class="cl-a7f6728f"><span class="cl-a7f66668">Jun</span></p></td><td class="cl-a7f6b2c8"><p class="cl-a7f6728f"><span class="cl-a7f66668">Jul</span></p></td><td class="cl-a7f6b2d0"><p class="cl-a7f6728f"><span class="cl-a7f66668">Aug</span></p></td><td class="cl-a7f6b2d0"><p class="cl-a7f6728f"><span class="cl-a7f66668">Sep</span></p></td><td class="cl-a7f6b2c8"><p class="cl-a7f6728f"><span class="cl-a7f66668">Oct</span></p></td><td class="cl-a7f6b2da"><p class="cl-a7f6728f"><span class="cl-a7f66668">Nov</span></p></td><td class="cl-a7f6b2da"><p class="cl-a7f6728f"><span class="cl-a7f66668">Dec</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b280"><p class="cl-a7f6728e"><span class="cl-a7f66668">1954</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668"></span></p></td><td class="cl-a7f6b278"><p class="cl-a7f6728f"><span class="cl-a7f66668"></span></p></td><td class="cl-a7f6b282"><p class="cl-a7f6728f"><span class="cl-a7f66668"></span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668"></span></p></td><td class="cl-a7f6b283"><p class="cl-a7f6728f"><span class="cl-a7f66668"></span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668"></span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">1</span></p></td><td class="cl-a7f6b281"><p class="cl-a7f6728f"><span class="cl-a7f66668">4</span></p></td><td class="cl-a7f6b281"><p class="cl-a7f6728f"><span class="cl-a7f66668">6</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">8</span></p></td><td class="cl-a7f6b277"><p class="cl-a7f6728f"><span class="cl-a7f66668">11</span></p></td><td class="cl-a7f6b277"><p class="cl-a7f6728f"><span class="cl-a7f66668">11</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b280"><p class="cl-a7f6728e"><span class="cl-a7f66668">1955</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">11</span></p></td><td class="cl-a7f6b278"><p class="cl-a7f6728f"><span class="cl-a7f66668">12</span></p></td><td class="cl-a7f6b282"><p class="cl-a7f6728f"><span class="cl-a7f66668">10</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">10</span></p></td><td class="cl-a7f6b283"><p class="cl-a7f6728f"><span class="cl-a7f66668">12</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">12</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">14</span></p></td><td class="cl-a7f6b281"><p class="cl-a7f6728f"><span class="cl-a7f66668">15</span></p></td><td class="cl-a7f6b281"><p class="cl-a7f6728f"><span class="cl-a7f66668">16</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">17</span></p></td><td class="cl-a7f6b277"><p class="cl-a7f6728f"><span class="cl-a7f66668">18</span></p></td><td class="cl-a7f6b277"><p class="cl-a7f6728f"><span class="cl-a7f66668">19</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b296"><p class="cl-a7f6728e"><span class="cl-a7f66668">1956</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">20</span></p></td><td class="cl-a7f6b29e"><p class="cl-a7f6728f"><span class="cl-a7f66668">20</span></p></td><td class="cl-a7f6b294"><p class="cl-a7f6728f"><span class="cl-a7f66668">22</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">25</span></p></td><td class="cl-a7f6b28a"><p class="cl-a7f6728f"><span class="cl-a7f66668">27</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">28</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">29</span></p></td><td class="cl-a7f6b295"><p class="cl-a7f6728f"><span class="cl-a7f66668">31</span></p></td><td class="cl-a7f6b295"><p class="cl-a7f6728f"><span class="cl-a7f66668">33</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">33</span></p></td><td class="cl-a7f6b28b"><p class="cl-a7f6728f"><span class="cl-a7f66668">33</span></p></td><td class="cl-a7f6b28b"><p class="cl-a7f6728f"><span class="cl-a7f66668">34</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b280"><p class="cl-a7f6728e"><span class="cl-a7f66668">1957</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">36</span></p></td><td class="cl-a7f6b278"><p class="cl-a7f6728f"><span class="cl-a7f66668">37</span></p></td><td class="cl-a7f6b282"><p class="cl-a7f6728f"><span class="cl-a7f66668">39</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">40</span></p></td><td class="cl-a7f6b283"><p class="cl-a7f6728f"><span class="cl-a7f66668">40</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">40</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">40</span></p></td><td class="cl-a7f6b281"><p class="cl-a7f6728f"><span class="cl-a7f66668">41</span></p></td><td class="cl-a7f6b281"><p class="cl-a7f6728f"><span class="cl-a7f66668">43</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">46</span></p></td><td class="cl-a7f6b277"><p class="cl-a7f6728f"><span class="cl-a7f66668">48</span></p></td><td class="cl-a7f6b277"><p class="cl-a7f6728f"><span class="cl-a7f66668">48</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b280"><p class="cl-a7f6728e"><span class="cl-a7f66668">1958</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">50</span></p></td><td class="cl-a7f6b278"><p class="cl-a7f6728f"><span class="cl-a7f66668">51</span></p></td><td class="cl-a7f6b282"><p class="cl-a7f6728f"><span class="cl-a7f66668">51</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">51</span></p></td><td class="cl-a7f6b283"><p class="cl-a7f6728f"><span class="cl-a7f66668">52</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">54</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">55</span></p></td><td class="cl-a7f6b281"><p class="cl-a7f6728f"><span class="cl-a7f66668">56</span></p></td><td class="cl-a7f6b281"><p class="cl-a7f6728f"><span class="cl-a7f66668">55</span></p></td><td class="cl-a7f6b276"><p class="cl-a7f6728f"><span class="cl-a7f66668">56</span></p></td><td class="cl-a7f6b277"><p class="cl-a7f6728f"><span class="cl-a7f66668">57</span></p></td><td class="cl-a7f6b277"><p class="cl-a7f6728f"><span class="cl-a7f66668">58</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b296"><p class="cl-a7f6728e"><span class="cl-a7f66668">1959</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">57</span></p></td><td class="cl-a7f6b29e"><p class="cl-a7f6728f"><span class="cl-a7f66668">59</span></p></td><td class="cl-a7f6b294"><p class="cl-a7f6728f"><span class="cl-a7f66668">62</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">64</span></p></td><td class="cl-a7f6b28a"><p class="cl-a7f6728f"><span class="cl-a7f66668">64</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">67</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">69</span></p></td><td class="cl-a7f6b295"><p class="cl-a7f6728f"><span class="cl-a7f66668">69</span></p></td><td class="cl-a7f6b295"><p class="cl-a7f6728f"><span class="cl-a7f66668">70</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">71</span></p></td><td class="cl-a7f6b28b"><p class="cl-a7f6728f"><span class="cl-a7f66668">71</span></p></td><td class="cl-a7f6b28b"><p class="cl-a7f6728f"><span class="cl-a7f66668">71</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b296"><p class="cl-a7f6728e"><span class="cl-a7f66668">1960</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">74</span></p></td><td class="cl-a7f6b29e"><p class="cl-a7f6728f"><span class="cl-a7f66668">75</span></p></td><td class="cl-a7f6b294"><p class="cl-a7f6728f"><span class="cl-a7f66668">76</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">79</span></p></td><td class="cl-a7f6b28a"><p class="cl-a7f6728f"><span class="cl-a7f66668">80</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">81</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">82</span></p></td><td class="cl-a7f6b295"><p class="cl-a7f6728f"><span class="cl-a7f66668">82</span></p></td><td class="cl-a7f6b295"><p class="cl-a7f6728f"><span class="cl-a7f66668">82</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">85</span></p></td><td class="cl-a7f6b28b"><p class="cl-a7f6728f"><span class="cl-a7f66668">87</span></p></td><td class="cl-a7f6b28b"><p class="cl-a7f6728f"><span class="cl-a7f66668">88</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b296"><p class="cl-a7f6728e"><span class="cl-a7f66668">1961</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">90</span></p></td><td class="cl-a7f6b29e"><p class="cl-a7f6728f"><span class="cl-a7f66668">91</span></p></td><td class="cl-a7f6b294"><p class="cl-a7f6728f"><span class="cl-a7f66668">93</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">95</span></p></td><td class="cl-a7f6b28a"><p class="cl-a7f6728f"><span class="cl-a7f66668">97</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">98</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">98</span></p></td><td class="cl-a7f6b295"><p class="cl-a7f6728f"><span class="cl-a7f66668">98</span></p></td><td class="cl-a7f6b295"><p class="cl-a7f6728f"><span class="cl-a7f66668">98</span></p></td><td class="cl-a7f6b28c"><p class="cl-a7f6728f"><span class="cl-a7f66668">100</span></p></td><td class="cl-a7f6b28b"><p class="cl-a7f6728f"><span class="cl-a7f66668">101</span></p></td><td class="cl-a7f6b28b"><p class="cl-a7f6728f"><span class="cl-a7f66668">100</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a7f6b2b2"><p class="cl-a7f6728e"><span class="cl-a7f66668">1962</span></p></td><td class="cl-a7f6b2a0"><p class="cl-a7f6728f"><span class="cl-a7f66668">103</span></p></td><td class="cl-a7f6b2b3"><p class="cl-a7f6728f"><span class="cl-a7f66668">105</span></p></td><td class="cl-a7f6b2a9"><p class="cl-a7f6728f"><span class="cl-a7f66668">105</span></p></td><td class="cl-a7f6b2a0"><p class="cl-a7f6728f"><span class="cl-a7f66668">106</span></p></td><td class="cl-a7f6b29f"><p class="cl-a7f6728f"><span class="cl-a7f66668">106</span></p></td><td class="cl-a7f6b2a0"><p class="cl-a7f6728f"><span class="cl-a7f66668">107</span></p></td><td class="cl-a7f6b2a0"><p class="cl-a7f6728f"><span class="cl-a7f66668">109</span></p></td><td class="cl-a7f6b2aa"><p class="cl-a7f6728f"><span class="cl-a7f66668">110</span></p></td><td class="cl-a7f6b2aa"><p class="cl-a7f6728f"><span class="cl-a7f66668">110</span></p></td><td class="cl-a7f6b2a0"><p class="cl-a7f6728f"><span class="cl-a7f66668">111</span></p></td><td class="cl-a7f6b2a8"><p class="cl-a7f6728f"><span class="cl-a7f66668"></span></p></td><td class="cl-a7f6b2a8"><p class="cl-a7f6728f"><span class="cl-a7f66668"></span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="13" class="cl-a7f6b2bd"><p class="cl-a7f6728e"><span class="cl-a7f66668">flextable</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dynamic-table-captions" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="dynamic-table-captions"><span class="header-section-number">3.4</span> Dynamic table captions</h2>
+<p>You can create captions dynamically.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tbl_cap <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">"This is a dynamically created caption. The length of mtcars is"</span>, <span class="fu">nrow</span>(mtcars), <span class="st">"rows. Here we show"</span>, <span class="fu">nrow</span>(dt), <span class="st">"rows."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Unfortunately you cannot dynamically create your chunk labels too.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-test3" class="anchored">
+
+<div class="tabwid"><style>.cl-a81b415e{}.cl-a816a20c{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-a816ab80{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a816ab8a{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-a816d6fa{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d704{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d705{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d70e{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d70f{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d718{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d719{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d71a{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d722{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d723{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d72c{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d736{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d737{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d738{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d740{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d741{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d74a{width:41.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d74b{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d754{width:38.9pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-a816d755{width:34pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-a81b415e"><caption>Table 3.4:  This is a dynamically created caption. The length of mtcars is 32 rows. Here we show 10 rows. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-a816d74a"><p class="cl-a816ab80"><span class="cl-a816a20c">mpg</span></p></td><td class="cl-a816d755"><p class="cl-a816ab80"><span class="cl-a816a20c">cyl</span></p></td><td class="cl-a816d74b"><p class="cl-a816ab80"><span class="cl-a816a20c">disp</span></p></td><td class="cl-a816d754"><p class="cl-a816ab80"><span class="cl-a816a20c">hp</span></p></td><td class="cl-a816d74a"><p class="cl-a816ab80"><span class="cl-a816a20c">drat</span></p></td><td class="cl-a816d74b"><p class="cl-a816ab80"><span class="cl-a816a20c">wt</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-a816d705"><p class="cl-a816ab80"><span class="cl-a816a20c">21.0</span></p></td><td class="cl-a816d6fa"><p class="cl-a816ab80"><span class="cl-a816a20c">6</span></p></td><td class="cl-a816d704"><p class="cl-a816ab80"><span class="cl-a816a20c">160.0</span></p></td><td class="cl-a816d70e"><p class="cl-a816ab80"><span class="cl-a816a20c">110</span></p></td><td class="cl-a816d705"><p class="cl-a816ab80"><span class="cl-a816a20c">3.90</span></p></td><td class="cl-a816d704"><p class="cl-a816ab80"><span class="cl-a816a20c">2.620</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">21.0</span></p></td><td class="cl-a816d722"><p class="cl-a816ab80"><span class="cl-a816a20c">6</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">160.0</span></p></td><td class="cl-a816d736"><p class="cl-a816ab80"><span class="cl-a816a20c">110</span></p></td><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">3.90</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">2.875</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">22.8</span></p></td><td class="cl-a816d722"><p class="cl-a816ab80"><span class="cl-a816a20c">4</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">108.0</span></p></td><td class="cl-a816d736"><p class="cl-a816ab80"><span class="cl-a816a20c">93</span></p></td><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">3.85</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">2.320</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">21.4</span></p></td><td class="cl-a816d722"><p class="cl-a816ab80"><span class="cl-a816a20c">6</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">258.0</span></p></td><td class="cl-a816d736"><p class="cl-a816ab80"><span class="cl-a816a20c">110</span></p></td><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">3.08</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">3.215</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a816d705"><p class="cl-a816ab80"><span class="cl-a816a20c">18.7</span></p></td><td class="cl-a816d6fa"><p class="cl-a816ab80"><span class="cl-a816a20c">8</span></p></td><td class="cl-a816d704"><p class="cl-a816ab80"><span class="cl-a816a20c">360.0</span></p></td><td class="cl-a816d70e"><p class="cl-a816ab80"><span class="cl-a816a20c">175</span></p></td><td class="cl-a816d705"><p class="cl-a816ab80"><span class="cl-a816a20c">3.15</span></p></td><td class="cl-a816d704"><p class="cl-a816ab80"><span class="cl-a816a20c">3.440</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a816d705"><p class="cl-a816ab80"><span class="cl-a816a20c">18.1</span></p></td><td class="cl-a816d6fa"><p class="cl-a816ab80"><span class="cl-a816a20c">6</span></p></td><td class="cl-a816d704"><p class="cl-a816ab80"><span class="cl-a816a20c">225.0</span></p></td><td class="cl-a816d70e"><p class="cl-a816ab80"><span class="cl-a816a20c">105</span></p></td><td class="cl-a816d705"><p class="cl-a816ab80"><span class="cl-a816a20c">2.76</span></p></td><td class="cl-a816d704"><p class="cl-a816ab80"><span class="cl-a816a20c">3.460</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a816d705"><p class="cl-a816ab80"><span class="cl-a816a20c">14.3</span></p></td><td class="cl-a816d6fa"><p class="cl-a816ab80"><span class="cl-a816a20c">8</span></p></td><td class="cl-a816d704"><p class="cl-a816ab80"><span class="cl-a816a20c">360.0</span></p></td><td class="cl-a816d70e"><p class="cl-a816ab80"><span class="cl-a816a20c">245</span></p></td><td class="cl-a816d705"><p class="cl-a816ab80"><span class="cl-a816a20c">3.21</span></p></td><td class="cl-a816d704"><p class="cl-a816ab80"><span class="cl-a816a20c">3.570</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">24.4</span></p></td><td class="cl-a816d722"><p class="cl-a816ab80"><span class="cl-a816a20c">4</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">146.7</span></p></td><td class="cl-a816d736"><p class="cl-a816ab80"><span class="cl-a816a20c">62</span></p></td><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">3.69</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">3.190</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">22.8</span></p></td><td class="cl-a816d722"><p class="cl-a816ab80"><span class="cl-a816a20c">4</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">140.8</span></p></td><td class="cl-a816d736"><p class="cl-a816ab80"><span class="cl-a816a20c">95</span></p></td><td class="cl-a816d723"><p class="cl-a816ab80"><span class="cl-a816a20c">3.92</span></p></td><td class="cl-a816d72c"><p class="cl-a816ab80"><span class="cl-a816a20c">3.150</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-a816d719"><p class="cl-a816ab80"><span class="cl-a816a20c">19.2</span></p></td><td class="cl-a816d70f"><p class="cl-a816ab80"><span class="cl-a816a20c">6</span></p></td><td class="cl-a816d71a"><p class="cl-a816ab80"><span class="cl-a816a20c">167.6</span></p></td><td class="cl-a816d718"><p class="cl-a816ab80"><span class="cl-a816a20c">123</span></p></td><td class="cl-a816d719"><p class="cl-a816ab80"><span class="cl-a816a20c">3.92</span></p></td><td class="cl-a816d71a"><p class="cl-a816ab80"><span class="cl-a816a20c">3.440</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="6" class="cl-a816d740"><p class="cl-a816ab8a"><span class="cl-a816a20c">flextable</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../text/tips.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tips</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../text/tables_in_a_for_loop.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Tables in a for loop</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">always_allow_html:</span><span class="co"> true</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">```{r warning=FALSE, echo=FALSE, message=FALSE}</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">FALSE</span>, <span class="at">warning=</span><span class="cn">FALSE</span>, <span class="at">message=</span><span class="cn">FALSE</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"tables"</span>, <span class="st">"_common.R"</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tables intro</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>This chapter shows a few simple examples of including tables and getting cross-referencing to work across formats (HTML, Word, PDF). See @sec-kableflexgt for more examples and comparisons of different table outputs.</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>In this chapter, I am going to use {flextable} for Word and HTML and {kabelExtra} for PDF. See @sec-kableflexgt for a comparison of {flextable}, {kableExtra} and {gt}. There is a current problem that Quarto is not processing the cross-references with {flextable} into PDF and Word. But this is a known problem and they are working on it. {flextable} is the only table package that I have found the tends to work as expected across platforms. The {officer} package uses it so it works well with Word and works well with LaTeX.</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>*Note, I am using some customized functions to be able have a uniform look for my tables. These are in <span class="in">`tables/_common.R`</span>.</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example table</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>This is an example a table. We can reference @tbl-example easily and it is auto-numbered. </span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-example</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "This is a simple table."</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>]</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(table.engine<span class="sc">==</span><span class="st">"flextable"</span>) <span class="fu">myflextable</span>(dt)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(table.engine<span class="sc">==</span><span class="st">"kbl"</span>) <span class="fu">mykbl</span>(dt)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## Including table files</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>It is often good to have your files in separate files so that when you edit your tables, you only have to work on the table code.</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="in">````markdown</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>`r ''````{r child=here::here("tables", "Table_flex.Rmd")}</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{r child=here::here("tables", "Table_flex.Rmd")}</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cross-references</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>In Quarto, <span class="co">[</span><span class="ot">table links</span><span class="co">](https://quarto.org/docs/authoring/cross-references.html#tables)</span> use the table label <span class="in">`@tbl-tablabel`</span> where <span class="in">`tablabel`</span> is the label you put on the table chunk. In the text it looks like this @tbl-tablabel. The chunk yaml looks like this</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: tbl-tablabel</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="in">#| tbl-cap: "my caption"</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-tablabel</span></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "This is a table with a number."</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>tt <span class="ot">&lt;-</span> <span class="fu">ts</span>(<span class="fu">cumsum</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">100</span>), <span class="dv">0</span>)),</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">start =</span> <span class="fu">c</span>(<span class="dv">1954</span>, <span class="dv">7</span>), <span class="at">frequency =</span> <span class="dv">12</span>)</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>Month <span class="ot">&lt;-</span>  <span class="fu">factor</span>(<span class="fu">cycle</span>(tt), <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">labels =</span> month.abb)</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">tapply</span>(tt, <span class="fu">list</span>(<span class="at">year =</span> <span class="fu">floor</span>(<span class="fu">time</span>(tt)), <span class="at">month =</span> Month), c))</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> dt <span class="sc">%&gt;%</span> tibble<span class="sc">::</span><span class="fu">rownames_to_column</span>(<span class="st">"Year"</span>)</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(table.engine<span class="sc">==</span><span class="st">"flextable"</span>) <span class="fu">myflextable</span>(dt)</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(table.engine<span class="sc">==</span><span class="st">"kbl"</span>) <span class="fu">mykbl</span>(dt)</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dynamic table captions</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>You can create captions dynamically.</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>]</span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>tbl_cap <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">"This is a dynamically created caption. The length of mtcars is"</span>, <span class="fu">nrow</span>(mtcars), <span class="st">"rows. Here we show"</span>, <span class="fu">nrow</span>(dt), <span class="st">"rows."</span>)</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>Unfortunately you cannot dynamically create your chunk labels too.</span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-test3</span></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: !expr tbl_cap</span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(table.engine<span class="sc">==</span><span class="st">"flextable"</span>) <span class="fu">myflextable</span>(dt)</span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(table.engine<span class="sc">==</span><span class="st">"kbl"</span>) <span class="fu">mykbl</span>(dt)</span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>

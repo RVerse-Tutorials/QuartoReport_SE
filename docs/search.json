@@ -1,0 +1,191 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A Very Long Title for A Big Report Because Long Titles are Common",
+    "section": "",
+    "text": "EE Holmes, 2022. Quarto Report Template. Northwest Fisheries Science Center."
+  },
+  {
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "1  Preface",
+    "section": "",
+    "text": "Phasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus."
+  },
+  {
+    "objectID": "preface.html#abstract",
+    "href": "preface.html#abstract",
+    "title": "1  Preface",
+    "section": "Abstract",
+    "text": "Abstract\nPhasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus."
+  },
+  {
+    "objectID": "text/tips.html",
+    "href": "text/tips.html",
+    "title": "2  Tips",
+    "section": "",
+    "text": "Figure 2.1: chapter 1 plot"
+  },
+  {
+    "objectID": "text/tips.html#general-set-up",
+    "href": "text/tips.html#general-set-up",
+    "title": "2  Tips",
+    "section": "2.2 General set-up",
+    "text": "2.2 General set-up\n\nBe as modular and simple as you can.\nDon’t make everyone in your team be the markdown wizard. You only need one person to build the framework.\nUse simple child Rmds so that other team members work only on simple Rmd/qmd flat files.\nDon’t put all your tables or figures in one huge file: Table xyz.Rmd/qmd, Table abc.Rmd/qmd. Have your dedicated markdown wizard figure out the automatic numbering.\nCopy reports built by others who are doing something similar to you. TALK within your center or across centers and share work."
+  },
+  {
+    "objectID": "text/tips.html#tips",
+    "href": "text/tips.html#tips",
+    "title": "2  Tips",
+    "section": "2.3 Tips",
+    "text": "2.3 Tips\n\n2.3.1 Cross-references\nThis can be really troublesome unless you use an output that already has cross-references as part of the design. For R Markdown,\n\n{bookdown} outputs for html and PDF\n{officedown} for Word\n\nThese output formats give you access to cross-referencing via the \\@ref(xxx:yyy) format and if you use bookdown::pdf_book, this will also work with PDF.\nHowever, Quarto makes cross-references, auto-numbering and cross-referencing of tables and figures super easy. Quarto cross-ref page.\nFor example, we can make a figure with the chunk label fig-plot like so.\nThe later in the text we use @fig-plot to get Figure 2.2.\n\n\n\n\n\nFigure 2.2: This is a plot of some data\n\n\n\n\n\n\n2.3.2 Chunk labels\n\nWhen using R Markdown (or Quarto), it is best not to use chunk labels in the your Rmd/qmd children. It’s too easy to get duplicate labels accidentally.\n\n\n\n2.3.3 File paths\n\nif you need to reference a file in a folder, let R create the path so that it is compatible across systems:\n\nfile.path('figures', 'figure1.Rmd')\n\nI typically use the {here} package so that my code doesn’t break if I happen to issue a change workspace directory command.\n\nhere::here('images', 'logo.png')\n\n\n2.3.4 Tables in for loops\nMaking tables within for loops is tricky and it is different if you are outputting to Word versus html and also depends on what package that you use. See my Rmd/qmd files in the tables folder for examples of how to set it up, but also be prepared for things breaking in the future as package writers change things. This feature is really fluid. Web searches on stackoverflow are key for solving these problems."
+  },
+  {
+    "objectID": "text/tips.html#working-with-word",
+    "href": "text/tips.html#working-with-word",
+    "title": "2  Tips",
+    "section": "2.4 Working with Word",
+    "text": "2.4 Working with Word\nFor many of us, Word is part of our team’s workflow. Here are some tips if that is the case for you:\n\nCheck out the officeverse: officedown and flextable R packages.\nQuarto has greatly improved Word integration so many of the problems we faced with Word output may soon be solved.\nDon’t build the whole report in one file. Work on individual text sections and then have RStudio (via pandoc/knitr) assemble the report (text, figures, tables) from the individual parts.\nHow to deal with the team needing to review the assembled document (text, figures, tables):\n\nTry to modularize. So maybe make individual chapters and have review happen at that level. Then you incorporate the changes into the plain text manually.\nUse templates to make your Word doc look the way you want. The default Word template is bare bones. See my example and read about using Word templates with Quartro here and R Markdown here .\n\n\n\n2.4.1 Making tables look nice in Word\nThe example in Table_Counts.Rmd and Table_Counts_flex.Rmd shows you tricks to make nice Word tables.\n\nhow to include a page break in your Word doc between tables.\nusing format=\"pandoc\" for the table\nusing results='asis' and print() so you can use for loops.\ncentering your tables is next to impossible with kable(). Use the {flextable} package if you need that.\n\n\n\n2.4.2 New pages\nThis is how to get a new page in Word. Make sure you are in print view on the word doc, otherwise you won’t see any of the pages.\n\n\n```{=openxml}\n<w:p><w:r><w:br w:type=\"page\"/></w:r></w:p>\n```"
+  },
+  {
+    "objectID": "text/tips.html#output-templates-with-quarto",
+    "href": "text/tips.html#output-templates-with-quarto",
+    "title": "2  Tips",
+    "section": "2.5 Output templates with Quarto",
+    "text": "2.5 Output templates with Quarto\nQuarto is working on templates to make output to different formats easy. Here is an example of journal templates quarto-journals."
+  },
+  {
+    "objectID": "text/tips.html#weird-quarto-quirks",
+    "href": "text/tips.html#weird-quarto-quirks",
+    "title": "2  Tips",
+    "section": "2.6 Weird Quarto quirks",
+    "text": "2.6 Weird Quarto quirks\n\nIf you use\n\n---\ntitle: MyTitle\n---\nas your title spec, then you won’t get the first header 2 in your pdf. Use # instead.\n\nIf you have 2 # levels in a qmd file, you only the first chapter appearing in the TOC. The others appear weirdly as sub-chapters.\nwith flextable, your table captions from knitr yaml disappear if the table breaks across a page."
+  },
+  {
+    "objectID": "text/tables.html",
+    "href": "text/tables.html",
+    "title": "3  Tables intro",
+    "section": "",
+    "text": "This chapter shows a few simple examples of including tables and getting cross-referencing to work across formats (HTML, Word, PDF). See Chapter 5 for more examples and comparisons of different table outputs.\nIn this chapter, I am going to use {flextable} for Word and HTML and {kabelExtra} for PDF. See Chapter 5 for a comparison of {flextable}, {kableExtra} and {gt}. There is a current problem that Quarto is not processing the cross-references with {flextable} into PDF and Word. But this is a known problem and they are working on it. {flextable} is the only table package that I have found the tends to work as expected across platforms. The {officer} package uses it so it works well with Word and works well with LaTeX.\n*Note, I am using some customized functions to be able have a uniform look for my tables. These are in tables/_common.R."
+  },
+  {
+    "objectID": "text/tables.html#example-table",
+    "href": "text/tables.html#example-table",
+    "title": "3  Tables intro",
+    "section": "3.1 Example table",
+    "text": "3.1 Example table\nThis is an example a table. We can reference Table 3.1 easily and it is auto-numbered.\n\n\n\n\nTable 3.1:  This is a simple table. \nmpgcyldisphpdratwt21.06160.01103.902.62021.06160.01103.902.87522.84108.0933.852.32021.46258.01103.083.21518.78360.01753.153.44018.16225.01052.763.46014.38360.02453.213.57024.44146.7623.693.19022.84140.8953.923.15019.26167.61233.923.440flextable"
+  },
+  {
+    "objectID": "text/tables.html#including-table-files",
+    "href": "text/tables.html#including-table-files",
+    "title": "3  Tables intro",
+    "section": "3.2 Including table files",
+    "text": "3.2 Including table files\nIt is often good to have your files in separate files so that when you edit your tables, you only have to work on the table code.\n```{r child=here::here(\"tables\", \"Table_flex.Rmd\")}\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTable 3.2:  This table is created in Table_flex.Rmd. flextable. \nDfDevianceResid. DfResid. DevNULL99129.5ethnicty347.29682.2grade11.79580.5ethnicty:grade37.29273.3\n\n\n\nWe can add a captions to a flextable with set_caption but then we won’t have access to Quarto’s cross-format (Word, HTML, PDF) cross-referencing engine. We can also use tab.cap=\"caption\" in the chunk yaml but again we don’t get the cross-referencing engine.\n\n\nCode\nset_caption(ft, \n  caption = \"a table caption with set_caption\", \n  style = \"Table Caption\")"
+  },
+  {
+    "objectID": "text/tables.html#cross-references",
+    "href": "text/tables.html#cross-references",
+    "title": "3  Tables intro",
+    "section": "3.3 Cross-references",
+    "text": "3.3 Cross-references\nIn Quarto, table links use the table label @tbl-tablabel where tablabel is the label you put on the table chunk. In the text it looks like this Table 3.3. The chunk yaml looks like this\n#| label: tbl-tablabel\n#| tbl-cap: \"my caption\"\n\n\n\n\nTable 3.3:  This is a table with a number. \nYearJanFebMarAprMayJunJulAugSepOctNovDec19541468111119551112101012121415161718191956202022252728293133333334195736373940404040414346484819585051515152545556555657581959575962646467696970717171196074757679808182828285878819619091939597989898981001011001962103105105106106107109110110111flextable"
+  },
+  {
+    "objectID": "text/tables.html#dynamic-table-captions",
+    "href": "text/tables.html#dynamic-table-captions",
+    "title": "3  Tables intro",
+    "section": "3.4 Dynamic table captions",
+    "text": "3.4 Dynamic table captions\nYou can create captions dynamically.\n\n\nCode\ndt <- mtcars[1:10, 1:6]\ntbl_cap <- paste(\"This is a dynamically created caption. The length of mtcars is\", nrow(mtcars), \"rows. Here we show\", nrow(dt), \"rows.\")\n\n\nUnfortunately you cannot dynamically create your chunk labels too.\n\n\n\n\nTable 3.4:  This is a dynamically created caption. The length of mtcars is 32 rows. Here we show 10 rows. \nmpgcyldisphpdratwt21.06160.01103.902.62021.06160.01103.902.87522.84108.0933.852.32021.46258.01103.083.21518.78360.01753.153.44018.16225.01052.763.46014.38360.02453.213.57024.44146.7623.693.19022.84140.8953.923.15019.26167.61233.923.440flextable"
+  },
+  {
+    "objectID": "text/tables_in_a_for_loop.html",
+    "href": "text/tables_in_a_for_loop.html",
+    "title": "4  Tables in a for loop",
+    "section": "",
+    "text": "Outputting tables (or figure) in a for loop works fine in Quarto, but there is no way to set the table numbers dynamically and get all the cross-references working in Word, HTML and PDF. We really need that dynamic numbering and cross-reference feature in a big report."
+  },
+  {
+    "objectID": "text/tables_in_a_for_loop.html#example-of-tables-produced-in-a-for-loop",
+    "href": "text/tables_in_a_for_loop.html#example-of-tables-produced-in-a-for-loop",
+    "title": "4  Tables in a for loop",
+    "section": "4.1 Example of tables produced in a for loop",
+    "text": "4.1 Example of tables produced in a for loop\nLook at the Code (link at top in HTML output) to see the cat(knitr::knit_print(tab)) trick for getting your tables to appear.\n\n\n\nCars with 4 cylinders. We can set a caption but no way to cross-reference it\n\n\nmpgcyldisphp216160110216160110flextable\n\n\nCars with 8 cylinders. We can set a caption but no way to cross-reference it\n\n\nmpgcyldisphp216160110216160110flextable"
+  },
+  {
+    "objectID": "text/tables_in_a_for_loop.html#getting-the-cross-reference-links",
+    "href": "text/tables_in_a_for_loop.html#getting-the-cross-reference-links",
+    "title": "4  Tables in a for loop",
+    "section": "4.2 Getting the cross-reference links",
+    "text": "4.2 Getting the cross-reference links\nWe have to use a bit of magic to get our dynamic table numbers and links using Quarto’s cross-referencing. The trick is to use a child Rmd (or qmd) in a for loop. This trick can be used for figures too but I’ll just show it here with tables. This code inspired from this gist.\nWe use knit_expand() and make a child Rmd that uses double curly braces like {{value.to.match}} in the code. That way the value at the time this Rmd was embedded can be referenced. Note that if value.to.match were a string (which it is not in this example), we would need to add quotes around {{value.to.match}} in our code.\nWith this approach we get our numbered tables and we can reference the tables usual such as Table 4.2. Click on the Code link at top (HTML output) to see how it’s done.\n\n\n\n\n\n\n\n\nTable 4.1:  Cars with 4 cylinders. These tables have cross-ref links via @tbl-xyz. \nmpgcyldisphp22.84108.09324.44146.76222.84140.895flextable\n\n\n\n\n\n\n\n\n\n\n\nTable 4.2:  Cars with 8 cylinders. These tables have cross-ref links via @tbl-xyz. \nmpgcyldisphp18.78360.017514.38360.024516.48275.8180flextable"
+  },
+  {
+    "objectID": "text/kable_flex.html",
+    "href": "text/kable_flex.html",
+    "title": "5  Kable vs Flex vs qt",
+    "section": "",
+    "text": "Here I compare a three different ways to make tables."
+  },
+  {
+    "objectID": "text/kable_flex.html#kable",
+    "href": "text/kable_flex.html#kable",
+    "title": "5  Kable vs Flex vs qt",
+    "section": "5.1 kable",
+    "text": "5.1 kable\nHere is the {kable} table Table 5.1. {kabel} is part of {knitr} so definitely going to be supported by Quarto since Quarto uses the {knitr} engine. Cross-referencing works across HTML, PDF and Word but output to Word is not always great.\n\n\nCode\nlibrary(knitr)\nlibrary(kableExtra)\n# note hold_position not working in Quarto v1.0.38.\nkbl(dt, booktabs = TRUE) %>%\n  kable_styling(latex_options = c(\"scale_down\")) %>%\n  kableExtra::footnote(symbol = c(f1, f2))\n\n\n\n\nTable 5.1:  kable: Donec bibendum pharetra arcu vitae porttitor. Morbi ac quam nunc. Ut cursus dolor a mauris aliquet vulputate. Morbi elementum ullamcorper augue, et tincidunt libero facilisis posuere. Nam congue velit non elit sollicitudin aliquet. \n \n  \n      \n    mpg \n    cyl \n    disp \n    hp \n    drat \n    wt \n    qsec \n    vs \n    am \n    gear \n    carb \n  \n \n\n  \n    Mazda RX4 \n    21.0 \n    6 \n    160.0 \n    110 \n    3.90 \n    2.620 \n    16.46 \n    0 \n    1 \n    4 \n    4 \n  \n  \n    Mazda RX4 Wag \n    21.0 \n    6 \n    160.0 \n    110 \n    3.90 \n    2.875 \n    17.02 \n    0 \n    1 \n    4 \n    4 \n  \n  \n    Datsun 710 \n    22.8 \n    4 \n    108.0 \n    93 \n    3.85 \n    2.320 \n    18.61 \n    1 \n    1 \n    4 \n    1 \n  \n  \n    Hornet 4 Drive \n    21.4 \n    6 \n    258.0 \n    110 \n    3.08 \n    3.215 \n    19.44 \n    1 \n    0 \n    3 \n    1 \n  \n  \n    Hornet Sportabout \n    18.7 \n    8 \n    360.0 \n    175 \n    3.15 \n    3.440 \n    17.02 \n    0 \n    0 \n    3 \n    2 \n  \n  \n    Valiant \n    18.1 \n    6 \n    225.0 \n    105 \n    2.76 \n    3.460 \n    20.22 \n    1 \n    0 \n    3 \n    1 \n  \n  \n    Duster 360 \n    14.3 \n    8 \n    360.0 \n    245 \n    3.21 \n    3.570 \n    15.84 \n    0 \n    0 \n    3 \n    4 \n  \n  \n    Merc 240D \n    24.4 \n    4 \n    146.7 \n    62 \n    3.69 \n    3.190 \n    20.00 \n    1 \n    0 \n    4 \n    2 \n  \n  \n    Merc 230 \n    22.8 \n    4 \n    140.8 \n    95 \n    3.92 \n    3.150 \n    22.90 \n    1 \n    0 \n    4 \n    2 \n  \n  \n    Merc 280 \n    19.2 \n    6 \n    167.6 \n    123 \n    3.92 \n    3.440 \n    18.30 \n    1 \n    0 \n    4 \n    4 \n  \n\n\n\n* Here is a footnote about this table\n\n† Here is a second footnote.\n\n\n\n\n\n\n\n5.1.1 kable quirks\n\nMake sure to put always_allow_html: true in the yaml at the top of your Rmd or qmd file if outputting to Word. I can’t figure out how to put it in the `\nWord output is often not good looking. This is a known issue with kable\nDo not pass in caption to kbl() if you want to use Quarto’s cross-reference engine.\nkbl(..., format=\"pandoc\") can help for Word if your templates stop working but destroys the PDF output."
+  },
+  {
+    "objectID": "text/kable_flex.html#flextable",
+    "href": "text/kable_flex.html#flextable",
+    "title": "5  Kable vs Flex vs qt",
+    "section": "5.2 flextable",
+    "text": "5.2 flextable\nHere is the {flextable} table Table 5.2. {flextable} gives you a lot more control over your tables with a grammar format (like ggplot2). It also gives nice output to Word, PDF and HTML. Sadly in Quarto v1.0.38 cross-reference and table captioning for Word and PDF is completely broken, but the developers know about this. The {officer} package, which I think Quarto is leaning on for Word generation, use {flextable} so I am hoping that {flextable} gets moved into the RStudio suite.\n\n\nCode\nlibrary(flextable)\ndt %>%\n  flextable() %>%\n  autofit() %>%\n  flextable::footnote(i = 1, j = 1:2,\n            value = as_paragraph(c(f1, f2)),\n            ref_symbols = c(\"a\", \"b\"),\n            part = \"header\") %>%\n  font(fontname=\"Times New Roman\", part=\"all\") %>%\n  fontsize(size=12)\n\n\n\n\nTable 5.2:  flextable: Donec bibendum pharetra arcu vitae porttitor. Morbi ac quam nunc. Ut cursus dolor a mauris aliquet vulputate. Morbi elementum ullamcorper augue, et tincidunt libero facilisis posuere. Nam congue velit non elit sollicitudin aliquet. \nmpgacylbdisphpdratwtqsecvsamgearcarb21.06160.01103.902.62016.46014421.06160.01103.902.87517.02014422.84108.0933.852.32018.61114121.46258.01103.083.21519.44103118.78360.01753.153.44017.02003218.16225.01052.763.46020.22103114.38360.02453.213.57015.84003424.44146.7623.693.19020.00104222.84140.8953.923.15022.90104219.26167.61233.923.44018.301044aHere is a footnote about this tablebHere is a second footnote.\n\n\n\n\n5.2.1 flextable quirks\n\nCross-refs broken in Word and PDF. Known issue."
+  },
+  {
+    "objectID": "text/kable_flex.html#gt",
+    "href": "text/kable_flex.html#gt",
+    "title": "5  Kable vs Flex vs qt",
+    "section": "5.3 gt",
+    "text": "5.3 gt\nHere is the {gt} table Table 5.3. {gt} has many of the same features as {flextable} and is in the RStudio suite so maybe it’ll get more Quarto support in the long run. But like {kable}, the Word output is not so great, at least not by default.\n\n\nCode\nlibrary(gt)\ndt %>%\n  gt() %>%\n  tab_source_note(source_note = f1) %>%\n  tab_source_note(source_note = f2) %>%\n  tab_options(\n      table.font.size = px(18), \n      table.font.names = \"Times New Roman\",\n      data_row.padding = px(1))\n\n\n\n\n\n\nTable 5.3:  gt: Donec bibendum pharetra arcu vitae porttitor. Morbi ac quam nunc. Ut cursus dolor a mauris aliquet vulputate. Morbi elementum ullamcorper augue, et tincidunt libero facilisis posuere. Nam congue velit non elit sollicitudin aliquet. \n  \n  \n    \n      mpg\n      cyl\n      disp\n      hp\n      drat\n      wt\n      qsec\n      vs\n      am\n      gear\n      carb\n    \n  \n  \n    21.0\n6\n160.0\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n    21.0\n6\n160.0\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n    22.8\n4\n108.0\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n    21.4\n6\n258.0\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n    18.7\n8\n360.0\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2\n    18.1\n6\n225.0\n105\n2.76\n3.460\n20.22\n1\n0\n3\n1\n    14.3\n8\n360.0\n245\n3.21\n3.570\n15.84\n0\n0\n3\n4\n    24.4\n4\n146.7\n62\n3.69\n3.190\n20.00\n1\n0\n4\n2\n    22.8\n4\n140.8\n95\n3.92\n3.150\n22.90\n1\n0\n4\n2\n    19.2\n6\n167.6\n123\n3.92\n3.440\n18.30\n1\n0\n4\n4\n  \n  \n    \n      Here is a footnote about this table\n    \n    \n      Here is a second footnote.\n    \n  \n  \n\n\n\n\n\n\n5.3.1 qt quirks\n\nTable captions broken in PDF. Known issue. The “Table X.” part is missing.\nI couldn’t get {gt} to respect my font request for HTML unlike for {flextable}"
+  },
+  {
+    "objectID": "text/figures.html",
+    "href": "text/figures.html",
+    "title": "6  Figures intro",
+    "section": "",
+    "text": "This chapter shows a few simple examples of including figures and getting cross-referencing to work across formats (HTML, Word, PDF)."
+  },
+  {
+    "objectID": "text/figures.html#ggplot2",
+    "href": "text/figures.html#ggplot2",
+    "title": "6  Figures intro",
+    "section": "6.1 ggplot2",
+    "text": "6.1 ggplot2\nWe can see in Figure 6.1 that there are many time series. The number of panels is choosen automatically using {ggplot2}.\n\n\n\n\n\n\n\n\n\nFigure 6.1: Plot of the data"
+  },
+  {
+    "objectID": "text/conclusion.html",
+    "href": "text/conclusion.html",
+    "title": "7  Conclusion",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo sit amet nibh non molestie. Maecenas hendrerit nisl velit, a condimentum enim lobortis sit amet. Ut vitae nunc sed mauris condimentum fermentum. Mauris pellentesque nec neque id elementum. Suspendisse a quam aliquam, facilisis urna venenatis, malesuada diam. Pellentesque in fringilla orci. Cras sed purus urna. Ut pharetra enim ut ligula egestas mattis.\nPhasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus.\nQuisque in nibh sit amet nunc mollis porttitor quis et mauris. Sed non condimentum leo, ac condimentum est. Duis ac venenatis nulla, et aliquet elit. Suspendisse potenti. Duis mollis dui at semper luctus. Maecenas euismod finibus condimentum. Fusce vitae gravida massa. Mauris metus est, pretium non semper vel, dictum vel augue.\nCurabitur tempus, leo quis volutpat rhoncus, turpis elit vehicula dolor, id tincidunt augue nunc at enim. In vel enim mattis, varius orci at, tempus ante. Morbi massa elit, pharetra ac libero at, porta tempus quam. Ut fringilla, tortor ac tristique euismod, magna felis vestibulum turpis, quis congue mauris leo nec felis. Aliquam viverra et nibh ut blandit. Praesent sed luctus odio. Pellentesque finibus velit dolor. Morbi ac pulvinar ex, id dapibus eros. Cras interdum arcu viverra auctor tristique. Suspendisse venenatis volutpat ultricies.\nDonec bibendum pharetra arcu vitae porttitor. Morbi ac quam nunc. Ut cursus dolor a mauris aliquet vulputate. Morbi elementum ullamcorper augue, et tincidunt libero facilisis posuere. Nam congue velit non elit sollicitudin aliquet. Donec lobortis nunc ligula, id sollicitudin erat rhoncus cursus. Ut egestas orci libero, eu malesuada ex sollicitudin sed. Sed ornare nunc eget massa scelerisque, nec egestas nulla commodo. Pellentesque efficitur accumsan ullamcorper. Nulla facilisi. Maecenas tristique luctus malesuada. Phasellus id enim maximus, tempus tellus eu, dignissim sapien. Integer et mauris in lectus condimentum pellentesque non a felis."
+  },
+  {
+    "objectID": "text/appendix_tables.html",
+    "href": "text/appendix_tables.html",
+    "title": "Appendices",
+    "section": "",
+    "text": "This is an example of a large number of tables in appendices. All the data are in the data folder."
+  },
+  {
+    "objectID": "text/appendix_tables.html#coweeman-river",
+    "href": "text/appendix_tables.html#coweeman-river",
+    "title": "Appendices",
+    "section": "Coweeman River",
+    "text": "Coweeman River\n\n\n\n\nTable 1:  Spawners and fracwild from Coweeman River for 2000 to 2010. \nYearSpawnersFracwild20002901.0020018020.7320028770.9720031,1060.8920041,5030.9120058530.6020065661.0020072511.0020084240.5220097830.6320106390.70** data file: Lower_Columbia_River_Chinook.csv mod date: Fri Jul 29 07:21:42 2022 -0400* These spawner counts are from river redd surveys."
+  },
+  {
+    "objectID": "text/appendix_tables.html#elochoman-river",
+    "href": "text/appendix_tables.html#elochoman-river",
+    "title": "Appendices",
+    "section": "Elochoman River",
+    "text": "Elochoman River\n\n\n\n\nTable 2:  Spawners and fracwild from Elochoman River for 2000 to 2010. \nYearSpawnersFracwild20001460.6220012,8060.8220027,8930.0020037,3480.6520046,8800.0120052,6990.0520063241.0020071681.0020081,3200.1020091,4670.1820101,3180.12** data file: Lower_Columbia_River_Chinook.csv mod date: Fri Jul 29 07:21:42 2022 -0400* These spawner counts are from river redd surveys."
+  }
+]
