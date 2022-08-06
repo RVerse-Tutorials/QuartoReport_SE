@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: A Very Long Title for A Big Report Because Long Titles are Common
