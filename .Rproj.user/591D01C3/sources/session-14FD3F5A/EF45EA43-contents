@@ -1,0 +1,83 @@
+---
+always_allow_html: true
+---
+
+```{r warning=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(knitr)
+library(kableExtra)
+library(xtable)
+library(flextable)
+library(dplyr)
+```
+
+# Tables intro
+
+This chapter shows a few simple examples of including tables and getting cross-referencing to work across formats (HTML, Word, PDF). See @kableflexgt for more examples and comparisons of different table outputs.
+
+In this chapter, I am going to use {flextable}. See @kableflexgt for a comparison to {kableExtra} and {gt}. There is a current problem that Quarto is not processing the cross-references with {flextable} into PDF and Word. But this is a know problem and they are working on it. {flextable} is the only table package that I have found the tends to work as expected across platforms. The {officer} package uses it so it works well with Word and works well with LaTeX.
+
+## `flextable`
+
+This is an example {flextable} table. We can reference @tbl-flexexample easily and it is auto-numbered. 
+
+```{r}
+#| label: tbl-flexexample
+#| tbl-cap: "This is a flextable."
+flextable(mtcars[1:10, 1:6]) %>%
+  font(fontname="Times New Roman", part="all") %>%
+  fontsize(size=12)
+```
+
+## Including table files
+
+It is often good to have your files in separate files so that when you edit your tables, you only have to work on the table code.
+
+````markdown
+`r ''````{r child=here::here("tables", "Table_flex.Rmd")}
+```
+````
+
+```{r child=here::here("tables", "Table_flex.Rmd")}
+```
+
+
+## Cross-references
+
+In Quarto, [table links](https://quarto.org/docs/authoring/cross-references.html#tables) use the table label `@tbl-tablabel` where `tablabel` is the label you put on the table chunk. In the text it looks like this @tbl-tablabel. The chunk yaml looks like this
+
+```
+#| label: tbl-tablabel
+#| tbl-cap: "my caption"
+```
+
+```{r}
+#| label: tbl-tablabel
+#| tbl-cap: "This is a table with a number."
+temp.ts <- ts(cumsum(1 + round(rnorm(100), 0)),
+    start = c(1954, 7), frequency = 12)
+ft <- xtable_to_flextable(x = xtable(temp.ts, digits = 0),
+    NA.string = "-")
+ft
+```
+
+## Dynamic table captions
+
+You can create captions dynamically.
+
+```{r}
+#| echo: true
+dt <- mtcars[1:10, 1:6]
+tbl_cap <- paste("This is a dynamically created caption. The length of mtcars is", nrow(mtcars), "rows. Here we show", nrow(dt), "rows.")
+```
+
+Unfortunately you cannot dynamically create your chunk labels too.
+
+```{r}
+#| label: tbl-test3
+#| tbl-cap: !expr tbl_cap
+flextable(dt) %>%
+  font(fontname="Times New Roman", part="all") %>%
+  fontsize(size=12)
+```
+

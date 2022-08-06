@@ -1,0 +1,52 @@
+---
+always_allow_html: true
+---
+# Tables in a for loop
+
+```{r warning=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+source(here::here("tables", "_common.R"))
+```
+
+
+Outputting tables (or figure) in a for loop works fine in Quarto, but there is no way to set the table numbers dynamically and get all the cross-references working in Word, HTML and PDF. We really need that dynamic numbering and cross-reference feature in a big report. 
+
+## Example of tables produced in a for loop
+
+Look at the Code (link at top in HTML output) to see the `cat(knitr::knit_print(tab))` trick for getting your tables to appear.
+
+```{r results='asis'}
+for(cyl in c(4,8)){
+  val <- paste("Cars with", cyl, "cylinders.")
+  dt <- mtcars[,1:4] %>%
+    filter(cyl == cyl) %>%
+    head(2)
+  if(table.engine=="flextable")
+    tab <- myflextable(dt) %>% 
+      set_caption(paste(val, "We can set a caption but no way to cross-reference it"))
+  if(table.engine=="kbl") 
+    tab <- mykbl(dt, caption = "We can set a caption but no way to cross-reference it")
+  cat(knitr::knit_print(tab))
+}
+```
+
+## Getting the cross-reference links
+
+We have to use a bit of magic to get our dynamic table numbers and links using Quarto's cross-referencing. The trick is to use a child Rmd (or qmd) in a for loop. This trick can be used for figures too but I'll just show it here with tables. This code inspired from [this gist](https://gist.github.com/rmoff/a043676a2f084b81a434).
+
+We use `knit_expand()` and make a child Rmd that uses double curly braces like `{{value.to.match}}` in the code. That way the value at the time this Rmd was embedded can be referenced. Note that if `value.to.match` were a string (which it is not in this example), we would need to add quotes around `{{value.to.match}}` in our code.
+
+With this approach we get our numbered tables and we can reference the tables usual such as @tbl-cyl8. Click on the Code link at top (HTML output) to see how it's done.
+
+```{r include=FALSE}
+#| echo: true
+out = NULL
+for (value.to.match in c(4,8)) {
+  out = c(out, knit_expand(here::here('tables', 'Table_for_child.Rmd')))
+}
+```
+`r paste(knit(text = out), collapse = '\n')`
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```

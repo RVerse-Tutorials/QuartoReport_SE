@@ -1,0 +1,16 @@
+### Cars with {{value.to.match}} cylinders
+
+```{r}
+tbl_cap <- paste("Cars with", {{value.to.match}}, "cylinders")
+```
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+
+```{r}
+#| label: tbl-cyl{{value.to.match}}
+#| tbl-cap: !expr tbl_cap
+ft <- mtcars %>%
+    filter(cyl == {{value.to.match}}) %>%
+    head(2) %>%
+    flextable()
+ft
+```

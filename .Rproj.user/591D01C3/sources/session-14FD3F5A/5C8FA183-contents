@@ -1,0 +1,58 @@
+---
+title: "Table of Population Counts"
+---
+
+```{r include=FALSE}
+# Since the master had this, I don't need to repeat it. But I do so that I can
+# run this Rmd independently during debugging and development
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(knitr)
+library(kableExtra)
+source(here::here("tables", "_Table_Counts.R"))
+```
+
+```{r}
+# readTableCounts defined in _Table_Counts.R
+out <- readTableCounts("Lower_Columbia_River_Chinook.csv")
+modtime <- out$modtime
+counts <- out$counts
+```
+
+```{r}
+# Create my table function; set default cols but different cols can be passed in
+tablecount <- function(data, cols="Spawners", caption=""){
+  dt <- data[, c("Year", cols)]
+  algn <- paste0("l", paste(rep("c", ncol(dt)-1), collapse=""))
+  if(isword)
+  tab <- knitr::kable(dt, align=algn, digits=0, 
+               row.names=FALSE, format="pandoc")
+  if(!isword){
+     tab <- dt %>% 
+       kableExtra::kbl(align=algn, digits=0, row.names=FALSE) %>% 
+       kableExtra::kable_styling(full_width = FALSE) %>%
+       add_footnote(paste("data file date:", modtime))
+  }
+  tab
+}
+```
+
+```{r}
+tbl <- 1
+i <- unique(counts$`Common Population Name`)[tbl]
+col <- c("Spawners", "Fracwild")
+dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2014)
+tbl_cap <- paste0("Kabel: ", i, " Yearly counts of ", paste(col, collapse=" and "), " for ", min(dat$Year), " to ", max(dat$Year))
+```
+
+```{r}
+#| label: tbl-countskabel
+#| tbl-cap: !expr tbl_cap
+  tab <- tablecount(dat, cols=col, caption=i)
+  tab
+```
+
+```{r results='asis'}
+cat("\n", wordnewpage, "\n")
+```
+
+

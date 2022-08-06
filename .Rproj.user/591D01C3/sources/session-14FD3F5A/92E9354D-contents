@@ -1,0 +1,45 @@
+---
+title: "Appendices of tables"
+---
+
+<!-- Since the main file (index) had this, I don't need to repeat it. 
+     But I do so that I can run this Rmd independently during debugging and development.
+     I set all the output to FALSE. -->
+     
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(knitr)
+library(dplyr) # need this for %>% function
+library(flextable)
+ishtml <- knitr::is_html_output()
+ispdf <- knitr::is_latex_output()
+isword <- !ishtml & !ispdf
+```
+
+<!-- Specify the data here at top so it is easy to find.
+     A better way to do this is to use parameterized Rmd. -->
+     
+<!-- I am adding the last commit date as the data date.
+     That helps makes sure we all know what data were used. -->
+
+```{r}
+nYr <- 2000:2010
+```
+
+```{r results='asis'}
+# So that I can later have many cvsfiles
+cvsfiles <- dir(here::here("data"), pattern = "\\.csv")
+cvsn <- 1
+app.letter <- LETTERS[cvsn]
+cvsfile.to.use <- cvsfiles[cvsn]
+datafil <- here::here("data", cvsfile.to.use)
+tmp <- read.csv(datafil, stringsAsFactors=FALSE)
+ntbl <- tmp %>% distinct(COMMON_POPULATION_NAME) %>% nrow()
+
+out <- NULL
+for(table.num.to.print in 1:2){
+  out = c(out, knit_expand(here::here('tables', 'Appendix_single_table.Rmd')))
+}
+```
+`r paste(knit(text = out), collapse = '\n')`
+

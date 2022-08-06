@@ -1,0 +1,59 @@
+---
+title: "Example flextable"
+author: "EE Holmes"
+output:
+  html_document:
+    df_print: paged
+  word_document:
+    reference_docx: here::here("template.dotx")
+---
+
+<!-- The yaml is not needed. Left here in case I need to copy this file into
+     a non-Quarto project. -->
+
+```{r warning=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(knitr)
+library(xtable)
+library(flextable)
+library(dplyr)
+```
+
+<!-- Generic flextable example from the flextable reference manual. 
+     The tbl-xyz label is important. This allows cross-referencing. -->
+
+
+```{r}
+if( require("xtable") ){
+  data(tli)
+  fm3 <- glm(disadvg ~ ethnicty*grade, data = tli, family = binomial)
+  ft <- xtable_to_flextable(xtable(anova(fm3)), hline.after = c(1))
+  ft <- ft %>%
+    font(fontname="Times New Roman", part="all") %>%
+    fontsize(size=12)
+}
+```
+
+<!-- This auto-numbering bit is different (and better) in Quarto -->
+
+```{r}
+#| label: tbl-flex
+#| tbl-cap: "Getting the auto-numbering to work is different with Quarto. See the code."
+ft
+```
+
+Now, add a caption with `set_caption`:
+
+```{r}
+#| echo: true
+set_caption(ft, 
+  caption = "a table caption with set_caption", 
+  style = "Table Caption")
+```
+
+Or use knitr chunk options `tab.cap="caption"`
+
+```{r tab.cap='Example caption with knitr options'}
+ft
+```
+

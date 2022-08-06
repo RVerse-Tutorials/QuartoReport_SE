@@ -1,0 +1,1 @@
+{"frames":[{"func":"paste0(\"Kabel: \", i, \" Yearly counts of \", paste(col, collapse = \" and \"), \n    \" for \", min(dt$Year), \" to \", max(dt$Year))","file":"","line_number":0,"end_line_number":0,"character_number":0,"end_character_number":0}],"message":"Error in dt$Year : object of type 'closure' is not subsettable\n"}

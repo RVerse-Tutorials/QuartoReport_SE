@@ -1,0 +1,5 @@
+"0","fil <- ""Lower_Columbia_River_Chinook.csv"""
+"0","filful <- here::here(""data"", fil)"
+"0","modtime <- system(paste(""git log -1 --format=%cd"", filful), intern=TRUE)"
+"0","counts <- read.csv(filful, stringsAsFactors=FALSE)"
+"0","colnames(counts) <- fixcols(colnames(counts))"

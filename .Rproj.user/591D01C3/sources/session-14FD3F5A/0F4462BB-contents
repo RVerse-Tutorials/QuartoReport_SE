@@ -1,0 +1,66 @@
+---
+title: "Table of Population Counts with flextable"
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(knitr)
+library(dplyr)
+library(flextable)
+```
+
+```{r}
+# readTableCounts defined in _Table_Counts.R
+out <- readTableCounts("Lower_Columbia_River_Chinook.csv")
+modtime <- out$modtime
+counts <- out$counts
+```
+
+The **flextable** package will do a bit nicer tables than **kable**.
+
+```{r}
+# Create my table function; set default cols but different cols can be passed in
+tablecount <- function(data, cols="Spawners"){
+  dat <- data[, c("Year", cols)]
+  tab <- dat %>%
+    flextable() %>%
+    autofit() %>%
+    add_footer(., Year = "* These spawner counts are from river redd surveys.") %>%
+    merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
+    add_footer(., Year = paste("** data file date:", modtime)) %>%
+    merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
+    colformat_num(., j=1, big.mark = "", na_str = "NA") %>%
+    font(fontname="Times New Roman", part="all") %>%
+    fontsize(size=12)
+  tab
+}
+```
+
+```{r}
+tbl <- 1
+i <- unique(counts$`Common Population Name`)[tbl]
+col <- c("Spawners", "Fracwild")
+dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2003)
+tbl_cap <- paste0("flextable: ", i, " Yearly counts of ", paste(col, collapse=" and "), " for ", min(dat$Year), " to ", max(dat$Year))
+```
+
+```{r}
+#| label: tbl-cflex
+#| tbl-cap: "flextable"
+tbl <- 1
+col <- c("Spawners", "Fracwild")
+  dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2003)
+  tab <- tablecount(dat, cols=col)
+#  cat(knitr::knit_print(tab))
+  tab
+```
+
+```{r}
+#| label: tbl-flex2
+#| tbl-cap: "please work"
+mtcars[1:3, 1:2] %>% flextable()
+```
+
+```{r results='asis'}
+cat("\n", wordnewpage, "\n")
+```

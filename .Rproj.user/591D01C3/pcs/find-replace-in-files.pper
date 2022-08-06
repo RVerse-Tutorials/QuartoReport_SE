@@ -1,0 +1,17 @@
+{
+    "dialog-state": {
+        "query": "Table_flex",
+        "path": "",
+        "regex": false,
+        "caseSensitive": true,
+        "wholeWord": false,
+        "filePatterns": [],
+        "useGitGrep": true,
+        "excludeGitIgnore": true,
+        "excludeFilePatterns": [],
+        "resultsCount": 1,
+        "errorCount": 0,
+        "replaceErrors": "",
+        "projectRelative": true
+    }
+}

@@ -1,0 +1,6 @@
+"0","tbl <- 1"
+"0","i <- unique(counts$`Common Population Name`)[tbl]"
+"0","col <- c(""Spawners"", ""Fracwild"")"
+"0","tbl_cap <- paste0(""Kabel: "", i, "" Yearly counts of "", paste(col, collapse="" and ""), "" for "", min(dt$Year), "" to "", max(dt$Year))"
+"2","Error in dt$Year : object of type 'closure' is not subsettable
+"

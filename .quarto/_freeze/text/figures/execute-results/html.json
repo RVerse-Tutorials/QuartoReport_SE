@@ -1,0 +1,16 @@
+{
+  "hash": "47a27cbfede4cd0385247bb0344bfe35",
+  "result": {
+    "markdown": "::: {.cell}\n\n:::\n\n\n\n# Figures intro\n\nThis chapter shows a few simple examples of including figures and getting cross-referencing to work across formats (HTML, Word, PDF).\n\n## `ggplot2`\n\nWe can see in @fig-salmon that there are many time series. The number of panels is choosen automatically using {ggplot2}. \n\n\n\n\n\n\n\n\n\n\n\n::: {.cell}\n\n:::\n\n<!-- Key bit is the fig-xyz label so that auto-numbering of fig works.\n     Notice that this plot will work for panels between 1 and 20 or so.\n     I am not customizing the paneling. -->\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![Plot of the data](figures_files/figure-html/fig-salmon-1.png){#fig-salmon fig-align='center' width=672}\n:::\n:::\n\n\n\n```{=openxml}\n<w:p><w:r><w:br w:type=\"page\"/></w:r></w:p>\n```\n",
+    "supporting": [
+      "figures_files/figure-html"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

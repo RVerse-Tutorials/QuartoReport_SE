@@ -1,0 +1,26 @@
+{
+    "id": "2A86DAA8",
+    "path": "~/Documents/GitHub/QmdReport/tables/_common.R",
+    "project_path": "tables/_common.R",
+    "type": "r_source",
+    "hash": "2932936771",
+    "contents": "",
+    "dirty": false,
+    "created": 1659816994969.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "24,1",
+        "scrollLine": "19"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1659822049,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1659822049448,
+    "read_only": false,
+    "read_only_alternatives": []
+}

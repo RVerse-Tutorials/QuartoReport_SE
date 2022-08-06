@@ -1,0 +1,4 @@
+"0","# readTableCounts defined in _Table_Counts.R"
+"0","out <- readTableCounts(""Lower_Columbia_River_Chinook.csv"")"
+"0","modtime <- out$modtime"
+"0","counts <- out$counts"

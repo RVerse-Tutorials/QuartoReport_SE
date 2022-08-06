@@ -1,0 +1,69 @@
+---
+title: "Table of Population Counts"
+output:
+  html_document:
+    df_print: paged
+  word_document: default
+  pdf_document: default
+---
+
+```{r include=FALSE}
+# Since the master had this, I don't need to repeat it. But I do so that I can
+# run this Rmd independently during debugging and development
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(knitr)
+library(kableExtra)
+source(here::here("tables", "_Table_Counts.R"))
+```
+
+```{r}
+# readTableCounts defined in _Table_Counts.R
+out <- readTableCounts("Lower_Columbia_River_Chinook.csv")
+modtime <- out$modtime
+counts <- out$counts
+```
+
+```{r}
+# Create my table function; set default cols but different cols can be passed in
+tablecount <- function(data, cols="Spawners", caption=""){
+  dt <- data[, c("Year", cols)]
+  algn <- paste0("l", paste(rep("c", ncol(dt)-1), collapse=""))
+  cap <- paste0(caption, "Yearly counts of ", paste(cols, collapse=" and "), " for ", min(dt$Year), " to ", max(dt$Year))
+  if(isword)
+  tab <- knitr::kable(dt, align=algn, caption=cap, digits=0, 
+               row.names=FALSE, format="pandoc")
+  if(ishtml){
+     tab <- dt %>% 
+       kableExtra::kbl(align=algn, caption=cap, digits=0, row.names=FALSE) %>% 
+       kableExtra::kable_styling(full_width = FALSE) %>%
+       add_footnote(paste("data file date:", modtime))
+  }
+  tab
+}
+```
+
+```{r results='asis', eval=isword}
+tbl <- 1
+col <- c("Spawners", "Fracwild")
+for(i in unique(counts$`Common Population Name`)[1:tbl]){
+  dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2014)
+  cap <- paste0("Table ", tbl, ". ", i, ". ")
+  tab <- tablecount(dat, cols=col, caption=cap)
+  cat("\n", wordnewpage, "\n")
+  print(tab)
+  tbl <- tbl + 1
+}
+```
+
+```{r results='asis', eval=ishtml}
+tbl <- 2
+col <- c("Spawners", "Fracwild")
+for(i in unique(counts$`Common Population Name`)[1:tbl]){
+  dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2014)
+  cap <- paste0("Table ", tbl, ". ", i, ". ")
+  tab <- tablecount(dat, cols=col, caption=cap)
+  print(tab)
+  tbl <- tbl + 1
+}
+```
+

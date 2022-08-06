@@ -1,0 +1,7 @@
+"0","#| label: tbl-example"
+"0","#| tbl-cap: ""This is a simple table."""
+"0","dt <- mtcars[1:10, 1:6]"
+"0","if(table.engine==""flextable"") myflextable(dt)"
+"2","Error in add_footer_row(., values = ""flextable"") : 
+  colwidths' sum must be equal to the number of col_keys (6)
+"

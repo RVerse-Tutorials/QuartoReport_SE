@@ -1,0 +1,8 @@
+build-last-errors="[]"
+build-last-errors-base-dir=""
+build-last-outputs="[]"
+compile_pdf_state="{\"tab_visible\":false,\"running\":false,\"target_file\":\"\",\"output\":\"\",\"errors\":[]}"
+files.monitored-path=""
+find-in-files-state="{\"handle\":\"37f4d936269e4f0c8a855cf1933e0ec4\",\"input\":\"Table_flex\",\"path\":\"~/Documents/GitHub/QmdReport\",\"regex\":false,\"ignoreCase\":false,\"results\":{\"file\":[\"/Users/eli.holmes/Documents/GitHub/QmdReport/text/tables_figures.qmd\"],\"line\":[18],\"lineValue\":[\"```{r child=here::here(\\\"tables\\\", \\\"Table_flex_example.Rmd\\\")}\"],\"matchOn\":[[34]],\"matchOff\":[[44]],\"replaceMatchOn\":[[]],\"replaceMatchOff\":[[]]},\"running\":false,\"replace\":false,\"preview\":false,\"gitFlag\":true,\"replacePattern\":\"\"}"
+imageDirtyState="1"
+saveActionState="0"

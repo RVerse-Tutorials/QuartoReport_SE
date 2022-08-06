@@ -1,0 +1,99 @@
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+require(knitr)
+require(dplyr) # need this for %>% function
+require(flextable)
+ishtml <- knitr::is_html_output()
+ispdf <- knitr::is_latex_output()
+isword <- !ishtml & !ispdf
+```
+
+
+```{r}
+# Just to make debugging easier
+tbl <- {{table.num.to.print}}
+csvfile <- "{{cvsfile.to.use}}"
+datafil <- here::here("data", cvsfile.to.use)
+counts <- read.csv(datafil, stringsAsFactors=FALSE)
+modtime <- system(paste("git log -1 --format=%cd", datafil), intern=TRUE)
+```
+
+```{r results='asis'}
+if(tbl==1) cat("# Appendix", "{{app.letter}}", "{.unnumbered} \n\n")
+```
+<!-- A function I need for data wrangling. There are better ways to do this -->
+
+```{r}
+fixcols <- function(x){
+  # fix _ and . in colname and make title format
+  x <- stringr::str_replace_all(x, "_", " ")
+  x <- stringr::str_replace_all(x, "[,]", " ")
+  x <- stringr::str_to_title(x)
+  x[x=="Esu"] <- "ESU"
+  x[x=="Number Of Spawners"] <- "Spawners"
+  x
+}
+```
+
+<!-- This is how to get a new page in Word. -->
+
+```{r}
+wordnewpage <-
+'```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```'
+```
+
+<!-- Data clean-up -->
+
+```{r}
+colnames(counts) <- fixcols(colnames(counts))
+```
+
+<!-- The table function. -->
+
+```{r}
+# These are all flextable functions
+tablecount <- function(data, cols="Spawners"){
+  dat <- data[, c("Year", cols)]
+  tab <- dat %>%
+    flextable() %>%
+    autofit() %>%
+    add_footer(., Year = "* These spawner counts are from river redd surveys.") %>%
+    merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
+    add_footer(., Year = paste("** data file:", csvfile, "mod date:", modtime)) %>%
+    merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
+    colformat_num(., j=1, big.mark = "", na_str = "NA") %>%
+    font(fontname="Times New Roman", part="all") %>%
+    fontsize(size=10) %>%
+    line_spacing(space = 1.0, part = "all")
+}
+```
+
+
+```{r}
+popname <- unique(counts$`Common Population Name`)[tbl]
+dat <- subset(counts, `Common Population Name`==popname & Year %in% nYr)
+tbl_cap <- paste0("Spawners and fracwild from ", popname, " for ", min(dat$Year), " to ", max(dat$Year), ". ")
+```
+
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+
+```{r results='asis'}
+if(ishtml) cat("## ", popname, "\n\n")
+```
+
+```{r}
+#| label: tbl-app{{app.letter}}{{table.num.to.print}}
+#| tbl-cap: !expr tbl_cap
+out <- NULL
+col <- c("Spawners", "Fracwild")
+tab <- tablecount(dat, cols=col)
+tab
+```
+
+```{r results='asis'}
+if(isword) cat("\n", wordnewpage, "\n")
+if(ispdf) cat("\\newpage")
+```

@@ -1,0 +1,59 @@
+project:
+  type: book
+
+book:
+  title: A Very Long Title for A Big Report Because Long Titles are Common
+  subtitle: Some tips on creating reports with Quarto with a focus on tables and replicated tables and figures
+  author:
+    - name: Jane Doe
+      affiliations:
+        - name: University of XXX
+          department: Department of YYY
+    - name: Eva Nováková
+      affiliations:
+        - name: University of XXX
+          department: Department of YYY
+    - name: Matti Meikäläinen
+      affiliations:
+        - name: University of XXX
+          department: Department of YYY
+  chapters:
+    - index.qmd
+    - preface.qmd
+    - text/tips.qmd
+    - text/tables.qmd
+    - text/tables_in_a_for_loop.qmd
+    - text/kable_flex.qmd
+    - text/figures.qmd
+    - text/conclusion.qmd
+    - references.qmd
+  appendices:
+    - text/appendix_tables.qmd
+
+bibliography: references.bib
+
+execute:
+  echo: false
+  code-overflow: wrap
+
+format:
+  docx:
+    toc: true
+    reference-doc: template.docx
+    always_allow_html: true
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-tools: true
+  pdf:
+    documentclass: scrbook
+    classoption: ["oneside"]
+    template-partials: ["partials/before-body.tex"]
+    toc: true
+    lof: true
+    lot: true
+    include-in-header: 
+      - partials/inheader.tex
+
+

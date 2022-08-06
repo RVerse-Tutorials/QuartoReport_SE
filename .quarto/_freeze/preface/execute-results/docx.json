@@ -1,0 +1,18 @@
+{
+  "hash": "ad024d1cce09d31effe094bc59a42541",
+  "result": {
+    "markdown": "---\ntitle: Preface\n---\n\n\n## Acknowledgements  {.unlisted .unnumbered}\n\nPhasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus.\n\n\n\n\n\n\n\n## Abstract {-}\n\nPhasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus.\n\n\n```{=openxml}\n<w:p><w:r><w:br w:type=\"page\"/></w:r></w:p>\n```\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}

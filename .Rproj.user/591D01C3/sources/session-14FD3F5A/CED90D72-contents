@@ -1,0 +1,95 @@
+```{r warning=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(knitr)
+library(xtable)
+library(flextable)
+library(dplyr)
+```
+
+# Tables and figures
+
+This chapter shows a few simple examples of including tables and figures.
+
+## `knitr` table
+
+This is an example knitr table. We can reference @tbl-tbl1 easily and it is auto-numbered. See the `Table1.Rmd` for how to get auto-numbering to work in Quarto.
+
+```{r}
+#| echo: true
+#| label: tbl-tbl1
+#| tbl-cap: "This is a table with a number. Getting the auto-numbering to work is different with Quarto. See the code."
+dt <- mtcars[1:5, 1:3]
+kable(dt, align="lcc", digits=c(0,1,2), format="pandoc")
+```
+
+
+## flextable
+
+This is an example from the flextable help doc. We can reference @tbl-flexexample easily and it is auto-numbered. 
+
+```{r}
+  data(tli)
+  fm3 <- glm(disadvg ~ ethnicty*grade, data = tli, family = binomial)
+  ft <- xtable_to_flextable(xtable(anova(fm3)), hline.after = c(1))
+  ft <- ft %>%
+    font(fontname="Times New Roman", part="all") %>%
+    fontsize(size=12)
+```
+
+```{r}
+#| label: tbl-flexexample
+#| tbl-cap: "Getting the auto-numbering to work is different with Quarto. See the code."
+ft
+```
+
+## Including table files
+
+It is often good to have your files in separate files so that when you edit your tables, you only have to work on the table code.
+
+```{r child=here::here("tables", "Table_flex.Rmd")}
+```
+
+
+## Cross-references
+
+In Quarto, [table links](https://quarto.org/docs/authoring/cross-references.html#tables) use the table label `@tbl-tablabel` where `tablabel` is the label you put on the table chunk. In the text it looks like this @tbl-tablabel. The chunk yaml looks like this
+
+```
+#| label: tbl-tablabel
+#| tbl-cap: "my caption"
+```
+
+```{r}
+#| label: tbl-tablabel
+#| tbl-cap: "This is a table with a number."
+kable(mtcars[1:4,1:3], align="lcc", digits=c(0,1,2), format="pandoc")
+```
+
+## Dynamic table captions
+
+You can create captions dynamically.
+
+```{r}
+#| echo: true
+tbl_cap <- paste("This is a dynamically created caption. The length of mtcars is", nrow(mtcars), "rows")
+```
+
+Unfortunately you cannot dynamically create your chunk labels too.
+
+```{r}
+#| label: tbl-test3
+#| tbl-cap: !expr tbl_cap
+kable(mtcars[1:4,1:3], align="lcc", digits=c(0,1,2), format="pandoc")
+```
+
+
+## Figures
+
+We can see in @fig-salmon that there are many time series. The number of panels is choosen automatically using {ggplot2}. Quisque in nibh sit amet nunc mollis porttitor quis et mauris. Sed non condimentum leo, ac condimentum est. Duis ac venenatis nulla, et aliquet elit. Suspendisse potenti. Duis mollis dui at semper luctus. Maecenas euismod finibus condimentum. Fusce vitae gravida massa. Mauris metus est, pretium non semper vel, dictum vel augue.
+
+```{r child=here::here("figures", "Figure_salmon_ts.Rmd")}
+```
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
