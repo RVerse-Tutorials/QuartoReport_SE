@@ -21,7 +21,7 @@ This is an example from the flextable help doc. We can reference @tbl-flex easil
 
 ## Cross-references
 
-In Quarto, [table links](https://quarto.org/docs/authoring/cross-references.html#tables) use the table label `@tbl-tablabel` where `tablabel` is the label you put on the table chunk. It looks like this
+In Quarto, [table links](https://quarto.org/docs/authoring/cross-references.html#tables) use the table label `@tbl-tablabel` where `tablabel` is the label you put on the table chunk. In the text it looks like this @tbl-tablabel. The chunk yaml looks like this
 
 ```
 #| label: tbl-tablabel
@@ -29,7 +29,7 @@ In Quarto, [table links](https://quarto.org/docs/authoring/cross-references.html
 ```
 
 ```{r}
-#| label: tbl-tbl2
+#| label: tbl-tablabel
 #| tbl-cap: "This is a table with a number."
 kable(mtcars[1:4,1:3], align="lcc", digits=c(0,1,2), format="pandoc")
 ```

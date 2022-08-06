@@ -1,10 +1,5 @@
 ---
 title: "Table of Population Counts"
-output:
-  html_document:
-    df_print: paged
-  word_document: default
-  pdf_document: default
 ---
 
 ```{r include=FALSE}
@@ -28,13 +23,12 @@ counts <- out$counts
 tablecount <- function(data, cols="Spawners", caption=""){
   dt <- data[, c("Year", cols)]
   algn <- paste0("l", paste(rep("c", ncol(dt)-1), collapse=""))
-  cap <- paste0(caption, "Yearly counts of ", paste(cols, collapse=" and "), " for ", min(dt$Year), " to ", max(dt$Year))
   if(isword)
-  tab <- knitr::kable(dt, align=algn, caption=cap, digits=0, 
+  tab <- knitr::kable(dt, align=algn, digits=0, 
                row.names=FALSE, format="pandoc")
-  if(ishtml){
+  if(!isword){
      tab <- dt %>% 
-       kableExtra::kbl(align=algn, caption=cap, digits=0, row.names=FALSE) %>% 
+       kableExtra::kbl(align=algn, digits=0, row.names=FALSE) %>% 
        kableExtra::kable_styling(full_width = FALSE) %>%
        add_footnote(paste("data file date:", modtime))
   }
@@ -42,28 +36,23 @@ tablecount <- function(data, cols="Spawners", caption=""){
 }
 ```
 
-```{r results='asis', eval=isword}
-tbl <- 2
+```{r}
+tbl <- 1
+i <- unique(counts$`Common Population Name`)[tbl]
 col <- c("Spawners", "Fracwild")
-for(i in unique(counts$`Common Population Name`)[1:tbl]){
-  dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2014)
-  cap <- paste0("Table ", tbl, ". ", i, ". ")
-  tab <- tablecount(dat, cols=col, caption=cap)
-  cat("\n", wordnewpage, "\n")
-  print(tab)
-  tbl <- tbl + 1
-}
+dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2014)
+tbl_cap <- paste0("Kabel: ", i, " Yearly counts of ", paste(col, collapse=" and "), " for ", min(dat$Year), " to ", max(dat$Year))
 ```
 
-```{r results='asis', eval=ishtml}
-tbl <- 2
-col <- c("Spawners", "Fracwild")
-for(i in unique(counts$`Common Population Name`)[1:tbl]){
-  dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2014)
-  cap <- paste0("Table ", tbl, ". ", i, ". ")
-  tab <- tablecount(dat, cols=col, caption=cap)
-  print(tab)
-  tbl <- tbl + 1
-}
+```{r}
+#| label: tbl-countskabel
+#| tbl-cap: !expr tbl_cap
+  tab <- tablecount(dat, cols=col, caption=i)
+  tab
 ```
+
+```{r results='asis'}
+cat("\n", wordnewpage, "\n")
+```
+
 

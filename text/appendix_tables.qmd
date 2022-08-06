@@ -1,4 +1,4 @@
-# Appendix
+# Appendices {.unnumbered}
 
 ```{r include=FALSE}
 library(knitr)
@@ -6,9 +6,9 @@ library(flextable)
 opts_chunk$set(echo = FALSE)
 ```
 
-This is an example of a large number of tables in an appendix.
+This is an example of a large number of tables in appendices. All the data are in the `data` folder.
 
-```{r child=here::here("tables", "Table_Appendix_for_loop.Rmd")}
+```{r child=here::here("tables", "Table_Appendix.Rmd")}
 ```
 
 

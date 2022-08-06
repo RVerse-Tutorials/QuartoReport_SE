@@ -1,5 +1,5 @@
 ---
-title: "Table in For Loop"
+title: "Appendices of tables"
 ---
 
 <!-- Since the main file (index) had this, I don't need to repeat it. 
@@ -27,7 +27,11 @@ nYr <- 2000:2010
 ```
 
 ```{r results='asis'}
-cvsfile.to.use <- "Lower_Columbia_River_Chinook.csv"
+# So that I can later have many cvsfiles
+cvsfiles <- dir(here::here("data"), pattern = "\\.csv")
+cvsn <- 1
+app.letter <- LETTERS[cvsn]
+cvsfile.to.use <- cvsfiles[cvsn]
 datafil <- here::here("data", cvsfile.to.use)
 tmp <- read.csv(datafil, stringsAsFactors=FALSE)
 ntbl <- tmp %>% distinct(COMMON_POPULATION_NAME) %>% nrow()

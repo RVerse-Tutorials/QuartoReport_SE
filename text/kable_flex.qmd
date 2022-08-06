@@ -1,8 +1,15 @@
----
-title: Kable vs Flex vs qt
----  
+# Kable vs Flex vs qt
+
+Here I compare a three different ways to make tables.
 
 ## `kabel`
+
+```{r}
+library(kabel)
+library(kabelExtra)
+kbl(mtcars, caption = "Demo table", booktabs = T) %>%
+kable_styling(latex_options = c("striped", "hold_position", "scale_down")))
+```
 
 ```{r child=here::here("tables", "Table_Counts.Rmd")}
 ```

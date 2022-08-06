@@ -21,11 +21,10 @@ counts <- out$counts
 
 ```{r}
 # Create my table function; set default cols but different cols can be passed in
-tablecount <- function(data, cols="Spawners", caption=""){
-  cap <- paste0(caption, "Yearly counts of ", paste(cols, collapse=" and "), " for ", min(dat$Year), " to ", max(dat$Year))
+tablecount <- function(data, cols="Spawners"){
   tab <- data %>%
     select(c("Year", cols)) %>%
-    gt(caption = caption) %>%
+    gt() %>%
    #Add a data source footnote
     tab_source_note(source_note = paste("** data file date:", modtime)) %>%
     tab_source_note(source_note = "* These spawner counts are from river redd surveys.") %>%
@@ -38,20 +37,20 @@ tablecount <- function(data, cols="Spawners", caption=""){
 ```
 
 ```{r}
-tab_cap <- paste("Table", "will this even work???")
+tbl <- 1
+i <- unique(counts$`Common Population Name`)[tbl]
+col <- c("Spawners", "Fracwild")
+dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2003)
+tbl_cap <- paste0("qt: ", i, " Yearly counts of ", paste(col, collapse=" and "), " for ", min(dat$Year), " to ", max(dat$Year))
 ```
 
 ```{r results='asis'}
-#| label: tbl-qt
-#| tbl-cap: !expr tab_cap
-tbl <- 2
-col <- c("Spawners", "Fracwild")
-for(i in unique(counts$`Common Population Name`)[1:tbl]){
+#| label: tbl-countsqt
+#| tbl-cap: !expr tbl_cap
   dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2014)
-  cap <- paste0("Table ", tbl, ". ", i, ". ")
-  tab <- tablecount(dat, cols=col, caption=cap)
-  cat("\n", wordnewpage, "\n")
-  cat(knitr::knit_print(tab))
+  tab <- tablecount(dat, cols=col)
+  tab
+  #cat("\n", wordnewpage, "\n")
+  #cat(knitr::knit_print(tab))
   # print(tab) also works
-}
 ```

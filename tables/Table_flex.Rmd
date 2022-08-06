@@ -47,7 +47,7 @@ Now, add a caption with `set_caption`:
 ```{r}
 #| echo: true
 set_caption(ft, 
-  caption = "airquality dataset", 
+  caption = "a table caption with set_caption", 
   style = "Table Caption")
 ```
 

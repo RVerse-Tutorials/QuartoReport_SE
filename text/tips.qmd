@@ -1,6 +1,5 @@
----
-title: Tips
----
+# Tips
+
 
 ## Overview 
 
@@ -106,6 +105,20 @@ cat('```{=openxml}\n<w:p><w:r><w:br w:type="page"/></w:r></w:p>\n```')
 ## Output templates with Quarto
 
 Quarto is working on templates to make output to different formats easy. Here is an example of journal templates [quarto-journals](https://github.com/quarto-journals/).
+
+## Weird Quarto quirks
+
+* If you use 
+```
+---
+title: MyTitle
+---
+```
+as your title spec, then you won't get the first header 2 in your pdf. Use `# ` instead.
+
+* If you have 2 `# ` levels in a qmd file, you only the first chapter appearing in the TOC. The others appear weirdly as sub-chapters.
+
+* with flextable, your table captions from knitr yaml disappear if the table breaks across a page.
 
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>

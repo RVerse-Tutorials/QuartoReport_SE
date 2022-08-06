@@ -16,10 +16,11 @@ Example of a table in a for loop.
 ```{r results='asis'}
 #| echo: true
 for(cyl in c(4,6,8)){
-  ft <- mtcars %>%
+  ft <- mtcars[,1:5] %>%
     filter(cyl == cyl) %>%
     head(2) %>%
     flextable() %>%
+    autofit() %>%
     set_caption(
     caption = paste("Cars with", cyl, "cylinders"), 
     style = "Table Caption")

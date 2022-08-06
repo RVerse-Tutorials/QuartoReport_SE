@@ -19,6 +19,9 @@ counts <- read.csv(datafil, stringsAsFactors=FALSE)
 modtime <- system(paste("git log -1 --format=%cd", datafil), intern=TRUE)
 ```
 
+```{r results='asis'}
+if(tbl==1) cat("# Appendix", "{{app.letter}}", "{.unnumbered} \n\n")
+```
 <!-- A function I need for data wrangling. There are better ways to do this -->
 
 ```{r}
@@ -69,12 +72,28 @@ tablecount <- function(data, cols="Spawners"){
 ```
 
 
-```{r results='asis'}
-out <- NULL
-col <- c("Spawners", "Fracwild")
+```{r}
 popname <- unique(counts$`Common Population Name`)[tbl]
 dat <- subset(counts, `Common Population Name`==popname & Year %in% nYr)
-caption <- paste0("Spawners and fracwild from ", popname, " for ", min(dat$Year), " to ", max(dat$Year), ". ")
+tbl_cap <- paste0("Spawners and fracwild from ", popname, " for ", min(dat$Year), " to ", max(dat$Year), ". ")
+```
+
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+
+```{r results='asis'}
+if(ishtml) cat("## ", popname, "\n\n")
+```
+
+```{r}
+#| label: tbl-app{{app.letter}}{{table.num.to.print}}
+#| tbl-cap: !expr tbl_cap
+out <- NULL
+col <- c("Spawners", "Fracwild")
 tab <- tablecount(dat, cols=col)
 tab
+```
+
+```{r results='asis'}
+if(isword) cat("\n", wordnewpage, "\n")
+if(ispdf) cat("\\newpage")
 ```
