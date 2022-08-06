@@ -2,8 +2,8 @@ project:
   type: book
 
 book:
-  title: The SocioEconomic Aspects of Stock Assessments Report
-  subtitle: Recommendations for Increasing Assessment Accuracy and Improving Management Advice
+  title: A Very Long Title for A Big Report Because Long Titles are Common
+  subtitle: Some tips on creating reports with Quarto with a focus on tables and replicated tables and figures
   author:
     - name: Jane Doe
       affiliations:
@@ -21,9 +21,10 @@ book:
     - index.qmd
     - preface.qmd
     - text/tips.qmd
-    - text/tables_figures.qmd
+    - text/tables.qmd
     - text/tables_in_a_for_loop.qmd
     - text/kable_flex.qmd
+    - text/figures.qmd
     - text/conclusion.qmd
     - references.qmd
   appendices:

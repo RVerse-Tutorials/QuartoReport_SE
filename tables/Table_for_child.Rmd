@@ -3,9 +3,7 @@ always_allow_html: true
 ---
 
 ```{r}
-table.engine <- "kable"
-tbl_cap <- paste("Cars with", {{value.to.match}}, "cylinders,")
-if(table.engine=="kable") tbl_cap <- paste(tbl_cap, "This will look bad in Word but ok in HTML and PDF.")
+tbl_cap <- paste("Cars with", {{value.to.match}}, "cylinders. These tables have cross-ref links via @tbl-xyz.")
 dt <- mtcars[, 1:4] %>%
     filter(cyl == {{value.to.match}}) %>%
     head(3)
@@ -15,10 +13,6 @@ dt <- mtcars[, 1:4] %>%
 ```{r}
 #| label: tbl-cyl{{value.to.match}}
 #| tbl-cap: !expr tbl_cap
-library(knitr)
-library(kableExtra)
-if(table.engine=="flextable") flextable::flextable(dt)
-if(table.engine=="kable")
-  kableExtra::kbl(dt, booktabs = TRUE) %>%
-  kable_styling(position = "center")
+if(table.engine=="flextable") myflextable(dt)
+if(table.engine=="kbl") mykbl(dt)
 ```

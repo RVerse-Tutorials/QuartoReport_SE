@@ -4,9 +4,10 @@ always_allow_html: true
 
 ```{r warning=FALSE, echo=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+source(here::here("tables", "_common.R"))
 ```
 
-# Kable vs Flex vs qt
+# Kable vs Flex vs qt {#sec-kableflexgt}
 
 Here I compare a three different ways to make tables.
 
@@ -20,24 +21,26 @@ f2 <- "Here is a second footnote."
 
 ## `kable`
 
-Here is the {kable} table @tbl-kable. {kabel} is part of {knitr} so definitely going to be supported by Quarto since Quarto uses the {knitr} engine. Cross-referencing works across HTML, PDF and Word but output to Word is ugly and no signs that this is going to be fixed.
+Here is the {kable} table @tbl-kable. {kabel} is part of {knitr} so definitely going to be supported by Quarto since Quarto uses the {knitr} engine. Cross-referencing works across HTML, PDF and Word but output to Word is not always great.
 
 ```{r}
 #| label: tbl-kable
 #| tbl-cap: !expr paste("kable:", tbl_cap)
+#| echo: true
 library(knitr)
 library(kableExtra)
 # note hold_position not working in Quarto v1.0.38.
 kbl(dt, booktabs = TRUE) %>%
   kable_styling(latex_options = c("scale_down")) %>%
-  footnote(symbol = c(f1, f2))
+  kableExtra::footnote(symbol = c(f1, f2))
 ```
 
 ### `kable` quirks
 
-* Make sure to put `always_allow_html: true` in the yaml at the top of your Rmd or qmd file if outputting to Word.
-* Word output is not good looking. This is a known issue with `kable`
+* Make sure to put `always_allow_html: true` in the yaml at the top of your Rmd or qmd file if outputting to Word. I can't figure out how to put it in the `
+* Word output is often not good looking. This is a known issue with `kable`
 * Do not pass in caption to `kbl()` if you want to use Quarto's cross-reference engine.
+* `kbl(..., format="pandoc")` can help for Word if your templates stop working but destroys the PDF output.
 
 ## `flextable`
 
@@ -46,11 +49,12 @@ Here is the {flextable} table @tbl-flex.  {flextable} gives you a lot more contr
 ```{r}
 #| label: tbl-flex
 #| tbl-cap: !expr paste("flextable:", tbl_cap)
+#| echo: true
 library(flextable)
 dt %>%
   flextable() %>%
   autofit() %>%
-  footnote(i = 1, j = 1:2,
+  flextable::footnote(i = 1, j = 1:2,
             value = as_paragraph(c(f1, f2)),
             ref_symbols = c("a", "b"),
             part = "header") %>%
@@ -65,11 +69,12 @@ dt %>%
 ## `gt`
 
 Here is the {gt} table @tbl-gt. {gt} has many of the same features as {flextable} and is in the RStudio suite so maybe it'll get more Quarto support in the long run.
-But like {kable}, the Word output is ugly. Generally speaking it is less developed and easy to use than {flextable} in my experience.
+But like {kable}, the Word output is not so great, at least not by default. 
 
 ```{r}
 #| label: tbl-gt
 #| tbl-cap: !expr paste("gt:", tbl_cap)
+#| echo: true
 library(gt)
 dt %>%
   gt() %>%
