@@ -11,7 +11,7 @@ I presented QmdReport at the last RWorkflow workshop. I'd made a lot of progress
 * flextable is by far best for Word but cross-refs are broken. The Quarto dev team knows about the problem.
 * I worked out how to use child Rmds.
 * I put tables separate from figures.
-* I tried using `quarto publish gh-pages` but I had to (or it seemed easier that) install pandoc to my bin instead of where RStudio has it. And then all the cross-ref links worked by showed "unresolved" and didn't look right. Turns out Quarto breaks with pandoc 2.19, so I have to figure out how to uninstall pandoc so RStudio goes back to using the old version. I had to run `rmarkdown::find_pandoc(version="2.18")` to force RStudio to use the previous pandoc version.
+* I tried having appendices as a "part" using `appendices: ` in the `_quarto.yml` but when I added a cross-ref to a chapter it wouldn't build to Word. So had to get rid of that.
 
 ## Aug 5 22 update
 
