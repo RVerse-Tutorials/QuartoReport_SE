@@ -1,6 +1,7 @@
 project:
   type: book
   output-dir: docs
+  output-file: "QmdReport"
 
 book:
   title: A Very Long Title for A Big Report Because Long Titles are Common
