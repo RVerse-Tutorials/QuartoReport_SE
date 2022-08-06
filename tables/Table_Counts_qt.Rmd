@@ -1,0 +1,57 @@
+---
+title: "Table of Population Counts with qt"
+---
+
+For some reason I can't get Quarto to respect my font specification with {qt}.
+
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+library(gt)
+library(tidyverse)
+library(glue)
+source(here::here("tables", "_Table_Counts.R"))
+```
+
+```{r}
+# readTableCounts defined in _Table_Counts.R
+out <- readTableCounts("Lower_Columbia_River_Chinook.csv")
+modtime <- out$modtime
+counts <- out$counts
+```
+
+```{r}
+# Create my table function; set default cols but different cols can be passed in
+tablecount <- function(data, cols="Spawners", caption=""){
+  cap <- paste0(caption, "Yearly counts of ", paste(cols, collapse=" and "), " for ", min(dat$Year), " to ", max(dat$Year))
+  tab <- data %>%
+    select(c("Year", cols)) %>%
+    gt(caption = caption) %>%
+   #Add a data source footnote
+    tab_source_note(source_note = paste("** data file date:", modtime)) %>%
+    tab_source_note(source_note = "* These spawner counts are from river redd surveys.") %>%
+    fmt_number(cols, decimals = 2) %>%
+    tab_options(
+      table.font.size = px(18), 
+      table.font.names = "Times New Roman",
+      data_row.padding = px(1))
+  }
+```
+
+```{r}
+tab_cap <- paste("Table", "will this even work???")
+```
+
+```{r results='asis'}
+#| label: tbl-qt
+#| tbl-cap: !expr tab_cap
+tbl <- 2
+col <- c("Spawners", "Fracwild")
+for(i in unique(counts$`Common Population Name`)[1:tbl]){
+  dat <- subset(counts, `Common Population Name`==i & Year %in% 2000:2014)
+  cap <- paste0("Table ", tbl, ". ", i, ". ")
+  tab <- tablecount(dat, cols=col, caption=cap)
+  cat("\n", wordnewpage, "\n")
+  cat(knitr::knit_print(tab))
+  # print(tab) also works
+}
+```

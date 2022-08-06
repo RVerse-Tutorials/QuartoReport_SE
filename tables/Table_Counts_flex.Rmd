@@ -3,42 +3,17 @@ title: "Table of Population Counts with flextable"
 ---
 
 ```{r include=FALSE}
-# Since the master had this, I don't need to repeat it. But I do so that I can
-# run this Rmd independently during debugging and development
 knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
 library(knitr)
-# need this for %>% function
 library(dplyr)
 library(flextable)
 ```
 
 ```{r}
-fixcols <- function(x){
-  # fix _ and . in colname and make title format
-  x <- stringr::str_replace_all(x, "_", " ")
-  x <- stringr::str_replace_all(x, "[,]", " ")
-  x <- stringr::str_to_title(x)
-  x[x=="Esu"] <- "ESU"
-  x[x=="Number Of Spawners"] <- "Spawners"
-  x
-}
-```
-
-<!-- This is how to get a new page in Word. Make sure you are in print view on the word doc -->
-
-```{r}
-wordnewpage <-
-'```{=openxml}
-<w:p><w:r><w:br w:type="page"/></w:r></w:p>
-```'
-```
-
-```{r}
-fil <- "Lower_Columbia_River_Chinook.csv"
-filful <- file.path(here::here(), "data", fil)
-modtime <- system(paste("git log -1 --format=%cd", filful), intern=TRUE)
-counts <- read.csv(filful, stringsAsFactors=FALSE)
-colnames(counts) <- fixcols(colnames(counts))
+# readTableCounts defined in _Table_Counts.R
+out <- readTableCounts("Lower_Columbia_River_Chinook.csv")
+modtime <- out$modtime
+counts <- out$counts
 ```
 
 The **flextable** package will do a bit nicer tables than **kable**.

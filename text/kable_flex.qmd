@@ -1,15 +1,20 @@
 ---
-title: Kable vs Flex
+title: Kable vs Flex vs qt
 ---  
 
 ## `kabel`
 
-```{r child=file.path(here::here(), "tables", "Table_Counts.Rmd")}
+```{r child=here::here("tables", "Table_Counts.Rmd")}
 ```
 
 ## `flextable`
 
-```{r child=file.path(here::here(), "tables", "Table_Counts_flex.Rmd")}
+```{r child=here::here("tables", "Table_Counts_flex.Rmd")}
+```
+
+## `qt`
+
+```{r child=here::here("tables", "Table_Counts_qt.Rmd")}
 ```
 
 

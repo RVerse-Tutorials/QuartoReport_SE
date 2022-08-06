@@ -13,39 +13,14 @@ output:
 knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
 library(knitr)
 library(kableExtra)
-# need to know the format
-ishtml <- knitr::is_html_output()
-ispdf <- knitr::is_latex_output()
-isword <- !ishtml & !ispdf
+source(here::here("tables", "_Table_Counts.R"))
 ```
 
 ```{r}
-fixcols <- function(x){
-  # fix _ and . in colname and make title format
-  x <- stringr::str_replace_all(x, "_", " ")
-  x <- stringr::str_replace_all(x, "[,]", " ")
-  x <- stringr::str_to_title(x)
-  x[x=="Esu"] <- "ESU"
-  x[x=="Number Of Spawners"] <- "Spawners"
-  x
-}
-```
-
-<!-- This is how to get a new page in Word. Make sure you are in print view on the word doc -->
-
-```{r}
-wordnewpage <-
-'```{=openxml}
-<w:p><w:r><w:br w:type="page"/></w:r></w:p>
-```'
-```
-
-```{r}
-fil <- "Lower_Columbia_River_Chinook.csv"
-filful <- here::here("data", fil)
-modtime <- system(paste("git log -1 --format=%cd", filful), intern=TRUE)
-counts <- read.csv(filful, stringsAsFactors=FALSE)
-colnames(counts) <- fixcols(colnames(counts))
+# readTableCounts defined in _Table_Counts.R
+out <- readTableCounts("Lower_Columbia_River_Chinook.csv")
+modtime <- out$modtime
+counts <- out$counts
 ```
 
 ```{r}
