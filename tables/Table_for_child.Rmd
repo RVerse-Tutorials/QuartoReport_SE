@@ -1,16 +1,24 @@
-### Cars with {{value.to.match}} cylinders
+---
+always_allow_html: true
+---
 
 ```{r}
-tbl_cap <- paste("Cars with", {{value.to.match}}, "cylinders")
+table.engine <- "kable"
+tbl_cap <- paste("Cars with", {{value.to.match}}, "cylinders,")
+if(table.engine=="kable") tbl_cap <- paste(tbl_cap, "This will look bad in Word but ok in HTML and PDF.")
+dt <- mtcars[, 1:4] %>%
+    filter(cyl == {{value.to.match}}) %>%
+    head(3)
 ```
 <!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
 
 ```{r}
 #| label: tbl-cyl{{value.to.match}}
 #| tbl-cap: !expr tbl_cap
-ft <- mtcars %>%
-    filter(cyl == {{value.to.match}}) %>%
-    head(2) %>%
-    flextable()
-ft
+library(knitr)
+library(kableExtra)
+if(table.engine=="flextable") flextable::flextable(dt)
+if(table.engine=="kable")
+  kableExtra::kbl(dt, booktabs = TRUE) %>%
+  kable_styling(position = "center")
 ```
