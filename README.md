@@ -2,6 +2,16 @@
 
 A demo a Quarto report
 
+## Aug 6 22 update
+
+I presented QmdReport at the last RWorkflow workshop. I'd made a lot of progress but many things were not working still. I made a bunch of updates and cleaned things up.
+
+* After fighting to try to get tables to look ok using one table engine, I have up and wrote some helper functions in `tables/_common.R` to select the best engine for LaTeX versus Word/HTML.
+* flextable cross-refs don't work in pdf but kableExtra tables work and look better in some ways. So I use kableExtra for pdf's.
+* flextable is by far best for Word but cross-refs are broken. The Quarto dev team knows about the problem.
+* I worked out how to use child Rmds.
+* I put tables separate from figures.
+
 ## Aug 5 22 update
 
 The title page work is living here at the moment: https://github.com/nmfs-opensci/quarto_titlepages
