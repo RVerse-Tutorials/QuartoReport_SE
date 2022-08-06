@@ -39,6 +39,7 @@ format:
   docx:
     toc: true
     reference-doc: template.docx
+    always_allow_html: true
   html:
     theme: cosmo
     toc: true

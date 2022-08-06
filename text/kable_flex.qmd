@@ -1,28 +1,90 @@
+---
+always_allow_html: true
+---
+
+```{r warning=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+```
+
 # Kable vs Flex vs qt
 
 Here I compare a three different ways to make tables.
 
-## `kabel`
+```{r}
+tbl_cap <- "Donec bibendum pharetra arcu vitae porttitor. Morbi ac quam nunc. Ut cursus dolor a mauris aliquet vulputate. Morbi elementum ullamcorper augue, et tincidunt libero facilisis posuere. Nam congue velit non elit sollicitudin aliquet."
+dt <- (mtcars[1:10,])
+f1 <- "Here is a footnote about this table"
+f2 <- "Here is a second footnote."
+```
+
+
+## `kable`
+
+Here is the {kable} table @tbl-kable. {kabel} is part of {knitr} so definitely going to be supported by Quarto since Quarto uses the {knitr} engine. Cross-referencing works across HTML, PDF and Word but output to Word is ugly and no signs that this is going to be fixed.
 
 ```{r}
-library(kabel)
-library(kabelExtra)
-kbl(mtcars, caption = "Demo table", booktabs = T) %>%
-kable_styling(latex_options = c("striped", "hold_position", "scale_down")))
+#| label: tbl-kable
+#| tbl-cap: !expr paste("kable:", tbl_cap)
+library(knitr)
+library(kableExtra)
+# note hold_position not working in Quarto v1.0.38.
+kbl(dt, booktabs = TRUE) %>%
+  kable_styling(latex_options = c("scale_down")) %>%
+  footnote(symbol = c(f1, f2))
 ```
 
-```{r child=here::here("tables", "Table_Counts.Rmd")}
-```
+### `kable` quirks
+
+* Make sure to put `always_allow_html: true` in the yaml at the top of your Rmd or qmd file if outputting to Word.
+* Word output is not good looking. This is a known issue with `kable`
+* Do not pass in caption to `kbl()` if you want to use Quarto's cross-reference engine.
 
 ## `flextable`
 
-```{r child=here::here("tables", "Table_Counts_flex.Rmd")}
+Here is the {flextable} table @tbl-flex.  {flextable} gives you a lot more control over your tables with a grammar format (like ggplot2). It also gives nice output to Word, PDF and HTML. Sadly in Quarto v1.0.38 cross-reference and table captioning for Word and PDF is completely broken, but the developers know about this. The {officer} package, which I think Quarto is leaning on for Word generation, use {flextable} so I am hoping that {flextable} gets moved into the RStudio suite.
+
+```{r}
+#| label: tbl-flex
+#| tbl-cap: !expr paste("flextable:", tbl_cap)
+library(flextable)
+dt %>%
+  flextable() %>%
+  autofit() %>%
+  footnote(i = 1, j = 1:2,
+            value = as_paragraph(c(f1, f2)),
+            ref_symbols = c("a", "b"),
+            part = "header") %>%
+  font(fontname="Times New Roman", part="all") %>%
+  fontsize(size=12)
 ```
 
-## `qt`
+### `flextable` quirks
 
-```{r child=here::here("tables", "Table_Counts_qt.Rmd")}
+* Cross-refs broken in Word and PDF. Known issue.
+
+## `gt`
+
+Here is the {gt} table @tbl-gt. {gt} has many of the same features as {flextable} and is in the RStudio suite so maybe it'll get more Quarto support in the long run.
+But like {kable}, the Word output is ugly. Generally speaking it is less developed and easy to use than {flextable} in my experience.
+
+```{r}
+#| label: tbl-gt
+#| tbl-cap: !expr paste("gt:", tbl_cap)
+library(gt)
+dt %>%
+  gt() %>%
+  tab_source_note(source_note = f1) %>%
+  tab_source_note(source_note = f2) %>%
+  tab_options(
+      table.font.size = px(18), 
+      table.font.names = "Times New Roman",
+      data_row.padding = px(1))
 ```
+
+### `qt` quirks
+
+* Table captions broken in PDF. Known issue. The "Table X." part is missing.
+* I couldn't get {gt} to respect my font request for HTML unlike for {flextable}
 
 
 ```{=openxml}
