@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "A Very Long Title for A Big Report Because Long Titles are Common",
+    "title": "A Quarto Template Repo to Create Big Reports and Very Long Title Because Long Titles are Common",
     "section": "",
     "text": "EE Holmes, 2022. Quarto Report Template. Northwest Fisheries Science Center."
   },
@@ -88,7 +88,7 @@
     "href": "text/tables.html#cross-references",
     "title": "3  Tables intro",
     "section": "3.3 Cross-references",
-    "text": "3.3 Cross-references\nIn Quarto, table links use the table label @tbl-tablabel where tablabel is the label you put on the table chunk. In the text it looks like this Table 3.3. The chunk yaml looks like this\n#| label: tbl-tablabel\n#| tbl-cap: \"my caption\"\n\n\n\n\nTable 3.3:  This is a table with a number. \nYearJanFebMarAprMayJunJulAugSepOctNovDec19541233231955458101214131516151516195616171718181920192122222219572222232323242425262829301958323232343637373839394140195940414243444647505153525419605556585758586060606363641961676970717271727474737376196278777879808082838482flextable"
+    "text": "3.3 Cross-references\nIn Quarto, table links use the table label @tbl-tablabel where tablabel is the label you put on the table chunk. In the text it looks like this Table 3.3. The chunk yaml looks like this\n#| label: tbl-tablabel\n#| tbl-cap: \"my caption\"\n\n\n\n\nTable 3.3:  This is a table with a number. \nYearJanFebMarAprMayJunJulAugSepOctNovDec19540113351955710101012111214141416161956161716171920202122252525195726252627293031333637383819584142454747484850525455541959555658605960616163656565196066666971727274767776787819617981818283838485868788881962909193969798100101101103flextable"
   },
   {
     "objectID": "text/tables.html#dynamic-table-captions",

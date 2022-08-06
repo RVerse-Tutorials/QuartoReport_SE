@@ -4,7 +4,7 @@ project:
   output-file: "QmdReport"
 
 book:
-  title: A Very Long Title for A Big Report Because Long Titles are Common
+  title: A Quarto Template Repo to Create Big Reports and Very Long Title Because Long Titles are Common
   subtitle: Some tips on creating reports with Quarto with a focus on tables and replicated tables and figures
   author:
     - name: Jane Doe
@@ -29,8 +29,25 @@ book:
     - text/figures.qmd
     - text/conclusion.qmd
     - references.qmd
-  appendices:
     - text/appendix_tables.qmd
+
+  site-url: https://rverse-tutorials.github.io/QmdReport/
+  repo-url: https://github.com/RVerse-Tutorials/QmdReport
+  repo-actions: [edit, source, issue]
+  search: true
+  navbar:
+    title: "QmdReport"
+    right:
+      - icon: twitter
+        href: https://twitter.com/eeholm
+        aria-label: eeholm Twitter
+      - icon: github
+        href: https://github.com/RVerse-Tutorials/QmdReport
+        aria-label: QmdReport GitHub
+
+  twitter-card: 
+    site: "@eeholm"
+
 
 bibliography: references.bib
 
