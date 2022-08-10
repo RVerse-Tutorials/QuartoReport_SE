@@ -1,0 +1,14 @@
+---
+always_allow_html: true
+---
+
+```{r include=FALSE}
+#| label: {{data_id}}-tblcap
+table_cap <- paste0("{{data_title}}", ". Log spawner count trends.")
+```
+
+```{r}
+#| label: fig-{{data_id}}-status
+#| fig-cap: !expr table_cap
+statusfigure("{{data_title}}", "{{data_id}}")
+```

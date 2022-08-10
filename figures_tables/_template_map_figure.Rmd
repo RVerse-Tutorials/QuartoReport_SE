@@ -1,0 +1,13 @@
+---
+always_allow_html: true
+---
+
+```{r include=FALSE}
+table_cap <- paste0("{{data_title}}", ". Map of the general location of the ESU.")
+```
+
+```{r}
+#| label: fig-{{data_id}}-map
+#| fig-cap: !expr table_cap
+mapfigure(data_title, id=data_id)
+```

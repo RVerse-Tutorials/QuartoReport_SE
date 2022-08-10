@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>An example report - 9&nbsp; Lower Columbia steelhead</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../text/OCcoho.html" rel="next">
+<link href="../text/LCcoho.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<link href="../site_libs/tabwid-1.0.0/tabwid.css" rel="stylesheet">
+<link href="../site_libs/tabwid-1.0.0/scrool.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lower Columbia steelhead</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">An example report</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/RVerse-Tutorials/QmdReport" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="../An-example-report.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+            <i class="bi bi-bi-facebook pe-1"></i>
+          Facebook
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Citation</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/CRchum.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Columbia River Chum</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/HCchum.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Hood River Chum</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/ICSRFchinook.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Interior Columbia Snake River Chinook</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/ICSRsthd.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Interior Columbia Snake River Chinook steelhead</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/ICUCchinook.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Upper Columbia Chinook</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/ICUCsthd.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Upper Columbia steelhead</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/LCchinook.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lower Columbia Chinook</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/LCcoho.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lower Columbia coho</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/LCsthd.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lower Columbia steelhead</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/OCcoho.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Oregon Coast coho</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/UWchinook.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Upper Willamette Chinook</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/UWsthd.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Upper Willamette steelhead</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../text/conclusion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conclusion</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#general-location" id="toc-general-location" class="nav-link active" data-scroll-target="#general-location"> <span class="header-section-number">9.1</span> General location</a></li>
+  <li><a href="#recent-trends" id="toc-recent-trends" class="nav-link" data-scroll-target="#recent-trends"> <span class="header-section-number">9.2</span> Recent trends</a></li>
+  <li><a href="#population-raw-data" id="toc-population-raw-data" class="nav-link" data-scroll-target="#population-raw-data"> <span class="header-section-number">9.3</span> Population raw data</a>
+  <ul class="collapse">
+  <li><a href="#coweeman-r." id="toc-coweeman-r." class="nav-link" data-scroll-target="#coweeman-r."> <span class="header-section-number">9.3.1</span> Coweeman R.</a></li>
+  <li><a href="#nf-toutle-r." id="toc-nf-toutle-r." class="nav-link" data-scroll-target="#nf-toutle-r."> <span class="header-section-number">9.3.2</span> NF Toutle R.</a></li>
+  <li><a href="#sf-toutle-r." id="toc-sf-toutle-r." class="nav-link" data-scroll-target="#sf-toutle-r."> <span class="header-section-number">9.3.3</span> SF Toutle R.</a></li>
+  <li><a href="#up.-cowlitz-r." id="toc-up.-cowlitz-r." class="nav-link" data-scroll-target="#up.-cowlitz-r."> <span class="header-section-number">9.3.4</span> Up. Cowlitz R.</a></li>
+  <li><a href="#tilton-r." id="toc-tilton-r." class="nav-link" data-scroll-target="#tilton-r."> <span class="header-section-number">9.3.5</span> Tilton R.</a></li>
+  <li><a href="#kalama-r." id="toc-kalama-r." class="nav-link" data-scroll-target="#kalama-r."> <span class="header-section-number">9.3.6</span> Kalama R.</a></li>
+  <li><a href="#ef-lewis-r." id="toc-ef-lewis-r." class="nav-link" data-scroll-target="#ef-lewis-r."> <span class="header-section-number">9.3.7</span> EF Lewis R.</a></li>
+  <li><a href="#clackamas-r." id="toc-clackamas-r." class="nav-link" data-scroll-target="#clackamas-r."> <span class="header-section-number">9.3.8</span> Clackamas R.</a></li>
+  <li><a href="#sandy-r." id="toc-sandy-r." class="nav-link" data-scroll-target="#sandy-r."> <span class="header-section-number">9.3.9</span> Sandy R.</a></li>
+  <li><a href="#washougal-r." id="toc-washougal-r." class="nav-link" data-scroll-target="#washougal-r."> <span class="header-section-number">9.3.10</span> Washougal R.</a></li>
+  <li><a href="#up.-gorge-tribs." id="toc-up.-gorge-tribs." class="nav-link" data-scroll-target="#up.-gorge-tribs."> <span class="header-section-number">9.3.11</span> Up. Gorge Tribs.</a></li>
+  <li><a href="#hood-r." id="toc-hood-r." class="nav-link" data-scroll-target="#hood-r."> <span class="header-section-number">9.3.12</span> Hood R.</a></li>
+  <li><a href="#wind-r." id="toc-wind-r." class="nav-link" data-scroll-target="#wind-r."> <span class="header-section-number">9.3.13</span> Wind R.</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/RVerse-Tutorials/QmdReport/edit/main/text/LCsthd.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/RVerse-Tutorials/QmdReport/blob/main/text/LCsthd.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/RVerse-Tutorials/QmdReport/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lower Columbia steelhead</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="citation" data-cites="clark1993">Clark (<a href="../references.html#ref-clark1993" role="doc-biblioref">1993</a>)</span> vitae ante quis dui egestas fringilla ac vitae justo <span class="citation" data-cites="ansley1981 collins1996 deuel1968">(<a href="../references.html#ref-ansley1981" role="doc-biblioref">Ansley and Davis 1981</a>; <a href="../references.html#ref-collins1996" role="doc-biblioref">Collins et al. 1996</a>; <a href="../references.html#ref-deuel1968" role="doc-biblioref">Deuel and Clark 1968</a>)</span> . Pellentesque quis magna vel odio malesuada rutrum a volutpat nisl. Aliquam fermentum, urna eget tristique mattis, augue augue tristique ipsum, eget finibus nunc eros non nisi. Phasellus mattis hendrerit sapien, quis accumsan dui pretium eget. Nunc eleifend laoreet urna a luctus. Nulla vel sapien in nulla gravida tempus sit amet a metus. Vivamus porta condimentum tempus. Maecenas rhoncus elit id ultricies scelerisque. In gravida urna in ligula fringilla euismod. Curabitur efficitur porta libero ac fermentum. Cras fringilla et libero at posuere. Curabitur sodales dapibus elit a convallis.</p>
+<p>Morbi iaculis eget augue eget facilisis. Etiam non orci dignissim, efficitur purus viverra, pellentesque neque. Aliquam ornare, magna ut dictum mollis, nunc lorem iaculis nibh, eu consequat lectus urna euismod tortor. Etiam ut felis nisl. Nunc quis euismod felis. Vestibulum gravida nisi mi, quis mollis velit ullamcorper non. Aliquam tempus fringilla bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra nulla elementum libero mollis, quis cursus velit sagittis.</p>
+<section id="general-location" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="general-location"><span class="header-section-number">9.1</span> General location</h2>
+<p>Morbi iaculis eget augue eget facilisis. Etiam non orci dignissim, efficitur purus viverra, pellentesque neque. Aliquam ornare, magna ut dictum mollis, nunc lorem iaculis nibh, eu consequat lectus urna euismod tortor.</p>
+<div class="cell">
+
+</div>
+<!-- Automatically includes the status figure -->
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-LCsthd-map" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="LCsthd_files/figure-html/fig-LCsthd-map-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 9.1: Lower Columbia steelhead. Map of the general location of the ESU.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="recent-trends" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="recent-trends"><span class="header-section-number">9.2</span> Recent trends</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ante quis dui egestas fringilla ac vitae justo. Pellentesque quis magna vel odio malesuada rutrum a volutpat nisl. Aliquam fermentum, urna eget tristique mattis, augue augue tristique ipsum, eget finibus nunc eros non nisi. Phasellus mattis hendrerit sapien, quis accumsan dui pretium eget. Nunc eleifend laoreet urna a luctus. Nulla vel sapien in nulla gravida tempus sit amet a metus. Vivamus porta condimentum tempus. Maecenas rhoncus elit id ultricies scelerisque. In gravida urna in ligula fringilla euismod. Curabitur efficitur porta libero ac fermentum. Cras fringilla et libero at posuere. Curabitur sodales dapibus elit a convallis.</p>
+<p>Morbi iaculis eget augue eget facilisis. Etiam non orci dignissim, efficitur purus viverra, pellentesque neque. Aliquam ornare, magna ut dictum mollis, nunc lorem iaculis nibh, eu consequat lectus urna euismod tortor. Etiam ut felis nisl. Nunc quis euismod felis. Vestibulum gravida nisi mi, quis mollis velit ullamcorper non. Aliquam tempus fringilla bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra nulla elementum libero mollis, quis cursus velit sagittis.</p>
+<div class="cell">
+
+</div>
+<!-- Automatically includes the status figure -->
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-LCsthd-status" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="LCsthd_files/figure-html/fig-LCsthd-status-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 9.2: Lower Columbia steelhead. Log spawner count trends.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="population-raw-data" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="population-raw-data"><span class="header-section-number">9.3</span> Population raw data</h2>
+<p>Morbi iaculis eget augue eget facilisis. Etiam non orci dignissim, efficitur purus viverra, pellentesque neque. Aliquam ornare, magna ut dictum mollis, nunc lorem iaculis nibh, eu consequat lectus urna euismod tortor. Etiam ut felis nisl. <a href="#tbl-rawLCsthd1">Table&nbsp;<span>9.1</span></a> Nunc quis euismod felis. Vestibulum gravida nisi mi, quis mollis velit ullamcorper non. Aliquam tempus fringilla bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra nulla elementum libero mollis, quis cursus velit sagittis.</p>
+<!-- Since the main file (index) had this, I don't need to repeat it. 
+     But I do so that I can run this Rmd independently during debugging and development.
+     I set all the output to FALSE. -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+<section id="coweeman-r." class="level3" data-number="9.3.1">
+<h3 data-number="9.3.1" class="anchored" data-anchor-id="coweeman-r."><span class="header-section-number">9.3.1</span> Coweeman R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd1" class="anchored">
+
+<div class="tabwid"><style>.cl-f6f289b4{}.cl-f6ed81ee{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f6ed8216{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f6ed9332{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f6ed933c{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f6edc280{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc28a{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc28b{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc28c{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc294{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc295{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc29e{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc29f{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc2a0{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc2a8{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc2a9{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc2b2{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc2b3{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc2bc{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f6edc2bd{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f6f289b4"><caption>Table 9.1:  Spawners and fracwild from Coweeman R. for 2000 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f6edc2bd"><p class="cl-f6ed9332"><span class="cl-f6ed81ee">Year</span></p></td><td class="cl-f6edc2bc"><p class="cl-f6ed9332"><span class="cl-f6ed81ee">Spawners</span></p></td><td class="cl-f6edc2b3"><p class="cl-f6ed9332"><span class="cl-f6ed81ee">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f6edc280"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2000</span></p></td><td class="cl-f6edc28a"><p class="cl-f6ed9332"><span class="cl-f6ed8216">530</span></p></td><td class="cl-f6edc28b"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc280"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2001</span></p></td><td class="cl-f6edc28a"><p class="cl-f6ed9332"><span class="cl-f6ed8216">384</span></p></td><td class="cl-f6edc28b"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc280"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2002</span></p></td><td class="cl-f6edc28a"><p class="cl-f6ed9332"><span class="cl-f6ed8216">298</span></p></td><td class="cl-f6edc28b"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc280"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2003</span></p></td><td class="cl-f6edc28a"><p class="cl-f6ed9332"><span class="cl-f6ed8216">460</span></p></td><td class="cl-f6edc28b"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc280"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2004</span></p></td><td class="cl-f6edc28a"><p class="cl-f6ed9332"><span class="cl-f6ed8216">722</span></p></td><td class="cl-f6edc28b"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc280"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2005</span></p></td><td class="cl-f6edc28a"><p class="cl-f6ed9332"><span class="cl-f6ed8216">370</span></p></td><td class="cl-f6edc28b"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc29e"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2006</span></p></td><td class="cl-f6edc29f"><p class="cl-f6ed9332"><span class="cl-f6ed8216">372</span></p></td><td class="cl-f6edc2a0"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc280"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2007</span></p></td><td class="cl-f6edc28a"><p class="cl-f6ed9332"><span class="cl-f6ed8216">384</span></p></td><td class="cl-f6edc28b"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc280"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2008</span></p></td><td class="cl-f6edc28a"><p class="cl-f6ed9332"><span class="cl-f6ed8216">722</span></p></td><td class="cl-f6edc28b"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc280"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2009</span></p></td><td class="cl-f6edc28a"><p class="cl-f6ed9332"><span class="cl-f6ed8216">602</span></p></td><td class="cl-f6edc28b"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f6edc28c"><p class="cl-f6ed9332"><span class="cl-f6ed8216">2010</span></p></td><td class="cl-f6edc294"><p class="cl-f6ed9332"><span class="cl-f6ed8216">528</span></p></td><td class="cl-f6edc295"><p class="cl-f6ed9332"><span class="cl-f6ed8216">-99</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f6edc2a8"><p class="cl-f6ed933c"><span class="cl-f6ed81ee">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f6edc2a8"><p class="cl-f6ed933c"><span class="cl-f6ed81ee">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="nf-toutle-r." class="level3" data-number="9.3.2">
+<h3 data-number="9.3.2" class="anchored" data-anchor-id="nf-toutle-r."><span class="header-section-number">9.3.2</span> NF Toutle R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd2" class="anchored">
+
+<div class="tabwid"><style>.cl-f712dd18{}.cl-f70e6abc{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f70e6ac6{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f70e74c6{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f70e74d0{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f70e964a{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e9654{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e9655{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e965e{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e965f{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e9660{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e9668{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e9669{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e9672{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e9673{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e967c{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e967d{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e967e{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e9686{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f70e9687{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f712dd18"><caption>Table 9.2:  Spawners and fracwild from NF Toutle R. for 2005 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f70e9687"><p class="cl-f70e74c6"><span class="cl-f70e6abc">Year</span></p></td><td class="cl-f70e9686"><p class="cl-f70e74c6"><span class="cl-f70e6abc">Spawners</span></p></td><td class="cl-f70e967e"><p class="cl-f70e74c6"><span class="cl-f70e6abc">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f70e9654"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">2005</span></p></td><td class="cl-f70e964a"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">222</span></p></td><td class="cl-f70e9655"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f70e965e"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">2006</span></p></td><td class="cl-f70e965f"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">592</span></p></td><td class="cl-f70e9660"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f70e9654"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">2007</span></p></td><td class="cl-f70e964a"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">410</span></p></td><td class="cl-f70e9655"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f70e9654"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">2008</span></p></td><td class="cl-f70e964a"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">554</span></p></td><td class="cl-f70e9655"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f70e9654"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">2009</span></p></td><td class="cl-f70e964a"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">610</span></p></td><td class="cl-f70e9655"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f70e9668"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">2010</span></p></td><td class="cl-f70e9669"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">256</span></p></td><td class="cl-f70e9672"><p class="cl-f70e74c6"><span class="cl-f70e6ac6">-99</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f70e9673"><p class="cl-f70e74d0"><span class="cl-f70e6abc">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f70e9673"><p class="cl-f70e74d0"><span class="cl-f70e6abc">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="sf-toutle-r." class="level3" data-number="9.3.3">
+<h3 data-number="9.3.3" class="anchored" data-anchor-id="sf-toutle-r."><span class="header-section-number">9.3.3</span> SF Toutle R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd3" class="anchored">
+
+<div class="tabwid"><style>.cl-f733558e{}.cl-f72f4c64{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f72f4c78{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f72f5696{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f72f5697{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f72f7cc0{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cca{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7ccb{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cd4{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cd5{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cd6{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cde{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cdf{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7ce8{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7ce9{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cf2{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cfc{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cfd{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7cfe{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f72f7d06{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f733558e"><caption>Table 9.3:  Spawners and fracwild from SF Toutle R. for 2000 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f72f7d06"><p class="cl-f72f5696"><span class="cl-f72f4c64">Year</span></p></td><td class="cl-f72f7cfe"><p class="cl-f72f5696"><span class="cl-f72f4c64">Spawners</span></p></td><td class="cl-f72f7cfd"><p class="cl-f72f5696"><span class="cl-f72f4c64">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cc0"><p class="cl-f72f5696"><span class="cl-f72f4c78">2000</span></p></td><td class="cl-f72f7cca"><p class="cl-f72f5696"><span class="cl-f72f4c78">490</span></p></td><td class="cl-f72f7ccb"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cc0"><p class="cl-f72f5696"><span class="cl-f72f4c78">2001</span></p></td><td class="cl-f72f7cca"><p class="cl-f72f5696"><span class="cl-f72f4c78">348</span></p></td><td class="cl-f72f7ccb"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cc0"><p class="cl-f72f5696"><span class="cl-f72f4c78">2002</span></p></td><td class="cl-f72f7cca"><p class="cl-f72f5696"><span class="cl-f72f4c78">640</span></p></td><td class="cl-f72f7ccb"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cc0"><p class="cl-f72f5696"><span class="cl-f72f4c78">2003</span></p></td><td class="cl-f72f7cca"><p class="cl-f72f5696"><span class="cl-f72f4c78">1,510</span></p></td><td class="cl-f72f7ccb"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cc0"><p class="cl-f72f5696"><span class="cl-f72f4c78">2004</span></p></td><td class="cl-f72f7cca"><p class="cl-f72f5696"><span class="cl-f72f4c78">1,212</span></p></td><td class="cl-f72f7ccb"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cc0"><p class="cl-f72f5696"><span class="cl-f72f4c78">2005</span></p></td><td class="cl-f72f7cca"><p class="cl-f72f5696"><span class="cl-f72f4c78">520</span></p></td><td class="cl-f72f7ccb"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cde"><p class="cl-f72f5696"><span class="cl-f72f4c78">2006</span></p></td><td class="cl-f72f7cdf"><p class="cl-f72f5696"><span class="cl-f72f4c78">656</span></p></td><td class="cl-f72f7ce8"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cc0"><p class="cl-f72f5696"><span class="cl-f72f4c78">2007</span></p></td><td class="cl-f72f7cca"><p class="cl-f72f5696"><span class="cl-f72f4c78">548</span></p></td><td class="cl-f72f7ccb"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cc0"><p class="cl-f72f5696"><span class="cl-f72f4c78">2008</span></p></td><td class="cl-f72f7cca"><p class="cl-f72f5696"><span class="cl-f72f4c78">412</span></p></td><td class="cl-f72f7ccb"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cc0"><p class="cl-f72f5696"><span class="cl-f72f4c78">2009</span></p></td><td class="cl-f72f7cca"><p class="cl-f72f5696"><span class="cl-f72f4c78">498</span></p></td><td class="cl-f72f7ccb"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f72f7cd4"><p class="cl-f72f5696"><span class="cl-f72f4c78">2010</span></p></td><td class="cl-f72f7cd5"><p class="cl-f72f5696"><span class="cl-f72f4c78">274</span></p></td><td class="cl-f72f7cd6"><p class="cl-f72f5696"><span class="cl-f72f4c78">-99</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f72f7ce9"><p class="cl-f72f5697"><span class="cl-f72f4c64">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f72f7ce9"><p class="cl-f72f5697"><span class="cl-f72f4c64">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="up.-cowlitz-r." class="level3" data-number="9.3.4">
+<h3 data-number="9.3.4" class="anchored" data-anchor-id="up.-cowlitz-r."><span class="header-section-number">9.3.4</span> Up. Cowlitz R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd4" class="anchored">
+
+<div class="tabwid"><style>.cl-f753dac0{}.cl-f74fcc28{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f74fcc32{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f74fd6a0{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f74fd6a1{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f74ffd4c{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd4d{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd56{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd57{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd58{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd60{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd61{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd6a{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd6b{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd74{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd75{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd76{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd7e{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd7f{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f74ffd88{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f753dac0"><caption>Table 9.4:  Spawners and fracwild from Up. Cowlitz R. for 2000 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd88"><p class="cl-f74fd6a0"><span class="cl-f74fcc28">Year</span></p></td><td class="cl-f74ffd7f"><p class="cl-f74fd6a0"><span class="cl-f74fcc28">Spawners</span></p></td><td class="cl-f74ffd7e"><p class="cl-f74fd6a0"><span class="cl-f74fcc28">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd4c"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2000</span></p></td><td class="cl-f74ffd4d"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">412</span></p></td><td class="cl-f74ffd56"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd4c"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2001</span></p></td><td class="cl-f74ffd4d"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">729</span></p></td><td class="cl-f74ffd56"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd4c"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2002</span></p></td><td class="cl-f74ffd4d"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2,787</span></p></td><td class="cl-f74ffd56"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd4c"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2003</span></p></td><td class="cl-f74ffd4d"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2,532</span></p></td><td class="cl-f74ffd56"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd4c"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2004</span></p></td><td class="cl-f74ffd4d"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">1,397</span></p></td><td class="cl-f74ffd56"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd4c"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2005</span></p></td><td class="cl-f74ffd4d"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">691</span></p></td><td class="cl-f74ffd56"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd57"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2006</span></p></td><td class="cl-f74ffd58"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">999</span></p></td><td class="cl-f74ffd60"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd4c"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2007</span></p></td><td class="cl-f74ffd4d"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">1,253</span></p></td><td class="cl-f74ffd56"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd4c"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2008</span></p></td><td class="cl-f74ffd4d"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">1,089</span></p></td><td class="cl-f74ffd56"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd57"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2009</span></p></td><td class="cl-f74ffd58"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">3,556</span></p></td><td class="cl-f74ffd60"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f74ffd61"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">2010</span></p></td><td class="cl-f74ffd6a"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">622</span></p></td><td class="cl-f74ffd6b"><p class="cl-f74fd6a0"><span class="cl-f74fcc32">-99</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f74ffd74"><p class="cl-f74fd6a1"><span class="cl-f74fcc28">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f74ffd74"><p class="cl-f74fd6a1"><span class="cl-f74fcc28">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="tilton-r." class="level3" data-number="9.3.5">
+<h3 data-number="9.3.5" class="anchored" data-anchor-id="tilton-r."><span class="header-section-number">9.3.5</span> Tilton R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd5" class="anchored">
+
+<div class="tabwid"><style>.cl-f77409ee{}.cl-f76ffd18{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f76ffd22{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f770077c{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f7700786{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f7702d74{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702d7e{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702d88{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702d89{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702d92{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702d93{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702d9c{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702d9d{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702d9e{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702da6{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702da7{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702db0{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702db1{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702db2{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7702dba{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f77409ee"><caption>Table 9.5:  Spawners and fracwild from Tilton R. for 2000 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f7702dba"><p class="cl-f770077c"><span class="cl-f76ffd18">Year</span></p></td><td class="cl-f7702db2"><p class="cl-f770077c"><span class="cl-f76ffd18">Spawners</span></p></td><td class="cl-f7702db1"><p class="cl-f770077c"><span class="cl-f76ffd18">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f7702d74"><p class="cl-f770077c"><span class="cl-f76ffd22">2000</span></p></td><td class="cl-f7702d7e"><p class="cl-f770077c"><span class="cl-f76ffd22">797</span></p></td><td class="cl-f7702d88"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d74"><p class="cl-f770077c"><span class="cl-f76ffd22">2001</span></p></td><td class="cl-f7702d7e"><p class="cl-f770077c"><span class="cl-f76ffd22">1,015</span></p></td><td class="cl-f7702d88"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d74"><p class="cl-f770077c"><span class="cl-f76ffd22">2002</span></p></td><td class="cl-f7702d7e"><p class="cl-f770077c"><span class="cl-f76ffd22">1,855</span></p></td><td class="cl-f7702d88"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d74"><p class="cl-f770077c"><span class="cl-f76ffd22">2003</span></p></td><td class="cl-f7702d7e"><p class="cl-f770077c"><span class="cl-f76ffd22">695</span></p></td><td class="cl-f7702d88"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d74"><p class="cl-f770077c"><span class="cl-f76ffd22">2004</span></p></td><td class="cl-f7702d7e"><p class="cl-f770077c"><span class="cl-f76ffd22">846</span></p></td><td class="cl-f7702d88"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d74"><p class="cl-f770077c"><span class="cl-f76ffd22">2005</span></p></td><td class="cl-f7702d7e"><p class="cl-f770077c"><span class="cl-f76ffd22">555</span></p></td><td class="cl-f7702d88"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d9c"><p class="cl-f770077c"><span class="cl-f76ffd22">2006</span></p></td><td class="cl-f7702d9d"><p class="cl-f770077c"><span class="cl-f76ffd22">299</span></p></td><td class="cl-f7702d9e"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d74"><p class="cl-f770077c"><span class="cl-f76ffd22">2007</span></p></td><td class="cl-f7702d7e"><p class="cl-f770077c"><span class="cl-f76ffd22">143</span></p></td><td class="cl-f7702d88"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d74"><p class="cl-f770077c"><span class="cl-f76ffd22">2008</span></p></td><td class="cl-f7702d7e"><p class="cl-f770077c"><span class="cl-f76ffd22">142</span></p></td><td class="cl-f7702d88"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d74"><p class="cl-f770077c"><span class="cl-f76ffd22">2009</span></p></td><td class="cl-f7702d7e"><p class="cl-f770077c"><span class="cl-f76ffd22">1,419</span></p></td><td class="cl-f7702d88"><p class="cl-f770077c"><span class="cl-f76ffd22">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7702d89"><p class="cl-f770077c"><span class="cl-f76ffd22">2010</span></p></td><td class="cl-f7702d92"><p class="cl-f770077c"><span class="cl-f76ffd22">179</span></p></td><td class="cl-f7702d93"><p class="cl-f770077c"><span class="cl-f76ffd22">1</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f7702da6"><p class="cl-f7700786"><span class="cl-f76ffd18">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f7702da6"><p class="cl-f7700786"><span class="cl-f76ffd18">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="kalama-r." class="level3" data-number="9.3.6">
+<h3 data-number="9.3.6" class="anchored" data-anchor-id="kalama-r."><span class="header-section-number">9.3.6</span> Kalama R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd6" class="anchored">
+
+<div class="tabwid"><style>.cl-f795ce12{}.cl-f7918c1c{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f7918c26{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f7919644{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f791964e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f791c484{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c485{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c48e{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c48f{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c498{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c499{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c4a2{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c4a3{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c4a4{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c4ac{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c4ad{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c4b6{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c4b7{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c4b8{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f791c4c0{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f795ce12"><caption>Table 9.6:  Spawners and fracwild from Kalama R. for 2000 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f791c4b8"><p class="cl-f7919644"><span class="cl-f7918c1c">Year</span></p></td><td class="cl-f791c4c0"><p class="cl-f7919644"><span class="cl-f7918c1c">Spawners</span></p></td><td class="cl-f791c4b7"><p class="cl-f7919644"><span class="cl-f7918c1c">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2000</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">921</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2001</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">1,042</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2002</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">1,495</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2003</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">1,815</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2004</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">2,400</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2005</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">1,982</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c499"><p class="cl-f7919644"><span class="cl-f7918c26">2006</span></p></td><td class="cl-f791c48f"><p class="cl-f7919644"><span class="cl-f7918c26">1,733</span></p></td><td class="cl-f791c498"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2007</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">1,011</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2008</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">742</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2009</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">1,044</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2010</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">961</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2000</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">140</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2001</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">286</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2002</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">454</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2003</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">817</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2004</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">549</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2005</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">435</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c499"><p class="cl-f7919644"><span class="cl-f7918c26">2006</span></p></td><td class="cl-f791c48f"><p class="cl-f7919644"><span class="cl-f7918c26">387</span></p></td><td class="cl-f791c498"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2007</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">361</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2008</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">237</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c48e"><p class="cl-f7919644"><span class="cl-f7918c26">2009</span></p></td><td class="cl-f791c485"><p class="cl-f7919644"><span class="cl-f7918c26">308</span></p></td><td class="cl-f791c484"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f791c4a4"><p class="cl-f7919644"><span class="cl-f7918c26">2010</span></p></td><td class="cl-f791c4a3"><p class="cl-f7919644"><span class="cl-f7918c26">370</span></p></td><td class="cl-f791c4a2"><p class="cl-f7919644"><span class="cl-f7918c26">-99</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f791c4ac"><p class="cl-f791964e"><span class="cl-f7918c1c">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f791c4ac"><p class="cl-f791964e"><span class="cl-f7918c1c">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="ef-lewis-r." class="level3" data-number="9.3.7">
+<h3 data-number="9.3.7" class="anchored" data-anchor-id="ef-lewis-r."><span class="header-section-number">9.3.7</span> EF Lewis R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd7" class="anchored">
+
+<div class="tabwid"><style>.cl-f7b7dbce{}.cl-f7b3b620{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f7b3b62a{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f7b3c066{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f7b3c067{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f7b3ec80{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ec8a{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ec8b{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ec94{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ec95{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ec9e{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3eca8{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3eca9{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ecaa{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ecb2{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ecb3{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ecbc{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ecbd{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ecc6{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7b3ecc7{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f7b7dbce"><caption>Table 9.7:  Spawners and fracwild from EF Lewis R. for 2000 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ecbd"><p class="cl-f7b3c066"><span class="cl-f7b3b620">Year</span></p></td><td class="cl-f7b3ecc7"><p class="cl-f7b3c066"><span class="cl-f7b3b620">Spawners</span></p></td><td class="cl-f7b3ecc6"><p class="cl-f7b3c066"><span class="cl-f7b3b620">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2001</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">377</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2002</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">292</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2003</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">532</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2004</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">1,298</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2005</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">246</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec9e"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2006</span></p></td><td class="cl-f7b3ec94"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">458</span></p></td><td class="cl-f7b3ec95"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2007</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">448</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2008</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">548</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2009</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">688</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2010</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">336</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2000</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">229</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2001</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">271</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2002</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">440</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2003</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">910</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2004</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">425</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2005</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">673</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec9e"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2006</span></p></td><td class="cl-f7b3ec94"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">560</span></p></td><td class="cl-f7b3ec95"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2007</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">412</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2008</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">365</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ec8b"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2009</span></p></td><td class="cl-f7b3ec80"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">800</span></p></td><td class="cl-f7b3ec8a"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7b3ecaa"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">2010</span></p></td><td class="cl-f7b3eca9"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">600</span></p></td><td class="cl-f7b3eca8"><p class="cl-f7b3c066"><span class="cl-f7b3b62a">-99</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f7b3ecb2"><p class="cl-f7b3c067"><span class="cl-f7b3b620">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f7b3ecb2"><p class="cl-f7b3c067"><span class="cl-f7b3b620">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="clackamas-r." class="level3" data-number="9.3.8">
+<h3 data-number="9.3.8" class="anchored" data-anchor-id="clackamas-r."><span class="header-section-number">9.3.8</span> Clackamas R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd8" class="anchored">
+
+<div class="tabwid"><style>.cl-f7d729d4{}.cl-f7d3576e{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f7d35778{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f7d361a0{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f7d361aa{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f7d38374{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d38375{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d38376{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d3837e{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d3837f{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d38388{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d38392{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d38393{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d38394{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d3839c{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d383a6{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d383a7{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d383a8{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d383b0{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7d383ba{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f7d729d4"><caption>Table 9.8:  Spawners and fracwild from Clackamas R. for 2000 to 2007. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f7d383ba"><p class="cl-f7d361a0"><span class="cl-f7d3576e">Year</span></p></td><td class="cl-f7d383a8"><p class="cl-f7d361a0"><span class="cl-f7d3576e">Spawners</span></p></td><td class="cl-f7d383b0"><p class="cl-f7d361a0"><span class="cl-f7d3576e">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f7d38376"><p class="cl-f7d361a0"><span class="cl-f7d35778">2000</span></p></td><td class="cl-f7d38375"><p class="cl-f7d361a0"><span class="cl-f7d35778">879</span></p></td><td class="cl-f7d38374"><p class="cl-f7d361a0"><span class="cl-f7d35778">0.848</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7d38376"><p class="cl-f7d361a0"><span class="cl-f7d35778">2001</span></p></td><td class="cl-f7d38375"><p class="cl-f7d361a0"><span class="cl-f7d35778">2,048</span></p></td><td class="cl-f7d38374"><p class="cl-f7d361a0"><span class="cl-f7d35778">0.727</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7d38376"><p class="cl-f7d361a0"><span class="cl-f7d35778">2002</span></p></td><td class="cl-f7d38375"><p class="cl-f7d361a0"><span class="cl-f7d35778">3,330</span></p></td><td class="cl-f7d38374"><p class="cl-f7d361a0"><span class="cl-f7d35778">0.698</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7d38388"><p class="cl-f7d361a0"><span class="cl-f7d35778">2006</span></p></td><td class="cl-f7d3837e"><p class="cl-f7d361a0"><span class="cl-f7d35778">1,763</span></p></td><td class="cl-f7d3837f"><p class="cl-f7d361a0"><span class="cl-f7d35778">0.660</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f7d38394"><p class="cl-f7d361a0"><span class="cl-f7d35778">2007</span></p></td><td class="cl-f7d38393"><p class="cl-f7d361a0"><span class="cl-f7d35778">1,450</span></p></td><td class="cl-f7d38392"><p class="cl-f7d361a0"><span class="cl-f7d35778">0.833</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f7d383a6"><p class="cl-f7d361aa"><span class="cl-f7d3576e">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f7d383a6"><p class="cl-f7d361aa"><span class="cl-f7d3576e">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="sandy-r." class="level3" data-number="9.3.9">
+<h3 data-number="9.3.9" class="anchored" data-anchor-id="sandy-r."><span class="header-section-number">9.3.9</span> Sandy R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd9" class="anchored">
+
+<div class="tabwid"><style>.cl-f7f56192{}.cl-f7f14274{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f7f1427e{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f7f14cce{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f7f14cd8{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f7f16d9e{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7f16da8{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7f16da9{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7f16db2{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7f16db3{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7f16dbc{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7f16dbd{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7f16dbe{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f7f16dc6{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f7f56192"><caption>Table 9.9:  Spawners and fracwild from Sandy R. for 2010 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f7f16dc6"><p class="cl-f7f14cce"><span class="cl-f7f14274">Year</span></p></td><td class="cl-f7f16dbd"><p class="cl-f7f14cce"><span class="cl-f7f14274">Spawners</span></p></td><td class="cl-f7f16dbe"><p class="cl-f7f14cce"><span class="cl-f7f14274">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f7f16da9"><p class="cl-f7f14cce"><span class="cl-f7f1427e">2010</span></p></td><td class="cl-f7f16da8"><p class="cl-f7f14cce"><span class="cl-f7f1427e">2,096</span></p></td><td class="cl-f7f16d9e"><p class="cl-f7f14cce"><span class="cl-f7f1427e">0.715</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f7f16db3"><p class="cl-f7f14cd8"><span class="cl-f7f14274">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f7f16db3"><p class="cl-f7f14cd8"><span class="cl-f7f14274">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="washougal-r." class="level3" data-number="9.3.10">
+<h3 data-number="9.3.10" class="anchored" data-anchor-id="washougal-r."><span class="header-section-number">9.3.10</span> Washougal R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd10" class="anchored">
+
+<div class="tabwid"><style>.cl-f816f9b0{}.cl-f81240fa{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f8124104{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f8124b54{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f8124b5e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f812eca8{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecb2{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecb3{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecbc{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecbd{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecbe{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecbf{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecc6{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecc7{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecc8{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecd0{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecd1{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecd2{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecda{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f812ecdb{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f816f9b0"><caption>Table 9.10:  Spawners and fracwild from Washougal R. for 2000 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f812ecda"><p class="cl-f8124b54"><span class="cl-f81240fa">Year</span></p></td><td class="cl-f812ecdb"><p class="cl-f8124b54"><span class="cl-f81240fa">Spawners</span></p></td><td class="cl-f812ecd2"><p class="cl-f8124b54"><span class="cl-f81240fa">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2001</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">216</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2002</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">286</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2003</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">764</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2004</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">1,114</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2005</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">320</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecbe"><p class="cl-f8124b54"><span class="cl-f8124104">2006</span></p></td><td class="cl-f812ecbd"><p class="cl-f8124b54"><span class="cl-f8124104">524</span></p></td><td class="cl-f812ecbc"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2007</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">632</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2008</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">732</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2009</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">418</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2010</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">232</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2000</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">140</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2001</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">184</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2002</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">404</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2003</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">607</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2005</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">608</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecbe"><p class="cl-f8124b54"><span class="cl-f8124104">2006</span></p></td><td class="cl-f812ecbd"><p class="cl-f8124b54"><span class="cl-f8124104">636</span></p></td><td class="cl-f812ecbc"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2007</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">681</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2008</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">755</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecb3"><p class="cl-f8124b54"><span class="cl-f8124104">2009</span></p></td><td class="cl-f812ecb2"><p class="cl-f8124b54"><span class="cl-f8124104">433</span></p></td><td class="cl-f812eca8"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f812ecbf"><p class="cl-f8124b54"><span class="cl-f8124104">2010</span></p></td><td class="cl-f812ecc7"><p class="cl-f8124b54"><span class="cl-f8124104">787</span></p></td><td class="cl-f812ecc6"><p class="cl-f8124b54"><span class="cl-f8124104">-99</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f812ecd0"><p class="cl-f8124b5e"><span class="cl-f81240fa">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f812ecd0"><p class="cl-f8124b5e"><span class="cl-f81240fa">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="up.-gorge-tribs." class="level3" data-number="9.3.11">
+<h3 data-number="9.3.11" class="anchored" data-anchor-id="up.-gorge-tribs."><span class="header-section-number">9.3.11</span> Up. Gorge Tribs.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd11" class="anchored">
+
+<div class="tabwid"><style>.cl-f83c0d22{}.cl-f8372d70{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f8372d7a{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f83737d4{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f83737d5{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f8375eda{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375ee4{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375ee5{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375ee6{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375eee{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375eef{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375ef0{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375ef8{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375ef9{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375efa{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375f02{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375f03{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375f0c{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375f0d{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8375f16{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f83c0d22"><caption>Table 9.11:  Spawners and fracwild from Up. Gorge Tribs. for 2000 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f8375f16"><p class="cl-f83737d4"><span class="cl-f8372d70">Year</span></p></td><td class="cl-f8375f0d"><p class="cl-f83737d4"><span class="cl-f8372d70">Spawners</span></p></td><td class="cl-f8375f0c"><p class="cl-f83737d4"><span class="cl-f8372d70">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f8375eda"><p class="cl-f83737d4"><span class="cl-f8372d7a">2000</span></p></td><td class="cl-f8375ee4"><p class="cl-f83737d4"><span class="cl-f8372d7a">20</span></p></td><td class="cl-f8375ee5"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375eda"><p class="cl-f83737d4"><span class="cl-f8372d7a">2001</span></p></td><td class="cl-f8375ee4"><p class="cl-f83737d4"><span class="cl-f8372d7a">53</span></p></td><td class="cl-f8375ee5"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375eda"><p class="cl-f83737d4"><span class="cl-f8372d7a">2002</span></p></td><td class="cl-f8375ee4"><p class="cl-f83737d4"><span class="cl-f8372d7a">51</span></p></td><td class="cl-f8375ee5"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375eda"><p class="cl-f83737d4"><span class="cl-f8372d7a">2003</span></p></td><td class="cl-f8375ee4"><p class="cl-f83737d4"><span class="cl-f8372d7a">27</span></p></td><td class="cl-f8375ee5"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375eda"><p class="cl-f83737d4"><span class="cl-f8372d7a">2004</span></p></td><td class="cl-f8375ee4"><p class="cl-f83737d4"><span class="cl-f8372d7a">28</span></p></td><td class="cl-f8375ee5"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375eda"><p class="cl-f83737d4"><span class="cl-f8372d7a">2005</span></p></td><td class="cl-f8375ee4"><p class="cl-f83737d4"><span class="cl-f8372d7a">22</span></p></td><td class="cl-f8375ee5"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375ef0"><p class="cl-f83737d4"><span class="cl-f8372d7a">2006</span></p></td><td class="cl-f8375ef8"><p class="cl-f83737d4"><span class="cl-f8372d7a">23</span></p></td><td class="cl-f8375ef9"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375eda"><p class="cl-f83737d4"><span class="cl-f8372d7a">2007</span></p></td><td class="cl-f8375ee4"><p class="cl-f83737d4"><span class="cl-f8372d7a">13</span></p></td><td class="cl-f8375ee5"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375eda"><p class="cl-f83737d4"><span class="cl-f8372d7a">2008</span></p></td><td class="cl-f8375ee4"><p class="cl-f83737d4"><span class="cl-f8372d7a">7</span></p></td><td class="cl-f8375ee5"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375eda"><p class="cl-f83737d4"><span class="cl-f8372d7a">2009</span></p></td><td class="cl-f8375ee4"><p class="cl-f83737d4"><span class="cl-f8372d7a">20</span></p></td><td class="cl-f8375ee5"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8375ee6"><p class="cl-f83737d4"><span class="cl-f8372d7a">2010</span></p></td><td class="cl-f8375eee"><p class="cl-f83737d4"><span class="cl-f8372d7a">30</span></p></td><td class="cl-f8375eef"><p class="cl-f83737d4"><span class="cl-f8372d7a">-99</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f8375efa"><p class="cl-f83737d5"><span class="cl-f8372d70">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f8375efa"><p class="cl-f83737d5"><span class="cl-f8372d70">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="hood-r." class="level3" data-number="9.3.12">
+<h3 data-number="9.3.12" class="anchored" data-anchor-id="hood-r."><span class="header-section-number">9.3.12</span> Hood R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd12" class="anchored">
+
+<div class="tabwid"><style>.cl-f857143c{}.cl-f8537c50{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f8538650{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f8538651{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f853a4dc{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f853a4dd{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f853a4e6{width:43.8pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f853a4e7{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f853a4e8{width:43.8pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f853a4f0{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f857143c"><caption>Table 9.12:  Spawners and fracwild from Hood R. for Inf to -Inf. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f853a4e8"><p class="cl-f8538650"><span class="cl-f8537c50">Year</span></p></td><td class="cl-f853a4f0"><p class="cl-f8538650"><span class="cl-f8537c50">Spawners</span></p></td><td class="cl-f853a4e7"><p class="cl-f8538650"><span class="cl-f8537c50">Fracwild</span></p></td></tr></thead><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f853a4e6"><p class="cl-f8538651"><span class="cl-f8537c50">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f853a4e6"><p class="cl-f8538651"><span class="cl-f8537c50">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+<div class="cell">
+
+</div>
+<!-- fixcols is in _common.R
+     A function I need for data wrangling. There are better ways to do this -->
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
+</section>
+<section id="wind-r." class="level3" data-number="9.3.13">
+<h3 data-number="9.3.13" class="anchored" data-anchor-id="wind-r."><span class="header-section-number">9.3.13</span> Wind R.</h3>
+
+<!-- tablecount function -->
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-rawLCsthd13" class="anchored">
+
+<div class="tabwid"><style>.cl-f879cdc4{}.cl-f8754484{font-family:'Times New Roman';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f8754498{font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-f8754e16{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f8754e20{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-f87573fa{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757404{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757405{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f875740e{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f875740f{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757418{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757419{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757422{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757423{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757424{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f875742c{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f875742d{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757436{width:61.5pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757437{width:69.4pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-f8757440{width:48.1pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class="cl-f879cdc4"><caption>Table 9.13:  Spawners and fracwild from Wind R. for 2000 to 2010. </caption>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-f8757440"><p class="cl-f8754e16"><span class="cl-f8754484">Year</span></p></td><td class="cl-f8757437"><p class="cl-f8754e16"><span class="cl-f8754484">Spawners</span></p></td><td class="cl-f8757436"><p class="cl-f8754e16"><span class="cl-f8754484">Fracwild</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-f87573fa"><p class="cl-f8754e16"><span class="cl-f8754498">2000</span></p></td><td class="cl-f8757404"><p class="cl-f8754e16"><span class="cl-f8754498">218</span></p></td><td class="cl-f8757405"><p class="cl-f8754e16"><span class="cl-f8754498">1.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f87573fa"><p class="cl-f8754e16"><span class="cl-f8754498">2001</span></p></td><td class="cl-f8757404"><p class="cl-f8754e16"><span class="cl-f8754498">503</span></p></td><td class="cl-f8757405"><p class="cl-f8754e16"><span class="cl-f8754498">0.966</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f87573fa"><p class="cl-f8754e16"><span class="cl-f8754498">2002</span></p></td><td class="cl-f8757404"><p class="cl-f8754e16"><span class="cl-f8754498">700</span></p></td><td class="cl-f8757405"><p class="cl-f8754e16"><span class="cl-f8754498">0.986</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f87573fa"><p class="cl-f8754e16"><span class="cl-f8754498">2003</span></p></td><td class="cl-f8757404"><p class="cl-f8754e16"><span class="cl-f8754498">1,113</span></p></td><td class="cl-f8757405"><p class="cl-f8754e16"><span class="cl-f8754498">1.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f87573fa"><p class="cl-f8754e16"><span class="cl-f8754498">2004</span></p></td><td class="cl-f8757404"><p class="cl-f8754e16"><span class="cl-f8754498">898</span></p></td><td class="cl-f8757405"><p class="cl-f8754e16"><span class="cl-f8754498">0.994</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f87573fa"><p class="cl-f8754e16"><span class="cl-f8754498">2005</span></p></td><td class="cl-f8757404"><p class="cl-f8754e16"><span class="cl-f8754498">608</span></p></td><td class="cl-f8757405"><p class="cl-f8754e16"><span class="cl-f8754498">0.987</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f8757419"><p class="cl-f8754e16"><span class="cl-f8754498">2006</span></p></td><td class="cl-f8757422"><p class="cl-f8754e16"><span class="cl-f8754498">661</span></p></td><td class="cl-f8757423"><p class="cl-f8754e16"><span class="cl-f8754498">0.995</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f87573fa"><p class="cl-f8754e16"><span class="cl-f8754498">2007</span></p></td><td class="cl-f8757404"><p class="cl-f8754e16"><span class="cl-f8754498">766</span></p></td><td class="cl-f8757405"><p class="cl-f8754e16"><span class="cl-f8754498">1.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f87573fa"><p class="cl-f8754e16"><span class="cl-f8754498">2008</span></p></td><td class="cl-f8757404"><p class="cl-f8754e16"><span class="cl-f8754498">638</span></p></td><td class="cl-f8757405"><p class="cl-f8754e16"><span class="cl-f8754498">1.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f87573fa"><p class="cl-f8754e16"><span class="cl-f8754498">2009</span></p></td><td class="cl-f8757404"><p class="cl-f8754e16"><span class="cl-f8754498">614</span></p></td><td class="cl-f8757405"><p class="cl-f8754e16"><span class="cl-f8754498">0.985</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-f875740e"><p class="cl-f8754e16"><span class="cl-f8754498">2010</span></p></td><td class="cl-f875740f"><p class="cl-f8754e16"><span class="cl-f8754498">772</span></p></td><td class="cl-f8757418"><p class="cl-f8754e16"><span class="cl-f8754498">0.992</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f8757424"><p class="cl-f8754e20"><span class="cl-f8754484">** data file: LCsthd.csv mod date: </span></p></td></tr><tr style="overflow-wrap:break-word;"><td colspan="3" class="cl-f8757424"><p class="cl-f8754e20"><span class="cl-f8754484">* These spawner counts are from river redd surveys.</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-ansley1981" class="csl-entry" role="doc-biblioentry">
+Ansley, H. L. H., and C. D. Davis. 1981. <span>“Migration and Standing Stock of Fishes Associated with Artificial and Natural Reefs on Georgia<span>’</span>s Outer Continental Shelf.”</span> Brunswick, Georgia, USA.
+</div>
+<div id="ref-clark1993" class="csl-entry" role="doc-biblioentry">
+Clark, W. G. 1993. <span>“The Effect of Recruitment Variability on the Choice of a Target Level of Spawning Biomass Per Recruit.”</span> In, 233246. Alaska Sea Grant College Program AK<span></span>SG<span></span>93<span></span>02.
+</div>
+<div id="ref-collins1996" class="csl-entry" role="doc-biblioentry">
+Collins, M. R., S. B. Van Sant, D. J. Schmidt, and G. R. Sedberry. 1996. <span>“Age Validation, Movements, and Growth Rates of Tagged Gag (Mycteroperca Microlepis), Black Sea Bass (Centropristis Striata) and Red Porgy (Pagrus Pagrus).”</span> In, edited by F. Arrequin-Sanchez, J. L. Munro, M. C. Balgos, and D. Pauly, 161–65. Makati City, Philippines: ICLARM (International Center for Living Aquatic Resources Management).
+</div>
+<div id="ref-deuel1968" class="csl-entry" role="doc-biblioentry">
+Deuel, D. G., and J. R. Clark. 1968. <span>“The 1965 Salt-Water Angling Survey.”</span>
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../text/LCcoho.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lower Columbia coho</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../text/OCcoho.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Oregon Coast coho</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

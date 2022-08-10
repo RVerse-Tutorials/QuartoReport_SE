@@ -1,0 +1,9 @@
+---
+title: "Map Figure"
+---
+
+<!-- Automatically includes the status figure -->
+```{r include=FALSE}
+out <- knitr::knit_expand(here::here('figures_tables', '_template_map_figure.Rmd'))
+```
+`r paste(knitr::knit(text = out), collapse = '\n')`

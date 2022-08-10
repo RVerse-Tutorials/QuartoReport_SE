@@ -1,0 +1,55 @@
+---
+always_allow_html: true
+---
+
+```{r warning=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+source(here::here("figures_tables", "_common.R"))
+load(here::here("data", "maplocs.rda"))
+```
+
+```{r}
+data_title <- "Hood Canal Chum"
+data_id <- "HCchum"
+```
+
+# Hood River Chum
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. @clark1993 vitae ante quis dui egestas fringilla ac vitae justo [@ansley1981; @collins1996; @deuel1968] . Pellentesque quis magna vel odio malesuada rutrum a volutpat nisl. Aliquam fermentum, urna eget tristique mattis, augue augue tristique ipsum, eget finibus nunc eros non nisi. Phasellus mattis hendrerit sapien, quis accumsan dui pretium eget. Nunc eleifend laoreet urna a luctus. Nulla vel sapien in nulla gravida tempus sit amet a metus. Vivamus porta condimentum tempus. Maecenas rhoncus elit id ultricies scelerisque. In gravida urna in ligula fringilla euismod. Curabitur efficitur porta libero ac fermentum. Cras fringilla et libero at posuere. Curabitur sodales dapibus elit a convallis.
+
+Morbi iaculis eget augue eget facilisis. Etiam non orci dignissim, efficitur purus viverra, pellentesque neque. Aliquam ornare, magna ut dictum mollis, nunc lorem iaculis nibh, eu consequat lectus urna euismod tortor. Etiam ut felis nisl. Nunc quis euismod felis. Vestibulum gravida nisi mi, quis mollis velit ullamcorper non. Aliquam tempus fringilla bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra nulla elementum libero mollis, quis cursus velit sagittis.
+
+## General location
+
+Morbi iaculis eget augue eget facilisis. Etiam non orci dignissim, efficitur purus viverra, pellentesque neque. Aliquam ornare, magna ut dictum mollis, nunc lorem iaculis nibh, eu consequat lectus urna euismod tortor.
+
+```{r eval=FALSE}
+# run to see what the map is like
+mapfigure(data_title, id=data_id)
+```
+
+```{r child=here::here("figures_tables", "Map_Figure.Rmd")}
+```
+
+## Recent trends
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ante quis dui egestas fringilla ac vitae justo. Pellentesque quis magna vel odio malesuada rutrum a volutpat nisl. Aliquam fermentum, urna eget tristique mattis, augue augue tristique ipsum, eget finibus nunc eros non nisi. Phasellus mattis hendrerit sapien, quis accumsan dui pretium eget. Nunc eleifend laoreet urna a luctus. Nulla vel sapien in nulla gravida tempus sit amet a metus. Vivamus porta condimentum tempus. Maecenas rhoncus elit id ultricies scelerisque. In gravida urna in ligula fringilla euismod. Curabitur efficitur porta libero ac fermentum. Cras fringilla et libero at posuere. Curabitur sodales dapibus elit a convallis.
+
+Morbi iaculis eget augue eget facilisis. Etiam non orci dignissim, efficitur purus viverra, pellentesque neque. Aliquam ornare, magna ut dictum mollis, nunc lorem iaculis nibh, eu consequat lectus urna euismod tortor. Etiam ut felis nisl. Nunc quis euismod felis. Vestibulum gravida nisi mi, quis mollis velit ullamcorper non. Aliquam tempus fringilla bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra nulla elementum libero mollis, quis cursus velit sagittis.
+
+```{r eval=FALSE}
+# This figure will be included.
+# Click green arrow at right to see
+source(here::here("figures_tables", "_common.R"))
+statusfigure(data_title, data_id)
+```
+
+```{r child=here::here("figures_tables", "Status_Figure.Rmd")}
+```
+
+## Population raw data
+
+Morbi iaculis eget augue eget facilisis. Etiam non orci dignissim, efficitur purus viverra, pellentesque neque. Aliquam ornare, magna ut dictum mollis, nunc lorem iaculis nibh, eu consequat lectus urna euismod tortor. Etiam ut felis nisl. @tbl-rawCRchum1 Nunc quis euismod felis. Vestibulum gravida nisi mi, quis mollis velit ullamcorper non. Aliquam tempus fringilla bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra nulla elementum libero mollis, quis cursus velit sagittis.
+
+```{r child=here::here("figures_tables", "Raw_Tables.Rmd")}
+```

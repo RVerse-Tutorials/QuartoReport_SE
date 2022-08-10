@@ -1,0 +1,47 @@
+---
+always_allow_html: true
+---
+
+```{r warning=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+source(here::here("figures_tables", "_common.R"))
+load(here::here("data", "maplocs.rda"))
+```
+
+```{r}
+data_title <- "ESU name"
+data_id <- "ESU id"
+```
+
+# Put ESU name here
+
+::: callout-note
+Add your text in this section
+:::
+
+## General location
+
+::: callout-note
+add text here
+:::
+
+```{r child=here::here("figures_tables", "Map_Figure.Rmd")}
+```
+
+## Recent trends
+
+::: callout-note
+add text here
+:::
+
+```{r child=here::here("figures_tables", "Status_Figure.Rmd")}
+```
+
+## Population raw data
+
+::: callout-note
+add text here
+:::
+
+```{r child=here::here("figures_tables", "Raw_Tables.Rmd")}
+```

@@ -2,50 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rverse-tutorials.github.io/QmdReport/index.html</loc>
-    <lastmod>2022-08-06T23:57:32.869Z</lastmod>
+    <lastmod>2022-08-10T23:56:14.843Z</lastmod>
   </url>
   <url>
-    <loc>https://rverse-tutorials.github.io/QmdReport/preface.html</loc>
-    <lastmod>2022-08-06T23:57:32.869Z</lastmod>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/CRchum.html</loc>
+    <lastmod>2022-08-10T23:56:14.845Z</lastmod>
   </url>
   <url>
-    <loc>https://rverse-tutorials.github.io/QmdReport/text/tips.html</loc>
-    <lastmod>2022-08-06T23:57:32.870Z</lastmod>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/HCchum.html</loc>
+    <lastmod>2022-08-10T23:56:14.845Z</lastmod>
   </url>
   <url>
-    <loc>https://rverse-tutorials.github.io/QmdReport/text/tables.html</loc>
-    <lastmod>2022-08-06T23:57:32.871Z</lastmod>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/ICSRFchinook.html</loc>
+    <lastmod>2022-08-10T23:56:14.846Z</lastmod>
   </url>
   <url>
-    <loc>https://rverse-tutorials.github.io/QmdReport/text/tables_in_a_for_loop.html</loc>
-    <lastmod>2022-08-06T23:57:32.872Z</lastmod>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/ICSRsthd.html</loc>
+    <lastmod>2022-08-10T23:56:14.847Z</lastmod>
   </url>
   <url>
-    <loc>https://rverse-tutorials.github.io/QmdReport/text/kable_flex.html</loc>
-    <lastmod>2022-08-06T23:57:32.874Z</lastmod>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/ICUCchinook.html</loc>
+    <lastmod>2022-08-10T23:56:14.848Z</lastmod>
   </url>
   <url>
-    <loc>https://rverse-tutorials.github.io/QmdReport/text/figures.html</loc>
-    <lastmod>2022-08-06T23:57:32.874Z</lastmod>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/ICUCsthd.html</loc>
+    <lastmod>2022-08-10T23:56:14.849Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/LCchinook.html</loc>
+    <lastmod>2022-08-10T23:56:14.853Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/LCcoho.html</loc>
+    <lastmod>2022-08-10T23:56:14.857Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/LCsthd.html</loc>
+    <lastmod>2022-08-10T23:56:14.859Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/OCcoho.html</loc>
+    <lastmod>2022-08-10T23:56:14.863Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/UWchinook.html</loc>
+    <lastmod>2022-08-10T23:56:14.864Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rverse-tutorials.github.io/QmdReport/text/UWsthd.html</loc>
+    <lastmod>2022-08-10T23:56:14.865Z</lastmod>
   </url>
   <url>
     <loc>https://rverse-tutorials.github.io/QmdReport/text/conclusion.html</loc>
-    <lastmod>2022-08-06T23:57:32.874Z</lastmod>
+    <lastmod>2022-08-10T23:56:14.865Z</lastmod>
   </url>
   <url>
     <loc>https://rverse-tutorials.github.io/QmdReport/references.html</loc>
-    <lastmod>2022-08-06T23:57:32.875Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rverse-tutorials.github.io/QmdReport/text/appendix_tables.html</loc>
-    <lastmod>2022-08-06T23:57:32.875Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rverse-tutorials.github.io/QmdReport/A-Quarto-Template-Repo-to-Create-Big-Reports-and-Very-Long-Title-Because-Long-Titles-are-Common.docx</loc>
-    <lastmod>2022-08-06T23:57:27.501Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rverse-tutorials.github.io/QmdReport/A-Quarto-Template-Repo-to-Create-Big-Reports-and-Very-Long-Title-Because-Long-Titles-are-Common.pdf</loc>
-    <lastmod>2022-08-06T23:57:32.503Z</lastmod>
+    <lastmod>2022-08-10T23:56:14.866Z</lastmod>
   </url>
 </urlset>

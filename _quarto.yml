@@ -4,8 +4,12 @@ project:
   output-file: "QmdReport"
 
 book:
-  title: A Quarto Template Repo to Create Big Reports and Very Long Title Because Long Titles are Common
-  subtitle: Some tips on creating reports with Quarto with a focus on tables and replicated tables and figures
+  title: An example report
+  subtitle: The subtitle
+  cover-image: images/logo.png
+  image: images/logo.png
+  downloads: [pdf]
+  sharing: [twitter, facebook]
   author:
     - name: Jane Doe
       affiliations:
@@ -21,33 +25,25 @@ book:
           department: Department of YYY
   chapters:
     - index.qmd
-    - preface.qmd
-    - text/tips.qmd
-    - text/tables.qmd
-    - text/tables_in_a_for_loop.qmd
-    - text/kable_flex.qmd
-    - text/figures.qmd
+    - text/CRchum.qmd
+    - text/ICSRFchinook.qmd
+    - text/ICSRsthd.qmd   
+    - text/ICUCchinook.qmd
+    - text/ICUCsthd.qmd
+    - text/LCchinook.qmd
+    - text/LCcoho.qmd    
+    - text/LCsthd.qmd
+    - text/OCcoho.qmd     
+    - text/HCchum.qmd
+    - text/UWchinook.qmd
+    - text/UWsthd.qmd
     - text/conclusion.qmd
     - references.qmd
-    - text/appendix_tables.qmd
 
   site-url: https://rverse-tutorials.github.io/QmdReport/
   repo-url: https://github.com/RVerse-Tutorials/QmdReport
   repo-actions: [edit, source, issue]
   search: true
-  navbar:
-    title: "QmdReport"
-    right:
-      - icon: twitter
-        href: https://twitter.com/eeholm
-        aria-label: eeholm Twitter
-      - icon: github
-        href: https://github.com/RVerse-Tutorials/QmdReport
-        aria-label: QmdReport GitHub
-
-  twitter-card: 
-    site: "@eeholm"
-
 
 bibliography: references.bib
 
@@ -58,21 +54,21 @@ execute:
 format:
   docx:
     toc: true
+    lof: true
+    lot: true
     reference-doc: template.docx
     always_allow_html: true
   html:
     theme: cosmo
     toc: true
-    code-fold: true
-    code-tools: true
   pdf:
     documentclass: scrbook
     classoption: ["oneside"]
-    template-partials: ["partials/before-body.tex"]
+#    template-partials: ["partials/before-body.tex"]
     toc: true
     lof: true
     lot: true
-    include-in-header: 
-      - partials/inheader.tex
+#    include-in-header: 
+#      - partials/inheader.tex
 
 
