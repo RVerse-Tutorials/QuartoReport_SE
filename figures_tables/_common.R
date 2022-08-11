@@ -2,6 +2,13 @@ require(knitr)
 require(dplyr)
 require(flextable)
 require(ggplot2)
+require(kableExtra)
+
+ishtml <- knitr::is_html_output()
+ispdf <- knitr::is_latex_output()
+isword <- !ishtml & !ispdf
+if(ishtml | isword) table.engine <- "flextable"
+if(ispdf) table.engine <- "kbl"
 
 mapfigure <- function(title, id=NULL){
   require(ggmap)
@@ -46,6 +53,28 @@ fixcols <- function(x){
   x
 }
 
+myflextable <- function(x){
+  if(inherits(x, "data.frame")){
+    x <- flextable(x)
+  }
+  if(isword){
+    x <- x %>% font(fontname="Times New Roman", part="all") %>%
+      fontsize(size=12)
+  }
+  n <- ncol_keys(x)
+  x %>% 
+    autofit() %>%
+    add_footer_row(values = "flextable", colwidths = n)
+}
+
+mykbl <- function(x, caption = NULL){
+  n <- ncol(x)
+  x <- kbl(x, booktabs = TRUE, caption = caption) %>%
+    kableExtra::footnote(general = "kable") %>%
+    kableExtra::kable_styling(position = "center")
+  if(n>8) kable_styling(x, latex_options = c("scale_down"))
+  x
+}
 # Misc
 
 wordnewpage <-
@@ -53,7 +82,5 @@ wordnewpage <-
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```'
 
-ishtml <- knitr::is_html_output()
-ispdf <- knitr::is_latex_output()
-isword <- !ishtml & !ispdf
+
 

@@ -4,9 +4,7 @@ title: Conclusion
 
 ## First off
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo sit amet nibh non molestie. Maecenas hendrerit nisl velit, a condimentum enim lobortis sit amet. Ut vitae nunc sed mauris condimentum fermentum. Mauris pellentesque nec neque id elementum. Suspendisse a quam aliquam, facilisis urna venenatis, malesuada diam. Pellentesque in fringilla orci. Cras sed purus urna. Ut pharetra enim ut ligula egestas mattis.
-
-
+We want to reference the Interior Columbia Upper Columbia population 1 data. It is in @tbl-rawICUCchinook1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo sit amet nibh non molestie. Maecenas hendrerit nisl velit, a condimentum enim lobortis sit amet. Ut vitae nunc sed mauris condimentum fermentum. Mauris pellentesque nec neque id elementum. Suspendisse a quam aliquam, facilisis urna venenatis, malesuada diam. Pellentesque in fringilla orci. Cras sed purus urna. Ut pharetra enim ut ligula egestas mattis.
 
 Phasellus non diam posuere, laoreet velit sed, egestas felis. Etiam eget neque in tellus lacinia tincidunt. Pellentesque scelerisque odio velit, nec fringilla nibh iaculis non. Aenean sit amet nulla ipsum. Cras felis lacus, pulvinar ac nisi et, convallis pulvinar turpis. Morbi non nibh lacus. Morbi vitae lorem massa. Sed ut turpis vel felis posuere commodo lacinia ac mi. Donec finibus lectus sit amet elit finibus, vitae rhoncus ligula tincidunt. Phasellus vitae blandit lacus. Integer sed nisl fermentum, pulvinar mauris in, posuere enim. Proin sit amet semper urna. Vivamus aliquet rutrum diam ac luctus.
 
@@ -19,5 +17,3 @@ Donec bibendum pharetra arcu vitae porttitor. Morbi ac quam nunc. Ut cursus dolo
 ```{=openxml}
 <w:p><w:r><w:br w:type="page"/></w:r></w:p>
 ```
-
-

@@ -15,12 +15,14 @@ source(here::here("figures_tables", "_common.R"))
 nYr <- 2000:2010
 ```
 
-```{r results='asis'}
+```{r}
 # So that I can later have many cvsfiles
 datafil <- here::here("data", paste0(data_id, ".csv"))
 tmp <- read.csv(datafil, stringsAsFactors=FALSE)
 ntbl <- tmp %>% distinct(COMMON_POPULATION_NAME) %>% nrow()
+```
 
+```{r include=FALSE}
 out <- NULL
 for(table.num.to.print in 1:ntbl){
   out = c(out, knit_expand(here::here('figures_tables', '_template_raw_table.Rmd')))

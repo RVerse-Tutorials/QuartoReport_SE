@@ -6,10 +6,10 @@ project:
 book:
   title: An example report
   subtitle: The subtitle
-  cover-image: images/logo.png
-  image: images/logo.png
-  downloads: [pdf]
-  sharing: [twitter, facebook]
+#  cover-image: images/logo.png
+#  image: images/logo.png
+  downloads: [pdf, docx]
+#  sharing: [twitter, facebook]
   author:
     - name: Jane Doe
       affiliations:
@@ -25,16 +25,16 @@ book:
           department: Department of YYY
   chapters:
     - index.qmd
-    - text/CRchum.qmd
+#    - text/CRchum.qmd
     - text/ICSRFchinook.qmd
     - text/ICSRsthd.qmd   
     - text/ICUCchinook.qmd
     - text/ICUCsthd.qmd
     - text/LCchinook.qmd
-    - text/LCcoho.qmd    
+#    - text/LCcoho.qmd    
     - text/LCsthd.qmd
-    - text/OCcoho.qmd     
-    - text/HCchum.qmd
+#    - text/OCcoho.qmd     
+#    - text/HCchum.qmd
     - text/UWchinook.qmd
     - text/UWsthd.qmd
     - text/conclusion.qmd
@@ -45,7 +45,7 @@ book:
   repo-actions: [edit, source, issue]
   search: true
 
-bibliography: references.bib
+bibliography: [references.bib, SEDAR.bib]
 
 execute:
   echo: false
@@ -54,6 +54,7 @@ execute:
 format:
   docx:
     toc: true
+    toc-depth: 2
     lof: true
     lot: true
     reference-doc: template.docx
@@ -61,14 +62,16 @@ format:
   html:
     theme: cosmo
     toc: true
+    toc-depth: 2
   pdf:
     documentclass: scrbook
     classoption: ["oneside"]
-#    template-partials: ["partials/before-body.tex"]
+    template-partials: ["partials/before-body.tex"]
     toc: true
+    toc-depth: 2
     lof: true
     lot: true
-#    include-in-header: 
-#      - partials/inheader.tex
+    include-in-header: 
+      - partials/inheader.tex
 
 

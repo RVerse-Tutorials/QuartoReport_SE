@@ -1,0 +1,23 @@
+---
+always_allow_html: true
+---
+
+```{r warning=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+source(here::here("figures_tables", "_common.R"))
+load(here::here("data", "maplocs.rda"))
+```
+
+```{r}
+data_title <- "Columbia River Chum"
+data_id <- "CRchum"
+```
+
+# Chapter 1
+
+## Population raw data
+
+Morbi iaculis eget augue eget facilisis. Etiam non orci dignissim, efficitur purus viverra, pellentesque neque. Aliquam ornare, magna ut dictum mollis, nunc lorem iaculis nibh, eu consequat lectus urna euismod tortor. Etiam ut felis nisl. @tbl-rawCRchum1 Nunc quis euismod felis. Vestibulum gravida nisi mi, quis mollis velit ullamcorper non. Aliquam tempus fringilla bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra nulla elementum libero mollis, quis cursus velit sagittis.
+
+```{r child=here::here("figures_tables", "Raw_Tables.Rmd")}
+```
