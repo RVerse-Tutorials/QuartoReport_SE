@@ -7,7 +7,8 @@ require(kableExtra)
 ishtml <- knitr::is_html_output()
 ispdf <- knitr::is_latex_output()
 isword <- !ishtml & !ispdf
-if(ishtml | isword) table.engine <- "flextable"
+if(ishtml) table.engine <- "flextable"
+if(isword) table.engine <- "flextable"
 if(ispdf) table.engine <- "kbl"
 
 mapfigure <- function(title, id=NULL){

@@ -53,10 +53,8 @@ tablecount <- function(data, cols="Spawners"){
       merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
       add_footer(., Year = f1) %>%
       merge_at(., i = 1, j = 1:ncol(dat), part = "footer") %>% 
-      colformat_num(., j=1, big.mark = "", na_str = "NA") %>%
-      font(fontname="Times New Roman", part="all") %>%
-      fontsize(size=10) %>%
-      line_spacing(space = 1.0, part = "all")
+      colformat_num(., j=1, big.mark = "", na_str = "NA")
+    # %>% line_spacing(space = 1.0, part = "all")
   }
   if(table.engine=="kbl"){
     tab <- 
