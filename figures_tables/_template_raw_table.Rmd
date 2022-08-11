@@ -25,7 +25,7 @@ colnames(counts) <- fixcols(colnames(counts))
 
 ```{r}
 popname <- unique(counts$`Common Population Name`)[tbl]
-dat <- subset(counts, `Common Population Name`==popname & Year %in% nYr)
+dat <- subset(counts, `Common Population Name`==popname & Year >= {{startYr}})
 rownames(dat) <- c()
 tbl_cap <- paste0("Spawners and fracwild from ", popname, " for ", min(dat$Year), " to ", max(dat$Year), ". ")
 ```
@@ -74,7 +74,11 @@ tablecount <- function(data, cols="Spawners"){
 #| tbl-cap: !expr tbl_cap
 out <- NULL
 col <- c("Spawners", "Fracwild")
-tab <- tablecount(dat, cols=col)
+if(nrow(dat) > 0){
+  tab <- tablecount(dat, cols=col)
+}else{
+  tab <- paste("No data for years greater than or equal to", {{startYr}})
+}
 tab
 ```
 

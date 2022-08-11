@@ -55,14 +55,12 @@ format:
   docx:
     toc: true
     toc-depth: 2
-    lof: true
-    lot: true
     reference-doc: template.docx
     always_allow_html: true
   html:
     theme: cosmo
     toc: true
-    toc-depth: 2
+    toc-depth: 3
   pdf:
     documentclass: scrbook
     classoption: ["oneside"]

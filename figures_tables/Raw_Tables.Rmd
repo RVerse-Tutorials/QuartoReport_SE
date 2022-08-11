@@ -12,7 +12,7 @@ source(here::here("figures_tables", "_common.R"))
 ```
 
 ```{r}
-nYr <- 2000:2010
+startYr <- 2000
 ```
 
 ```{r}
@@ -23,6 +23,7 @@ ntbl <- tmp %>% distinct(COMMON_POPULATION_NAME) %>% nrow()
 ```
 
 ```{r include=FALSE}
+# This is cycling through all the populations in the data
 out <- NULL
 for(table.num.to.print in 1:ntbl){
   out = c(out, knit_expand(here::here('figures_tables', '_template_raw_table.Rmd')))
