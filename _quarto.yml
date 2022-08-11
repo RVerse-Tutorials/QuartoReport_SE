@@ -40,8 +40,8 @@ book:
     - text/conclusion.qmd
     - references.qmd
 
-  site-url: https://rverse-tutorials.github.io/QmdReport/
-  repo-url: https://github.com/RVerse-Tutorials/QmdReport
+  site-url: https://rverse-tutorials.github.io/QuartoReport_SE/
+  repo-url: https://github.com/RVerse-Tutorials/QuartoReport_SE
   repo-actions: [edit, source, issue]
   search: true
 
