@@ -24,8 +24,13 @@ ntbl <- tmp %>% distinct(COMMON_POPULATION_NAME) %>% nrow()
 
 ```{r include=FALSE}
 # This is cycling through all the populations in the data
+# this is a big hacky because I can't use variables in `label: `
+# So I am having to create popid here so I can use {{popid}} in the label
 out <- NULL
 for(table.num.to.print in 1:ntbl){
+  popname <- unique(tmp$`COMMON_POPULATION_NAME`)[table.num.to.print]
+  tmp2 <- subset(tmp, `COMMON_POPULATION_NAME`==popname)
+  popid <- unique(tmp2$NMFS_POPID)[1]
   out = c(out, knit_expand(here::here('figures_tables', '_template_raw_table.Rmd')))
 }
 ```

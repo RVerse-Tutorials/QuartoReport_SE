@@ -27,7 +27,7 @@ colnames(counts) <- fixcols(colnames(counts))
 popname <- unique(counts$`Common Population Name`)[tbl]
 dat <- subset(counts, `Common Population Name`==popname & Year >= {{startYr}})
 rownames(dat) <- c()
-tbl_cap <- paste0("Spawners and fracwild from ", popname, " for ", min(dat$Year), " to ", max(dat$Year), ". ")
+tbl_cap <- paste0("Spawners and fracwild from ", popname, " (NMFS_POPID ", {{popid}}, ") for ", min(dat$Year), " to ", max(dat$Year), ". ")
 ```
 
 <!-- unlike tbl-cap, label won't take a string so !expr tbl_label won't work. But you can still make this work with the hack below. -->
@@ -68,7 +68,7 @@ tablecount <- function(data, cols="Spawners"){
 ```
 
 ```{r}
-#| label: tbl-raw{{data_id}}{{table.num.to.print}}
+#| label: tbl-raw{{data_id}}-{{popid}}
 #| tbl-cap: !expr tbl_cap
 out <- NULL
 col <- c("Spawners", "Fracwild")

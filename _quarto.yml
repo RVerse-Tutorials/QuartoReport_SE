@@ -27,15 +27,15 @@ book:
     - index.qmd
 #    - text/CRchum.qmd
     - text/ICSRFchinook.qmd
-    - text/ICSRsthd.qmd   
     - text/ICUCchinook.qmd
-    - text/ICUCsthd.qmd
     - text/LCchinook.qmd
+    - text/UWchinook.qmd
+    - text/ICSRsthd.qmd   
+    - text/ICUCsthd.qmd
 #    - text/LCcoho.qmd    
     - text/LCsthd.qmd
 #    - text/OCcoho.qmd     
 #    - text/HCchum.qmd
-    - text/UWchinook.qmd
     - text/UWsthd.qmd
     - text/conclusion.qmd
     - references.qmd
