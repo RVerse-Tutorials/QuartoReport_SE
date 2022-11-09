@@ -1,11 +1,11 @@
 project:
   type: book
   output-dir: docs
-  output-file: "QmdReport"
 
 book:
   title: An example report
   subtitle: The subtitle
+  output-file: "QmdReport"
 #  cover-image: images/logo.png
 #  image: images/logo.png
   downloads: [pdf, docx]
